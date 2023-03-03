@@ -44,7 +44,10 @@
      <Folder Include="Assets" />
      <Folder Include="Assets/model/Dog" />
      <Folder Include="Assets/model/Cat" />
+     <Folder Include="Assets/Animation/Dog" />
      <Folder Include="Assets/model" />
+     <Folder Include="Assets/Animation/Cat" />
+     <Folder Include="Assets/Animation" />
      <Folder Include="Assets/Scenes" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
