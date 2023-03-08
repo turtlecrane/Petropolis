@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49590
+49743
 Successfully changed project path to: /Users/limsuhan/Desktop/Petropolis/PetropolisProject
 /Users/limsuhan/Desktop/Petropolis/PetropolisProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,11 +54,11 @@ Successfully changed project path to: /Users/limsuhan/Desktop/Petropolis/Petropo
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [4630652416] Host "[IP] 172.30.1.92 [Port] 0 [Flags] 2 [Guid] 999521380 [EditorId] 999521380 [Version] 1048832 [Id] OSXEditor(0,imsuhan-ui-MacBookAir.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4505445888] Host "[IP] 172.30.1.92 [Port] 0 [Flags] 2 [Guid] 1757963013 [EditorId] 1757963013 [Version] 1048832 [Id] OSXEditor(0,imsuhan-ui-MacBookAir.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [4630652416] Host "[IP] 172.30.1.92 [Port] 0 [Flags] 2 [Guid] 999521380 [EditorId] 999521380 [Version] 1048832 [Id] OSXEditor(0,imsuhan-ui-MacBookAir.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4505445888] Host "[IP] 172.30.1.92 [Port] 0 [Flags] 2 [Guid] 1757963013 [EditorId] 1757963013 [Version] 1048832 [Id] OSXEditor(0,imsuhan-ui-MacBookAir.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 235.96 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 215.62 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -73,90 +73,90 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56574
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.003072 seconds.
+Registered in 0.002510 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 151.48 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 165.84 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.780 seconds
+- Completed reload, in  2.446 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1782ms)
-		BeginReloadAssembly (289ms)
+	ReloadAssembly (2447ms)
+		BeginReloadAssembly (370ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1202ms)
-			LoadAssemblies (291ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1665ms)
+			LoadAssemblies (373ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (329ms)
+			SetupTypeCache (558ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (86ms)
-			SetupLoadedEditorAssemblies (666ms)
+			RebuildScriptCaches (107ms)
+			SetupLoadedEditorAssemblies (890ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (152ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (376ms)
-				ProcessInitializeOnLoadMethodAttributes (121ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (166ms)
+				BeforeProcessingInitializeOnLoad (4ms)
+				ProcessInitializeOnLoadAttributes (476ms)
+				ProcessInitializeOnLoadMethodAttributes (228ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.020371 seconds.
+Registered in 0.016235 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/limsuhan/Desktop/Petropolis/PetropolisProject/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/limsuhan/Desktop/Petropolis/PetropolisProject/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 2.86 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.240 seconds
+- Completed reload, in  4.119 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3245ms)
-		BeginReloadAssembly (346ms)
+	ReloadAssembly (4123ms)
+		BeginReloadAssembly (467ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (15ms)
+			DisableScriptedObjects (19ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (84ms)
-		EndReloadAssembly (2645ms)
-			LoadAssemblies (343ms)
+			CreateAndSetChildDomain (142ms)
+		EndReloadAssembly (3005ms)
+			LoadAssemblies (421ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (751ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (137ms)
-			SetupLoadedEditorAssemblies (1219ms)
+			SetupTypeCache (1210ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (188ms)
+			SetupLoadedEditorAssemblies (1105ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (37ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (292ms)
-				ProcessInitializeOnLoadAttributes (715ms)
-				ProcessInitializeOnLoadMethodAttributes (161ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (2ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (346ms)
+				ProcessInitializeOnLoadAttributes (660ms)
+				ProcessInitializeOnLoadMethodAttributes (75ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.12 seconds
-Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.17 seconds
+Refreshing native plugins compatible for Editor in 4.92 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3361 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 27 unused Assets / (88.5 KB). Loaded Objects now: 3818.
-Memory consumption went from 114.7 MB to 114.6 MB.
-Total: 4.948397 ms (FindLiveObjects: 0.386815 ms CreateObjectMapping: 0.363322 ms MarkObjects: 4.001873 ms  DeleteObjects: 0.194849 ms)
+Unloading 27 unused Assets / (85.1 KB). Loaded Objects now: 3818.
+Memory consumption went from 114.8 MB to 114.7 MB.
+Total: 12.151465 ms (FindLiveObjects: 0.528163 ms CreateObjectMapping: 0.653558 ms MarkObjects: 10.718152 ms  DeleteObjects: 0.248634 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,13 +170,13 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 14962.311871 seconds.
-  path: Assets/Animation/Dog/dog2.controller
-  artifactKey: Guid(5b2a21a373eac4c3399241e5a7059017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation/Dog/dog2.controller using Guid(5b2a21a373eac4c3399241e5a7059017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb0daafbff66bdf5253a1055a6b6633f') in 1.497566 seconds 
+  Time since last request: 15533.288248 seconds.
+  path: Assets/Animation/Dog/DogWalk.anim
+  artifactKey: Guid(035869ef4b32a4b0cbd0375d488f5b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Dog/DogWalk.anim using Guid(035869ef4b32a4b0cbd0375d488f5b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b42a2d84b3d8627f80795a3f3e71c148') in 0.366735 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.446399 seconds.
-  path: Assets/Animation/Dog/dog2.controller
-  artifactKey: Guid(5b2a21a373eac4c3399241e5a7059017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation/Dog/dog2.controller using Guid(5b2a21a373eac4c3399241e5a7059017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64cd1f989ce70392fada3a34ff955047') in 0.057913 seconds 
+  Time since last request: 0.000105 seconds.
+  path: Assets/Animation/Dog/DogRun.anim
+  artifactKey: Guid(4a83dd8522ba047908d6a6fec9688d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Dog/DogRun.anim using Guid(4a83dd8522ba047908d6a6fec9688d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17e8d1f603ede996bd53e3d42224d63e') in 0.032010 seconds 
