@@ -44,9 +44,9 @@
      <Compile Include="Assets/source/UI/Script/DontSettingPopup.cs" />
      <Compile Include="Assets/source/UI/Script/MuteClick.cs" />
      <Compile Include="Assets/source/UI/Script/GotoScene.cs" />
+     <Compile Include="Assets/source/UI/Script/StaminaSetting.cs" />
      <Compile Include="Assets/source/UI/Script/SettingsOnEsc.cs" />
      <Compile Include="Assets/source/UI/Script/InteractManager.cs" />
-     <Compile Include="Assets/source/UI/Script/StaminaSetting.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/model/Dog" />
