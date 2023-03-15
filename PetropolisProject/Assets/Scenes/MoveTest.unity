@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8a2cbcbc0fad443a854ebab8d11de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1289476914}
+  Target: {fileID: 1243150705}
   offsetX: 0
   offsetY: 0.5
   offsetZ: -3
@@ -683,7 +683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8a301f2ec5719c44a79c1e2cfc3d84e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8a301f2ec5719c44a79c1e2cfc3d84e, type: 3}
       propertyPath: m_TagString
@@ -836,7 +836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f8a7efc94ab204a61afbbb3928bd944a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f8a7efc94ab204a61afbbb3928bd944a, type: 3}
       propertyPath: m_TagString
