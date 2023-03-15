@@ -8,6 +8,8 @@ TagManager:
   - Food
   - NPC
   - Stamina
+  - Cat
+  - Dog
   layers:
   - Default
   - TransparentFX
