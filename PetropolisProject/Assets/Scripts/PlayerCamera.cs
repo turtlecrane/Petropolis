@@ -4,26 +4,39 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    public GameObject Target;               // Ä«¸Ş¶ó°¡ µû¶ó´Ù´Ò Å¸°Ù
+    private Vector3 offsets;                // ì¹´ë©”ë¼ì˜ ì¢Œí‘œ
+    Quaternion camTurnAngleY, camTurnAngleX; // ì¹´ë©”ë¼ì˜ íšŒì „ ì¿¼í„°ë‹ˆì–¸
 
-    public float offsetX = 0.0f;            // Ä«¸Ş¶óÀÇ xÁÂÇ¥
-    public float offsetY = 0.5f;           // Ä«¸Ş¶óÀÇ yÁÂÇ¥
-    public float offsetZ = -3.0f;          // Ä«¸Ş¶óÀÇ zÁÂÇ¥
+    public float rotateSpeed = 5.0f;        // ì¹´ë©”ë¼ íšŒì „ ì†ë„
 
-    public float CameraSpeed = 10.0f;       // Ä«¸Ş¶óÀÇ ¼Óµµ
-    Vector3 TargetPos;                      // Å¸°ÙÀÇ À§Ä¡
+    public GameObject Target;               // ì¹´ë©”ë¼ê°€ ë”°ë¼ë‹¤ë‹ íƒ€ê²Ÿ
 
-    // Update is called once per frame
-    void FixedUpdate()
+    public float offsetX = 0.0f;            // ì¹´ë©”ë¼ì˜ xì¢Œí‘œ
+    public float offsetY = 2.0f;           // ì¹´ë©”ë¼ì˜ yì¢Œí‘œ
+    public float offsetZ = -4.0f;          // ì¹´ë©”ë¼ì˜ zì¢Œí‘œ
+
+    public float CameraSpeed = 10.0f;       // ì¹´ë©”ë¼ì˜ ì†ë„
+    Vector3 TargetPos;                      // íƒ€ê²Ÿì˜ ìœ„ì¹˜
+
+    void Start()
     {
-        // Å¸°ÙÀÇ x, y, z ÁÂÇ¥¿¡ Ä«¸Ş¶óÀÇ ÁÂÇ¥¸¦ ´õÇÏ¿© Ä«¸Ş¶óÀÇ À§Ä¡¸¦ °áÁ¤
-        TargetPos = new Vector3(
-            Target.transform.position.x + offsetX,
-            Target.transform.position.y + offsetY,
-            Target.transform.position.z + offsetZ
-            );
+        offsets = new Vector3(offsetX, offsetY, offsetZ);
+    }
 
-        // Ä«¸Ş¶óÀÇ ¿òÁ÷ÀÓÀ» ºÎµå·´°Ô ÇÏ´Â ÇÔ¼ö(Lerp)
+    void LateUpdate()
+    {
+        if (Input.GetMouseButton(0)) // ë§ˆìš°ìŠ¤ ì¢Œí´ë¦­ ì‹œ
+        {
+            camTurnAngleY = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotateSpeed, Vector3.up); // ë§ˆìš°ìŠ¤ Xì¶• -> ì¢Œìš° íšŒì „(ì˜¤ë¸Œì íŠ¸ Yì¶•)
+            camTurnAngleX = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * rotateSpeed, Vector3.left); // ë§ˆìš°ìŠ¤ Yì¶• -> ìƒí•˜ íšŒì „(ì˜¤ë¸Œì íŠ¸ Xì¶•)
+            offsets = camTurnAngleY * camTurnAngleX * offsets;
+        }
+        // íƒ€ê²Ÿì˜ x, y, z ì¢Œí‘œì— ì¹´ë©”ë¼ì˜ ì¢Œí‘œë¥¼ ë”í•˜ì—¬ ì¹´ë©”ë¼ì˜ ìœ„ì¹˜ë¥¼ ê²°ì •
+        TargetPos = Target.transform.position + offsets;
+
+        // ì¹´ë©”ë¼ì˜ ì›€ì§ì„ì„ ë¶€ë“œëŸ½ê²Œ í•˜ëŠ” í•¨ìˆ˜(Lerp)
         transform.position = Vector3.Lerp(transform.position, TargetPos, Time.deltaTime * CameraSpeed);
+
+        transform.LookAt(Target.transform);
     }
 }

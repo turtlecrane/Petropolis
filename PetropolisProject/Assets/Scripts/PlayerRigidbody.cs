@@ -5,24 +5,28 @@ using UnityEngine;
 public class PlayerRigidbody : MonoBehaviour
 {
     private Animator m_animator;
+    private Camera playercam;  // í”Œë ˆì´ì–´ë¥¼ ì¶”ì í•˜ëŠ” ì¹´ë©”ë¼
 
     private Rigidbody m_rigidBody;
-    private bool m_wasGrounded; // ÀÌÀü¿¡ ¶¥À§¿¡ ÀÖ¾úÀ¸¸é true °øÁß¿¡ ÀÖ¾úÀ¸¸é false
-    private bool m_isGrounded; // ÇöÀç ¶¥À§¿¡ ÀÖÀ¸¸é true °øÁß¿¡ ÀÖÀ¸¸é false
+    private bool m_wasGrounded; // ì´ì „ì— ë•…ìœ„ì— ìˆì—ˆìœ¼ë©´ true ê³µì¤‘ì— ìˆì—ˆìœ¼ë©´ false
+    private bool m_isGrounded; // í˜„ì¬ ë•…ìœ„ì— ìˆìœ¼ë©´ true ê³µì¤‘ì— ìˆìœ¼ë©´ false
     private List<Collider> m_collisions = new List<Collider>();
 
-    private float stamina = 100.0f; // ´Ş¸®±â ½ºÅÂ¹Ì³ª
-    private float recovery_stamina = 20.0f; // ´ë±â, °È±â Áß ½ºÅÂ¹Ì³ª È¸º¹·®
-    private float reduction_stamina = 40.0f; // ´ë±â, °È±â Áß ½ºÅÂ¹Ì³ª °¨¼Ò·®
-    private int running = 0; // 0 = ´ë±â, °È±â Áß / 1 = ´Ş¸®±â Áß
+    private float stamina = 100.0f; // ë‹¬ë¦¬ê¸° ìŠ¤íƒœë¯¸ë‚˜
+    private float recovery_stamina = 20.0f; // ëŒ€ê¸°, ê±·ê¸° ì¤‘ ìŠ¤íƒœë¯¸ë‚˜ íšŒë³µëŸ‰
+    private float reduction_stamina = 40.0f; // ëŒ€ê¸°, ê±·ê¸° ì¤‘ ìŠ¤íƒœë¯¸ë‚˜ ê°ì†ŒëŸ‰
+    private int running = 0; // 0 = ëŒ€ê¸°, ê±·ê¸° ì¤‘ / 1 = ë‹¬ë¦¬ê¸° ì¤‘
 
-    public float cat_jumpvalue = 1.5f; // °í¾çÀÌ Á¡ÇÁ ½Ã ³ôÀÌ, ÀüÁø °¡ÁßÄ¡
+    private float forwardvalue = 0.0f;
+    private float jumpvalue = 0.0f;
+
+    public float cat_jumpvalue = 1.5f; // ê³ ì–‘ì´ ì í”„ ì‹œ ë†’ì´, ì „ì§„ ê°€ì¤‘ì¹˜
     public float cat_forwardvalue = 0.0f;
-    public float dog_jumpvalue = 1.2f; // °³ Á¡ÇÁ ½Ã ³ôÀÌ, ÀüÁø °¡ÁßÄ¡
+    public float dog_jumpvalue = 1.3f; // ê°œ ì í”„ ì‹œ ë†’ì´, ì „ì§„ ê°€ì¤‘ì¹˜
     public float dog_forwardvalue = 3.0f;
 
-    public float m_moveSpeed = 2.0f; // ÀÌµ¿¼Óµµ
-    public float m_jumpForce = 3.0f; // Á¡ÇÁÀÇ Èû
+    public float m_moveSpeed = 2.0f; // ì´ë™ì†ë„
+    public float m_jumpForce = 3.0f; // ì í”„ì˜ í˜
     private float m_jumpTimeStamp = 0; 
     private float m_minJumpInterval = 0.25f;
 
@@ -30,6 +34,7 @@ public class PlayerRigidbody : MonoBehaviour
     {
         m_rigidBody = GetComponent<Rigidbody>();
         m_animator = GetComponent<Animator>();
+        playercam = Camera.main;
     }
 
     void Update()
@@ -39,7 +44,7 @@ public class PlayerRigidbody : MonoBehaviour
         PlayerMove();
         JumpingAndLanding();
 
-        if (stamina < 100.0f && running == 0)
+        if (stamina < 100.0f && running == 0)  // ìŠ¤íƒœë¯¸ë‚˜ê°€ 100ë³´ë‹¤ ì ê³ , ë‹¬ë¦¬ê³  ìˆì§€ ì•Šì„ ë•Œ
         {
             stamina += recovery_stamina * Time.deltaTime;
         }
@@ -52,31 +57,31 @@ public class PlayerRigidbody : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        Vector3 moveHorizontal = Vector3.right * h;
-        Vector3 moveVertical = Vector3.forward * v;
+        // ì¹´ë©”ë¼ê°€ ë°”ë¼ë³´ëŠ” ë°©í–¥ì— ë”°ë¼ í”Œë ˆì´ì–´ ìºë¦­í„°ì˜ ì „ì§„ ë°©í–¥ ë³€í™˜
+        Vector3 moveHorizontal = new Vector3(playercam.transform.right.x, 0.0f, playercam.transform.right.z) * h;
+        Vector3 moveVertical = new Vector3(playercam.transform.forward.x, 0.0f, playercam.transform.forward.z) * v;
         Vector3 velocity = (moveHorizontal + moveVertical).normalized;
 
         transform.LookAt(transform.position + velocity);
 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetMouseButton(1))
         {
-            if (stamina > 0.0f) // ½ºÅÂ¹Ì³ª°¡ ³²¾Æ ÀÖÀ» ¶§
+            if (stamina > 0.0f) // ìŠ¤íƒœë¯¸ë‚˜ê°€ ë‚¨ì•„ ìˆì„ ë•Œ
             {
-                velocity *= 2.0f; // MoveSpeed¿¡ °ªÀ» Àü´ŞÇÒ¶§ º¸´Ù È¿À²ÀûÀÌ±â À§ÇØ velocity¸¦ Àü´Ş
+                velocity *= 2.0f; // MoveSpeedì— ê°’ì„ ì „ë‹¬í• ë•Œ ë³´ë‹¤ íš¨ìœ¨ì ì´ê¸° ìœ„í•´ velocityë¥¼ ì „ë‹¬
                 stamina -= reduction_stamina * Time.deltaTime;
                 running = 1;
-            }    
+            }
         }
         else { running = 0; }
-
+        
         transform.Translate(velocity * m_moveSpeed * Time.deltaTime, Space.World);
-
         m_animator.SetFloat("MoveSpeed", velocity.magnitude);
-    }
+     }
 
     private void JumpingAndLanding()
     {
-        bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval; // ÄğÅ¸ÀÓ
+        bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval; // ì¿¨íƒ€ì„
 
         if (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Space))
         {
@@ -84,34 +89,38 @@ public class PlayerRigidbody : MonoBehaviour
 
             if (gameObject.CompareTag("Cat"))
             {
-                m_rigidBody.AddRelativeForce(Vector3.forward * cat_forwardvalue, ForceMode.Impulse);
-                m_rigidBody.AddForce(Vector3.up * m_jumpForce * cat_jumpvalue, ForceMode.Impulse);
+                forwardvalue = cat_forwardvalue;
+                jumpvalue = cat_jumpvalue;
             }
             else if (gameObject.CompareTag("Dog"))
             {
-                m_rigidBody.AddRelativeForce(Vector3.forward * dog_forwardvalue, ForceMode.Impulse);
-                m_rigidBody.AddForce(Vector3.up * m_jumpForce * dog_jumpvalue, ForceMode.Impulse);
+                forwardvalue = dog_forwardvalue;
+                jumpvalue = dog_jumpvalue;
             }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+                m_rigidBody.AddRelativeForce(Vector3.forward * forwardvalue, ForceMode.Impulse);
+            m_rigidBody.AddForce(Vector3.up * m_jumpForce * jumpvalue, ForceMode.Impulse);
         }
 
-        if (!m_wasGrounded && m_isGrounded) // °øÁß¿¡ ¶°ÀÖ¾ú°í Áö±İ ¶¥¿¡ ÂøÁö
+        if (!m_wasGrounded && m_isGrounded) // ê³µì¤‘ì— ë– ìˆì—ˆê³  ì§€ê¸ˆ ë•…ì— ì°©ì§€
         {
             m_animator.SetTrigger("Land");
         }
 
-        if (!m_isGrounded && m_wasGrounded) // ¶¥¿¡ ¼­ÀÖ¾ú°í °øÁßÀ¸·Î Á¡ÇÁ
+        if (!m_isGrounded && m_wasGrounded) // ë•…ì— ì„œìˆì—ˆê³  ê³µì¤‘ìœ¼ë¡œ ì í”„
         {
             m_animator.SetTrigger("Jump");
         }
 
     }
 
-    private void OnCollisionEnter(Collision collision) // Ãæµ¹ÇÑ ¼ø°£
+    private void OnCollisionEnter(Collision collision) // ì¶©ëŒí•œ ìˆœê°„
     {
         ContactPoint[] contactPoints = collision.contacts;
         for (int i = 0; i < contactPoints.Length; i++)
         {
-            if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f) // ³»ÀûÀ» °è»êÇÏ¿© ¶¥ À§¿¡ ÀÖ´ÂÁö ¾ø´ÂÁö¸¦ ÆÇ´Ü
+            if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f) // ë‚´ì ì„ ê³„ì‚°í•˜ì—¬ ë•… ìœ„ì— ìˆëŠ”ì§€ ì—†ëŠ”ì§€ë¥¼ íŒë‹¨
             {
                 if (!m_collisions.Contains(collision.collider))
                 {
@@ -123,7 +132,7 @@ public class PlayerRigidbody : MonoBehaviour
     }
 
 
-    private void OnCollisionExit(Collision collision) // Ãæµ¹Ã¼¿Í ¶³¾îÁü
+    private void OnCollisionExit(Collision collision) // ì¶©ëŒì²´ì™€ ë–¨ì–´ì§
     {
         if (m_collisions.Contains(collision.collider))
         {
@@ -132,7 +141,7 @@ public class PlayerRigidbody : MonoBehaviour
         if (m_collisions.Count == 0) { m_isGrounded = false; }
     }
 
-    private void OnCollisionStay(Collision collision) // Ãæµ¹Ã¼¿Í °è¼Ó ºÙ¾îÀÖÀ½
+    private void OnCollisionStay(Collision collision) // ì¶©ëŒì²´ì™€ ê³„ì† ë¶™ì–´ìˆìŒ
     {
         ContactPoint[] contactPoints = collision.contacts;
         bool validSurfaceNormal = false;
