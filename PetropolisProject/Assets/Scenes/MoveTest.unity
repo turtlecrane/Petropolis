@@ -605,13 +605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8a2cbcbc0fad443a854ebab8d11de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 5
-  Target: {fileID: 919132148250035233}
+  rotateSpeed: 1.5
+  Target: {fileID: 2058465258}
   offsetX: 0
   offsetY: 2
   offsetZ: -4
   CameraSpeed: 10
---- !u!1 &919132148250035233 stripped
+--- !u!1 &2058465258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1630294026465986116, guid: 10decf8a51c0ae045b9105e23c3e1a01, type: 3}
   m_PrefabInstance: {fileID: 1900129910809657957}
@@ -683,6 +683,10 @@ PrefabInstance:
     - target: {fileID: 7470480705373181999, guid: 312cc02bacc680f44b3a8870202d9354, type: 3}
       propertyPath: m_Name
       value: dog2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470480705373181999, guid: 312cc02bacc680f44b3a8870202d9354, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7847428014213022357, guid: 312cc02bacc680f44b3a8870202d9354, type: 3}
       propertyPath: m_RootOrder
