@@ -5278,11 +5278,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8a2cbcbc0fad443a854ebab8d11de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 5
+  rotateSpeed: 1.5
   Target: {fileID: 1580495556}
   offsetX: 0
-  offsetY: 0.5
-  offsetZ: -3
+  offsetY: 2
+  offsetZ: -4
   CameraSpeed: 10
 --- !u!1 &1543259179
 GameObject:
