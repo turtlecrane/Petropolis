@@ -928,7 +928,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2572993602593077196}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.141, y: 0.025999993, z: 4.399}
   m_LocalScale: {x: 0.020000003, y: 0.02, z: 0.020000003}
   m_ConstrainProportionsScale: 1
@@ -938,7 +938,7 @@ Transform:
   - {fileID: 3831133691597069838}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &3419487611274955417
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1000,6 +1000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ef22910372c464aa38b98d58c002fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stamina: 100
+  recovery_stamina: 20
+  reduction_stamina: 40
+  running: 0
   cat_jumpvalue: 1.5
   cat_forwardvalue: 0
   dog_jumpvalue: 1.3
@@ -1472,7 +1476,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   InteractBox: {fileID: 0}
   TextBox: {fileID: 0}
-  RayMaxDistance: 0.5
+  RayMaxDistance: 1
 --- !u!1 &4090479532812129797
 GameObject:
   m_ObjectHideFlags: 0

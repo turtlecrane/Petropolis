@@ -11509,6 +11509,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1565546501, guid: d2b99e54bf379314d8b963eeebb9b93d, type: 3}
+      propertyPath: TextBox
+      value: 
+      objectReference: {fileID: 1193161967}
+    - target: {fileID: 1565546501, guid: d2b99e54bf379314d8b963eeebb9b93d, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 683136941}
+    - target: {fileID: 1565546501, guid: d2b99e54bf379314d8b963eeebb9b93d, type: 3}
+      propertyPath: InteractBox
+      value: 
+      objectReference: {fileID: 1158119996}
     - target: {fileID: 1464100086521129496, guid: d2b99e54bf379314d8b963eeebb9b93d, type: 3}
       propertyPath: m_Name
       value: dog2
@@ -11519,7 +11531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2241200423312928930, guid: d2b99e54bf379314d8b963eeebb9b93d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.231
       objectReference: {fileID: 0}
     - target: {fileID: 2241200423312928930, guid: d2b99e54bf379314d8b963eeebb9b93d, type: 3}
       propertyPath: m_LocalPosition.y

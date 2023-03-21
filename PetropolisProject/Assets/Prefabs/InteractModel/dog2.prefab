@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1565546499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565546500}
+  - component: {fileID: 1565546501}
+  m_Layer: 0
+  m_Name: Dog_Ray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1565546500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565546499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 15.5, z: 9.59}
+  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2241200423312928930}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565546501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565546499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a165f0cba334e3587bd51e2d785172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  InteractBox: {fileID: 0}
+  TextBox: {fileID: 0}
+  RayMaxDistance: 1
 --- !u!1 &818826148764975017
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +189,6 @@ GameObject:
   - component: {fileID: 1770176974601901899}
   - component: {fileID: 1770176974601901901}
   - component: {fileID: 1770176974601901903}
-  - component: {fileID: 3019531592898236158}
   m_Layer: 0
   m_Name: dog2
   m_TagString: Dog
@@ -158,11 +205,12 @@ Transform:
   m_GameObject: {fileID: 1464100086521129496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: 5.5759997}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalScale: {x: 0.045, y: 0.045, z: 0.045}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2248020397036183780}
   - {fileID: 7615532445945040053}
+  - {fileID: 1565546500}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -227,28 +275,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ef22910372c464aa38b98d58c002fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stamina: 100
+  recovery_stamina: 20
+  reduction_stamina: 40
+  running: 0
   cat_jumpvalue: 1.5
   cat_forwardvalue: 0
   dog_jumpvalue: 1.3
   dog_forwardvalue: 3
   m_moveSpeed: 2
   m_jumpForce: 3
---- !u!114 &3019531592898236158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464100086521129496}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a165f0cba334e3587bd51e2d785172, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  InteractBox: {fileID: 0}
-  TextBox: {fileID: 0}
-  RayMaxDistance: 0.75
 --- !u!1 &1714203384639512418
 GameObject:
   m_ObjectHideFlags: 0
