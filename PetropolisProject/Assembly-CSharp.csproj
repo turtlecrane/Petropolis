@@ -44,8 +44,12 @@
      <Compile Include="Assets\Scripts\PlayerRigidbody.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\PlayerCamera.cs" />
+     <Compile Include="Assets\Scripts\ObjData.cs" />
+     <Compile Include="Assets\Scripts\TalkManager.cs" />
      <Compile Include="Assets\Scripts\BtnController.cs" />
      <Compile Include="Assets\Scripts\DontSettingPopup.cs" />
+     <Compile Include="Assets\Scripts\StaminaToggle.cs" />
+     <Compile Include="Assets\Scripts\DialogManager.cs" />
      <Compile Include="Assets\Scripts\MuteClick.cs" />
      <Compile Include="Assets\Scripts\GotoScene.cs" />
      <Compile Include="Assets\Scripts\StaminaSetting.cs" />
@@ -68,6 +72,7 @@
      <Folder Include="Assets\model\Cat" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures\icons\128x128" />
+     <Folder Include="Assets\model\NPC\Remy" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Bed\Materials" />
@@ -77,13 +82,16 @@
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Textures" />
      <Folder Include="Assets\source\font\NaverNanumSquareNeo\TMP" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\kiti\Materials" />
+     <Folder Include="Assets\model\NPC\Doctor" />
      <Folder Include="Assets\Animation\UI" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures\icons\256x256" />
+     <Folder Include="Assets\Prefabs\npc" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\tumba_fur" />
      <Folder Include="Assets\model\Furniture\QA_Books\Textures" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Animation\Dog" />
+     <Folder Include="Assets\Prefabs\InteractModel" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <None Include="Assets\model\Furniture\QA_Books\Readme.txt" />
@@ -157,6 +165,7 @@
      <Folder Include="Assets\model\Furniture" />
      <Folder Include="Assets\model\Furniture\skitsch_zucca_fbx_obj" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures\WornOutA" />
+     <Folder Include="Assets\model\NPC" />
      <Folder Include="Assets\source\Fantasy Wooden GUI  Free\Scene" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Bed\Textures" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Fonts" />
@@ -174,6 +183,7 @@
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\source\Audio" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets\model\NPC\Remy\Tex" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\kiti" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

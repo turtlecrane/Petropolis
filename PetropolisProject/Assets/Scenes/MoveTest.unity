@@ -627,6 +627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: catRig3
       objectReference: {fileID: 0}
+    - target: {fileID: 1900129911784307479, guid: 10decf8a51c0ae045b9105e23c3e1a01, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2149386263151647998, guid: 10decf8a51c0ae045b9105e23c3e1a01, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -671,6 +675,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7108951801638646063, guid: 10decf8a51c0ae045b9105e23c3e1a01, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10decf8a51c0ae045b9105e23c3e1a01, type: 3}
 --- !u!1001 &7740864562965741135
@@ -680,6 +688,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6492636119712971977, guid: 312cc02bacc680f44b3a8870202d9354, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7470480705373181999, guid: 312cc02bacc680f44b3a8870202d9354, type: 3}
       propertyPath: m_Name
       value: dog2

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StaminaSetting : MonoBehaviour
 {
     private GameObject FImage;
-    private Image Stamina;
+    public Image Stamina;
 
     private void Start()
     {
@@ -17,16 +17,19 @@ public class StaminaSetting : MonoBehaviour
 
     void Update()
     {
-        if (Stamina.fillAmount < 0.5f)
+        if (Stamina.fillAmount < 0.5f && Stamina.fillAmount > 0.22f)
         {
+            //Debug.Log("Yellow");
             Stamina.color = new Color(255/255f, 186/255f, 66/255f);
-            if (Stamina.fillAmount < 0.22f)
-            {
-                Stamina.color= new Color(255/255f, 90/255f, 89/255f);
-            }
+        }
+        else if (Stamina.fillAmount < 0.22f)
+        {
+            //Debug.Log("Red");
+            Stamina.color = new Color(255 / 255f, 90 / 255f, 89 / 255f);
         }
         else
         {
+            //Debug.Log("Green");
             Stamina.color= new Color(38/255f, 200/255f, 78/255f);
         }
     }
