@@ -352,16 +352,20 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/BtnController.cs"
+"Assets/Scripts/DialogManager.cs"
 "Assets/Scripts/DontSettingPopup.cs"
 "Assets/Scripts/GotoScene.cs"
 "Assets/Scripts/InteractManager.cs"
 "Assets/Scripts/MuteClick.cs"
+"Assets/Scripts/ObjData.cs"
 "Assets/Scripts/PlayerCamera.cs"
 "Assets/Scripts/PlayerRigidbody.cs"
 "Assets/Scripts/SettingsOnEsc.cs"
 "Assets/Scripts/SoundManager.cs"
 "Assets/Scripts/SoundOptions.cs"
 "Assets/Scripts/StaminaSetting.cs"
+"Assets/Scripts/StaminaToggle.cs"
+"Assets/Scripts/TalkManager.cs"
 -langversion:9.0
 
 /deterministic

@@ -12,10 +12,10 @@ public class PlayerRigidbody : MonoBehaviour
     private bool m_isGrounded; // 현재 땅위에 있으면 true 공중에 있으면 false
     private List<Collider> m_collisions = new List<Collider>();
 
-    private float stamina = 100.0f; // 달리기 스태미나
-    private float recovery_stamina = 20.0f; // 대기, 걷기 중 스태미나 회복량
-    private float reduction_stamina = 40.0f; // 대기, 걷기 중 스태미나 감소량
-    private int running = 0; // 0 = 대기, 걷기 중 / 1 = 달리기 중
+    public float stamina = 100.0f; // 달리기 스태미나
+    public float recovery_stamina = 20.0f; // 대기, 걷기 중 스태미나 회복량
+    public float reduction_stamina = 40.0f; // 대기, 걷기 중 스태미나 감소량
+    public int running = 0; // 0 = 대기, 걷기 중 / 1 = 달리기 중
 
     private float forwardvalue = 0.0f;
     private float jumpvalue = 0.0f;

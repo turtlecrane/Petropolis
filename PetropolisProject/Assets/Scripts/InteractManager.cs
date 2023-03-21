@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InteractManager : MonoBehaviour
 {
+    public TalkManager manager;
+    GameObject scanObject;
+
     private bool isHit;
     private bool isMouseHit;
     private string HitTag;
@@ -26,23 +29,33 @@ public class InteractManager : MonoBehaviour
             if (isMouseHit && isHit) { //마우스를 클릭했는데 클릭한 지점에 충돌되는 오브젝트가 있으며, 플레이어도 충돌중이면!
                 if (HitTag == "NPC" && HitTag == mousehit.transform.tag)
                 {
-                    // Debug.Log("충돌한 오브젝트와 클릭한 오브젝트가 같습니다. ( NPC )");
                     InteractBox.SetActive(false);
                     TextBox.SetActive(true);
+                    manager.Action(scanObject);
                 }
-                if (HitTag == "Food" && HitTag == mousehit.transform.tag)
+                if (HitTag == "Interaction" && HitTag == mousehit.transform.tag)
                 {
-                    // Debug.Log("충돌한 오브젝트와 클릭한 오브젝트가 같습니다. ( Food )");
                     InteractBox.SetActive(true);
                     TextBox.SetActive(false);
                 }
+            }
+            else
+            {
+                InteractBox.SetActive(false);
+                TextBox.SetActive(false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                InteractBox.SetActive(false);
+                TextBox.SetActive(false);
             }
         }
     }
     
     void OnDrawGizmos()
     {
-        isHit = Physics.BoxCast(transform.position, transform.lossyScale / 3.0f, 
+        isHit = Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, 
             transform.forward, out RaycastHit hit, transform.rotation, RayMaxDistance);
         Gizmos.color = _rayColor;
 
@@ -50,7 +63,10 @@ public class InteractManager : MonoBehaviour
         {
             Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
             Gizmos.DrawWireCube(transform.position + transform.forward * hit.distance, transform.lossyScale);
+            
+            scanObject = hit.collider.gameObject;
             HitTag = hit.collider.gameObject.tag;
+            
             //Debug.Log(hit.collider.gameObject.name);
         }
         else //히트가 안되면
@@ -58,6 +74,7 @@ public class InteractManager : MonoBehaviour
             Gizmos.DrawRay(transform.position, transform.forward * RayMaxDistance);
             InteractBox.SetActive(false);
             TextBox.SetActive(false);
+            scanObject = null;
             HitTag = "";
         }
     }

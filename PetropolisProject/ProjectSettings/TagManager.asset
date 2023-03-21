@@ -5,9 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Popup
-  - Food
   - NPC
   - Stamina
+  - Cat
+  - Dog
+  - Interaction
   layers:
   - Default
   - TransparentFX
