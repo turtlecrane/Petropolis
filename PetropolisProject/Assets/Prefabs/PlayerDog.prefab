@@ -1599,6 +1599,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ef22910372c464aa38b98d58c002fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stamina: 100
+  recovery_stamina: 20
+  reduction_stamina: 40
+  running: 0
   cat_jumpvalue: 1.5
   cat_forwardvalue: 0
   dog_jumpvalue: 1.3
@@ -1617,6 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a165f0cba334e3587bd51e2d785172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   InteractBox: {fileID: 0}
   TextBox: {fileID: 0}
   RayMaxDistance: 0.75
