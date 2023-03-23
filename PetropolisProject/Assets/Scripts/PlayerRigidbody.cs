@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class PlayerRigidbody : MonoBehaviour
@@ -30,6 +31,9 @@ public class PlayerRigidbody : MonoBehaviour
     private float m_jumpTimeStamp = 0; 
     private float m_minJumpInterval = 0.25f;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     void Start()
     {
         m_rigidBody = GetComponent<Rigidbody>();
@@ -43,6 +47,9 @@ public class PlayerRigidbody : MonoBehaviour
 
         PlayerMove();
         JumpingAndLanding();
+        PlaySound();
+
+        
 
         if (stamina < 100.0f && running == 0)  // 스태미나가 100보다 적고, 달리고 있지 않을 때
         {
@@ -169,5 +176,11 @@ public class PlayerRigidbody : MonoBehaviour
             }
             if (m_collisions.Count == 0) { m_isGrounded = false; }
         }
+    }
+
+    public void PlaySound()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+            audioSource.PlayOneShot(audioClip);
     }
 }

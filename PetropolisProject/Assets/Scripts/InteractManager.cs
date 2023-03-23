@@ -12,62 +12,50 @@ public class InteractManager : MonoBehaviour
     private string HitTag;
     public GameObject InteractBox;
     public GameObject TextBox;
-    // ray의 길이
-    public float RayMaxDistance = 0.75f;
-    // ray의 색상
+    
+    // ray의 길이, 색상
+    public float RayMaxDistance = 1.00f;
     private Color _rayColor = Color.green;
    
     void Update()
     {
         //마우스 버튼 입력 받기
-        if (Input.GetMouseButtonDown(0)) {
-            //클릭한곳에 레이 발사
-            RaycastHit mousehit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            isMouseHit = Physics.Raycast(ray, out mousehit);
-            
-            if (isMouseHit && isHit) { //마우스를 클릭했는데 클릭한 지점에 충돌되는 오브젝트가 있으며, 플레이어도 충돌중이면!
-                if (HitTag == "NPC" && HitTag == mousehit.transform.tag)
-                {
-                    InteractBox.SetActive(false);
-                    TextBox.SetActive(true);
-                    manager.Action(scanObject);
-                }
-                if (HitTag == "Interaction" && HitTag == mousehit.transform.tag)
-                {
-                    InteractBox.SetActive(true);
-                    TextBox.SetActive(false);
-                }
-            }
-            else
+        if (Input.GetMouseButtonDown(0)&&isHit)
+        {
+            //Debug.Log("히트가 되었고 마우스를 클릭함.");
+            if (HitTag == "NPC")
             {
                 InteractBox.SetActive(false);
-                TextBox.SetActive(false);
+                TextBox.SetActive(true);
+                manager.Action(scanObject);
             }
-
-            if (Input.GetKeyDown(KeyCode.Escape))
+            else if (HitTag == "Interaction")
             {
-                InteractBox.SetActive(false);
+                InteractBox.SetActive(true);
                 TextBox.SetActive(false);
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            InteractBox.SetActive(false);
+            TextBox.SetActive(false);
         }
     }
     
     void OnDrawGizmos()
     {
-        isHit = Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, 
-            transform.forward, out RaycastHit hit, transform.rotation, RayMaxDistance);
+        //isHit = Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, RayMaxDistance);
+        isHit = Physics.Raycast(transform.position, transform.forward, out RaycastHit hit,RayMaxDistance);
         Gizmos.color = _rayColor;
 
         if (isHit)//히트가 되면
         {
             Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
-            Gizmos.DrawWireCube(transform.position + transform.forward * hit.distance, transform.lossyScale);
-            
-            scanObject = hit.collider.gameObject;
-            HitTag = hit.collider.gameObject.tag;
-            
-            //Debug.Log(hit.collider.gameObject.name);
+            //Gizmos.DrawWireCube(transform.position + transform.forward * hit.distance, transform.lossyScale);
+
+            var o = hit.collider.gameObject;
+            scanObject = o;
+            HitTag = o.tag;
         }
         else //히트가 안되면
         {
