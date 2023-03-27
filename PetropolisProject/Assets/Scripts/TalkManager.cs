@@ -6,6 +6,8 @@ using TMPro;
 
 public class TalkManager : MonoBehaviour
 {
+    private NpcController npcController;
+    
     public DialogManager dialogManager;
     public InteractManager interactManager;
     public bool isTextBox;
@@ -18,6 +20,7 @@ public class TalkManager : MonoBehaviour
     {
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
+        npcController = scanObject.GetComponent<NpcController>();
         NpcName.text = "[ " + scanObject.name + " ]";
         Talk(objData.id, objData.isNpc);
     }
@@ -29,6 +32,7 @@ public class TalkManager : MonoBehaviour
         if (talkData == null)//다음 대화가 null 일때
         {
             isTextBox = false;
+            npcController.State = 0;//npc상태를 idle로
             talkIndex = 0; //대사가 끝나면 인덱스 초기화
             interactManager.TextBox.SetActive(false);
             return;//바로 함수의 진행을 끝냄
@@ -36,7 +40,16 @@ public class TalkManager : MonoBehaviour
         
         if (isNpc)
         {
-            Context.text = talkData;
+            Context.text = talkData.Split(':')[0];
+            //Debug.Log(talkData.Split(':')[1]);
+            if (talkData.Split(':')[1] == "1")//구분자를 나눠서 그 구분자에따라 NPC모션이 결정됨.
+            {
+                npcController.State = 1;
+            }
+            else if (talkData.Split(':')[1] == "2")
+            {
+                npcController.State = 2;
+            }
         }
         else
         {
