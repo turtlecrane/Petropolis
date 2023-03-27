@@ -351,6 +351,7 @@
 "Assets/Scripts/GotoScene.cs"
 "Assets/Scripts/InteractManager.cs"
 "Assets/Scripts/MuteClick.cs"
+"Assets/Scripts/NpcController.cs"
 "Assets/Scripts/ObjData.cs"
 "Assets/Scripts/PlayerCamera.cs"
 "Assets/Scripts/PlayerRigidbody.cs"
