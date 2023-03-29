@@ -49,7 +49,8 @@ public class PlayerRigidbody : MonoBehaviour
         JumpingAndLanding();
         PlaySound();
 
-        
+        PlayerSit();
+
 
         if (stamina < 100.0f && running == 0)  // 스태미나가 100보다 적고, 달리고 있지 않을 때
         {
@@ -182,5 +183,28 @@ public class PlayerRigidbody : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
             audioSource.PlayOneShot(audioClip);
+    }
+
+    public float sitcnt = 4;
+    //private bool m_sit = false;
+    public void PlayerSit()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject sitObj = null; // 앉기용 오브젝트
+            sitObj = GameObject.FindWithTag("Chair");
+            if (sitObj != null)
+            {
+                transform.position = sitObj.transform.position;
+                m_animator.SetBool("Sit", true);
+                Invoke("PlayerStandup", sitcnt);  // 몇 초 뒤 일어나기
+            }
+        }
+    }
+    public void PlayerStandup()
+    {
+        m_animator.SetBool("Sit", false);
+        m_animator.SetBool("StandUp", true);
+
     }
 }

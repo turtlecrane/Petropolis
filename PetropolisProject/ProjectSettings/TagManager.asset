@@ -10,6 +10,7 @@ TagManager:
   - Cat
   - Dog
   - Interaction
+  - Chair
   layers:
   - Default
   - TransparentFX
