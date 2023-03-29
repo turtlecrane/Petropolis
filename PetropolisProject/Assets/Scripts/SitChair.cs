@@ -5,13 +5,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class SitChair : MonoBehaviour
 {
-    private GameObject target;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private GameObject target;
 
     // Update is called once per frame
     void Update()

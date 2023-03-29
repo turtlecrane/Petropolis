@@ -50,8 +50,6 @@ public class PlayerRigidbody : MonoBehaviour
         PlaySound();
         PlayerSit();
 
-
-
         if (stamina < 100.0f && running == 0)  // 스태미나가 100보다 적고, 달리고 있지 않을 때
         {
             stamina += recovery_stamina * Time.deltaTime;
@@ -202,8 +200,9 @@ public class PlayerRigidbody : MonoBehaviour
         }
     }
     public void PlayerStandup()
-    {    
+    {
         m_animator.SetBool("Sit", false);
         m_animator.SetBool("StandUp", true);
+
     }
 }
