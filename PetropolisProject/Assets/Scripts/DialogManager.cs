@@ -7,19 +7,22 @@ public class DialogManager : MonoBehaviour
     //어떤 대사가 들어가는지 저장하는 스크립트
     //key와 value가 들어감
     private Dictionary<int, string[]> talkData;
-        
+    private Dictionary<int, int> StatusData;
+    
     void Awake()
     {
         talkData = new Dictionary<int, string[]>();//초기화
+        StatusData = new Dictionary<int, int>();
         GenerateData();
     }
 
     void GenerateData()
     {
         //1000 = Remy, 2000 = Doctor, 3000 = Test
-        talkData.Add(1000, new string[]{ "안녕?" , "넌 작고 귀엽구나 !"});
-        talkData.Add(2000, new string[]{ "걱정마렴 넌 너무나 건강해" , "주위를 둘러보는건 어떠니?"});
-        talkData.Add(3000, new string[]{ "npc테스트용 박스입니다"});
+        // 구분자 목록 >> :0 = 대기, :1 = 긍정, :2 = 부정
+        talkData.Add(1000, new string[]{ "안녕?:0" , "넌 작고 귀엽구나 !:0" , "그래 !:1" , "아니 !:2"});
+        talkData.Add(2000, new string[]{ "걱정마렴 넌 너무나 건강해:0" , "주위를 둘러보는건 어떠니?:0", "그래 !:1" , "아니 !:2"});
+        talkData.Add(3000, new string[]{ "npc테스트용 박스입니다:0","그래 !:1" , "아니 !:2"});
     }
 
     //한 문장씩 이 함수가 가져와서 리턴해주는 방식

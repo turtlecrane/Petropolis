@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\GotoScene.cs" />
      <Compile Include="Assets\Scripts\StaminaSetting.cs" />
      <Compile Include="Assets\Scripts\SettingsOnEsc.cs" />
+     <Compile Include="Assets\Scripts\NpcController.cs" />
      <Compile Include="Assets\Scripts\InteractManager.cs" />
      <Compile Include="Assets\Scripts\SoundOptions.cs" />
      <Folder Include="Assets" />
@@ -74,6 +75,7 @@
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures\icons\128x128" />
      <Folder Include="Assets\model\NPC\Remy" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\model\NPC\Remy\Animation" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Bed\Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -103,9 +105,11 @@
      <Folder Include="Assets\model\Furniture\Furniture_ges1\sek" />
      <Folder Include="Assets\model\Furniture\odesd2_B2_fbx_obj" />
      <Folder Include="Assets\model\Furniture\QA_Books\Models" />
+     <Folder Include="Assets\Prefabs\oldPrefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\source\font\NaverNanumSquareNeo" />
      <Folder Include="Assets\model\Furniture\Modern Minimalist Sofa" />
+     <Folder Include="Assets\model\NPC\Doctor\Animation" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\HDRI\KirbyCove" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture" />
      <Folder Include="Assets\TextMesh Pro" />
@@ -117,6 +121,7 @@
      <Folder Include="Assets\model\Furniture\Furniture_ges1\glass_table\Materials" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Textures\Frames" />
      <Folder Include="Assets\model\Furniture\QA_Books\Models\Materials" />
+     <Folder Include="Assets\model\NPC\Doctor\Tex" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Models" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\source\font\ElliotSix" />

@@ -31,13 +31,6 @@ public class StaminaToggle : MonoBehaviour
         //일반 달리지 않는 상태면 비활성화
         if (isShow)
         {
-            if (playerRigidbody.stamina / 100.0f < 0.05f)
-            {
-                //스테미너 퇴장 애니메이션
-                staminaAniMator.SetInteger("Status",1);
-                isShow = false;
-                Invoke("Exit",0.5f);
-            }
             if (playerRigidbody.stamina > 90.0f && playerRigidbody.running == 0)
             {
                 staminaAniMator.SetInteger("Status",1);
