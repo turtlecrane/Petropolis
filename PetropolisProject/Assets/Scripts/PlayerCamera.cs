@@ -33,11 +33,11 @@ public class PlayerCamera : MonoBehaviour
         offsets = new Vector3(offsetX, offsetY, offsetZ); // offset 초기화
 
         SetGazePos(); // GazePos 설정
-        transform.position = offsets; // 카메라 위치 초기화
+        transform.position = Target.transform.position + offsets; // 카메라 위치 초기화
         transform.LookAt(GazePos);
 
         //camera_Dist = Vector3.Distance(Target.transform.position, transform.position);
-        camera_Dist = Vector3.Distance(GazePos, offsets); // 플레이어와 카메라 사이의 거리 계산
+        camera_Dist = Vector3.Distance(GazePos, transform.position); // 플레이어와 카메라 사이의 거리 계산
     }
 
     void LateUpdate()
