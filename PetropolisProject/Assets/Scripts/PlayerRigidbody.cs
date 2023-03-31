@@ -48,7 +48,6 @@ public class PlayerRigidbody : MonoBehaviour
         PlayerMove();
         JumpingAndLanding();
         PlaySound();
-        PlayerSit();
 
         if (stamina < 100.0f && running == 0)  // 스태미나가 100보다 적고, 달리고 있지 않을 때
         {
@@ -175,6 +174,24 @@ public class PlayerRigidbody : MonoBehaviour
             }
             if (m_collisions.Count == 0) { m_isGrounded = false; }
         }
+
+        if (collision.collider.CompareTag("Chair"))
+        {
+            float cnt = 0;
+            if (Input.GetMouseButtonDown(0))
+            {
+                cnt++;
+                var obj = collision.gameObject;
+                transform.position = obj.transform.position; //충돌한 오브젝트의 위치로 이동(=의자로 이동)
+                m_moveSpeed = 0; // 움직임 멈추게 하기
+                PlayerSit();
+            }
+            /*if (m_animator.GetBool("Sit") == true && cnt <= 2.0f)
+            {
+                PlayerStandup();
+            }*/
+        }
+
     }
 
     public void PlaySound()
@@ -183,26 +200,20 @@ public class PlayerRigidbody : MonoBehaviour
             audioSource.PlayOneShot(audioClip);
     }
 
-    public float sitcnt = 4;
-    //private bool m_sit = false;
-    public void PlayerSit()
+    public float sitcnt = 4.0f;
+    private void PlayerSit()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject sitObj = null; // 앉기용 오브젝트
-            sitObj = GameObject.FindWithTag("Chair");
-            if (sitObj != null)
-            {
-                transform.position = sitObj.transform.position;
-                m_animator.SetBool("Sit", true);
-                Invoke("PlayerStandup", sitcnt);  // 몇 초 뒤 일어나기
-            }
-        }
+        m_animator.SetBool("Sit", true);  
+        Invoke("PlayerStandup", sitcnt);  // 4초 뒤 다시 일어남
     }
-    public void PlayerStandup()
+    private void PlayerStandup()
     {
-        m_animator.SetBool("Sit", false);
         m_animator.SetBool("StandUp", true);
-
+        m_animator.SetBool("Sit", false);
+        Invoke("move", 0.5f); // 다시 움직임
+    }
+    private void move()
+    {
+        m_moveSpeed = 2.0f;
     }
 }
