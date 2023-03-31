@@ -31,7 +31,7 @@ public class PlayerCamera : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.lockState = CursorLockMode.Confined;  // 마우스 커서 잠금
         offsets = new Vector3(offsetX, offsetY, offsetZ); // offset 초기화
-
+ 
         SetGazePos(); // GazePos 설정
         transform.position = offsets; // 카메라 위치 초기화
         transform.LookAt(GazePos);
