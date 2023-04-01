@@ -27,12 +27,8 @@ public class InteractManager : MonoBehaviour
 
     void Update()
     {
-        if (soe.isOpen)
-        {
-
-        }
         //마우스 버튼 입력 받기
-        else if (Input.GetMouseButtonDown(0) && isHit)
+        if (Input.GetMouseButtonDown(0) && isHit)
         {
             soe.isOpen = true;
             //Debug.Log("히트가 되었고 마우스를 클릭함.");
@@ -92,10 +88,6 @@ public class InteractManager : MonoBehaviour
         if (HitTag == "Food")
         {
             fmanager.SetCondition();
-        }
-        else
-        {
-
         }
     }
 }

@@ -611,6 +611,7 @@ MonoBehaviour:
   offsetY: 2
   offsetZ: -4
   CameraSpeed: 10
+  CameraUp: 1
 --- !u!1 &2058465258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1630294026465986116, guid: 10decf8a51c0ae045b9105e23c3e1a01, type: 3}
@@ -634,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 1900129911784307472, guid: 10decf8a51c0ae045b9105e23c3e1a01, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6093a25168b67644a94625a4e9fe4697, type: 2}
+      objectReference: {fileID: 9100000, guid: ebb8baa9f1a2fcb409427fedb6d787f5, type: 2}
     - target: {fileID: 1900129911784307479, guid: 10decf8a51c0ae045b9105e23c3e1a01, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -707,7 +708,7 @@ PrefabInstance:
     - target: {fileID: 7740864564226467194, guid: 312cc02bacc680f44b3a8870202d9354, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d01a75b4b3501a7418dc01c2af18409f, type: 2}
+      objectReference: {fileID: 9100000, guid: b6637e63c036cf54a92100f06f1d0154, type: 2}
     - target: {fileID: 7847428014213022357, guid: 312cc02bacc680f44b3a8870202d9354, type: 3}
       propertyPath: m_RootOrder
       value: 4
