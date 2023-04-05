@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InteractManager : MonoBehaviour
 {
@@ -19,7 +21,17 @@ public class InteractManager : MonoBehaviour
     private Color _rayColor = Color.green;
 
     private SettingsOnEsc soe;
+    private ObjData objData;
+    private Dictionary<int, string[]> interactionData;
+    private int objId;
+    private int interactionContentIndex = 0;  // foodData에서 interactbox에 표시되는 텍스트가 저장된 인덱스
+    private TextMeshProUGUI interactionContent;
 
+    void Awake()
+    {
+        interactionData = new Dictionary<int, string[]>();
+        InteractionTextData();
+    }
     void Start()
     {
         soe = GameObject.Find("Canvas").GetComponent<SettingsOnEsc>();
@@ -40,6 +52,8 @@ public class InteractManager : MonoBehaviour
             }
             else if (HitTag == "Interaction")
             {
+                Action(scanObject);
+                SetInteractText();
                 InteractBox.SetActive(true);
                 TextBox.SetActive(false);
             }
@@ -89,5 +103,34 @@ public class InteractManager : MonoBehaviour
         {
             fmanager.SetCondition();
         }
+        else if (HitTag == "Interaction")
+        {
+            switch (objId)
+            {
+                case (1):
+                    scanObject.GetComponent<GotoScene>().SceneChange();
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    void InteractionTextData()
+    {
+        interactionData.Add(1, new string[] { "방으로 이동하시겠습니까?" });
+    }
+
+    void SetInteractText()
+    {
+        interactionContent = InteractBox.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>(); // InteractBox의 Text 불러오기
+        interactionContent.text = interactionData[objId][interactionContentIndex];
+    }
+
+    void Action(GameObject scanObj)
+    {
+        scanObject = scanObj;
+        objData = scanObject.GetComponent<ObjData>();
+        objId = objData.id;
     }
 }
