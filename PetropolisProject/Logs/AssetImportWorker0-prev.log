@@ -1,30 +1,23 @@
-Unity Editor version:    2021.3.16f1 (4016570cf34f)
-Branch:                  2021.3/evg/staging/82bb020e-b03b1330/draft-0
-Build type:              Release
-Batch mode:              YES
-macOS version:           Version 13.3 (Build 22E252)
-Darwin version:          22.4.0
-Architecture:            arm64
-Running under Rosetta:   NO
-Available memory:        16384 MB
 Using pre-set license
-Pro License: YES
+Built from '2021.3/evg/staging/82bb020e-b03b1330/draft-0' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ko' Physical Memory: 16124 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MacOS/Unity
+C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-/Users/a1/CaDe/Petropolis/PetropolisProject
+C:/Users/Hansung/Desktop/Petropolis/PetropolisProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49636
-Successfully changed project path to: /Users/a1/CaDe/Petropolis/PetropolisProject
-/Users/a1/CaDe/Petropolis/PetropolisProject
+63073
+Successfully changed project path to: C:/Users/Hansung/Desktop/Petropolis/PetropolisProject
+C:/Users/Hansung/Desktop/Petropolis/PetropolisProject
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -54,126 +47,381 @@ Successfully changed project path to: /Users/a1/CaDe/Petropolis/PetropolisProjec
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8554715968] Host "[IP] 192.168.0.103 [Port] 0 [Flags] 2 [Guid] 361149499 [EditorId] 361149499 [Version] 1048832 [Id] OSXEditor(0,1ui-MacBookPro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [5224] Host "[IP] 172.30.1.11 [Port] 0 [Flags] 2 [Guid] 2324205299 [EditorId] 2324205299 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TP8GUFQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [8554715968] Host "[IP] 192.168.0.103 [Port] 0 [Flags] 2 [Guid] 361149499 [EditorId] 361149499 [Version] 1048832 [Id] OSXEditor(0,1ui-MacBookPro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5224] Host "[IP] 172.30.1.11 [Port] 0 [Flags] 2 [Guid] 2324205299 [EditorId] 2324205299 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TP8GUFQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 90.05 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 81.32 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
-[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path /Users/a1/CaDe/Petropolis/PetropolisProject/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Hansung/Desktop/Petropolis/PetropolisProject/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
- preferred device: Apple M1 (high power)
-Metal devices available: 1
-0: Apple M1 (high power)
-Using device Apple M1 (high power)
-Initializing Metal device caps: Apple M1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 Ti (ID=0x1f95)
+    Vendor:   NVIDIA
+    VRAM:     3951 MB
+    Driver:   31.0.15.3129
 Initialize mono
-Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Managed'
-Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
-Mono config path = '/Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56347
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56168
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: /Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Register platform support module: /Applications/Unity/Hub/Editor/2021.3.16f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000585 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006831 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 85.99 ms, found 2 plugins.
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 78.20 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.411 seconds
+- Completed reload, in  0.584 seconds
 Domain Reload Profiling:
-	ReloadAssembly (411ms)
-		BeginReloadAssembly (34ms)
+	ReloadAssembly (585ms)
+		BeginReloadAssembly (94ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (306ms)
-			LoadAssemblies (33ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (393ms)
+			LoadAssemblies (93ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (75ms)
+			SetupTypeCache (94ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (21ms)
-			SetupLoadedEditorAssemblies (182ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (236ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (43ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (86ms)
+				RefreshPlugins (78ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (69ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
+				ProcessInitializeOnLoadAttributes (76ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001351 seconds.
+Registered in 0.003396 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/a1/CaDe/Petropolis/PetropolisProject/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /Users/a1/CaDe/Petropolis/PetropolisProject/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.539 seconds
+- Completed reload, in  0.912 seconds
 Domain Reload Profiling:
-	ReloadAssembly (539ms)
-		BeginReloadAssembly (53ms)
+	ReloadAssembly (913ms)
+		BeginReloadAssembly (207ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (421ms)
-			LoadAssemblies (35ms)
+			CreateAndSetChildDomain (129ms)
+		EndReloadAssembly (608ms)
+			LoadAssemblies (99ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (132ms)
+			SetupTypeCache (167ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (201ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (282ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (48ms)
-				ProcessInitializeOnLoadAttributes (137ms)
-				ProcessInitializeOnLoadMethodAttributes (12ms)
-				AfterProcessingInitializeOnLoad (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (183ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (2ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launching external process: /Applications/Unity/Hub/Editor/2021.3.16f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3270 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (297.2 KB). Loaded Objects now: 3759.
-Memory consumption went from 138.8 MB to 138.5 MB.
-Total: 2.222750 ms (FindLiveObjects: 0.112750 ms CreateObjectMapping: 0.038417 ms MarkObjects: 2.014917 ms  DeleteObjects: 0.056000 ms)
+Unloading 24 unused Assets / (56.7 KB). Loaded Objects now: 3761.
+Memory consumption went from 147.6 MB to 147.5 MB.
+Total: 2.926400 ms (FindLiveObjects: 0.209500 ms CreateObjectMapping: 0.082700 ms MarkObjects: 2.543600 ms  DeleteObjects: 0.089800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 5356.623200 seconds.
+  Time since last request: 964905.800196 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(a70b0a654e1932046b6c2030f11bc383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(a70b0a654e1932046b6c2030f11bc383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f45f93e442b7cce81993d646634391') in 0.078631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.425986 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Bank.fbx
+  artifactKey: Guid(5f4bf4a930a2f2f4e935361af4a6b922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Bank.fbx using Guid(5f4bf4a930a2f2f4e935361af4a6b922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '953bddeea5a4e445fada9010222cd193') in 0.160801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Build_G-Middle.fbx
+  artifactKey: Guid(883203dc2a015234fad00299c603aaf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Build_G-Middle.fbx using Guid(883203dc2a015234fad00299c603aaf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e09b4139c7bf4d7bcc97839078a75558') in 0.037276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Build_G-Right.fbx
+  artifactKey: Guid(bb1edca309ad0a442b0a690fc4e4a944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Build_G-Right.fbx using Guid(bb1edca309ad0a442b0a690fc4e4a944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb6ed30b3c4e0ccadb695145fb1b0d74') in 0.026322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Build_G-Left.fbx
+  artifactKey: Guid(304125dc564333d4598543ef0fa739ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Build_G-Left.fbx using Guid(304125dc564333d4598543ef0fa739ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043c168329661208f4b959eeff669c27') in 0.032618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Building_A.fbx
+  artifactKey: Guid(bbee6f5e04c54854dba4ea612e4d83c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Building_A.fbx using Guid(bbee6f5e04c54854dba4ea612e4d83c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4f368c54b9675bc36345b4625322fd3') in 0.039260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Building_A1.fbx
+  artifactKey: Guid(e48ed78ee18a85b4ab1b16c0f67824b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Building_A1.fbx using Guid(e48ed78ee18a85b4ab1b16c0f67824b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6091edd9be7e490f3985c8499b43b51') in 0.039766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Building_B.fbx
+  artifactKey: Guid(6f10def50e777ec4f87ab5e87ccf6594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Building_B.fbx using Guid(6f10def50e777ec4f87ab5e87ccf6594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df74cb08f8be909e8702db5c32df4971') in 0.023977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Building_B1.fbx
+  artifactKey: Guid(58dc609a263a7af4990b33b3be735e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Buildings_FBX/Building_B1.fbx using Guid(58dc609a263a7af4990b33b3be735e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c2a318d854341f2175a26fefa21c338') in 0.023154 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.325482 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_E.fbx
+  artifactKey: Guid(f2a2569c67177d54c8edfc4ce3cc77ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_E.fbx using Guid(f2a2569c67177d54c8edfc4ce3cc77ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa410ea8b3198c8f0e4c2c11d6c6159a') in 0.026323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_H.fbx
+  artifactKey: Guid(a83780d4fbb08eb49b703d2298b149cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_H.fbx using Guid(a83780d4fbb08eb49b703d2298b149cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5467c5b021745723f2ab2a3d329eeb9') in 0.026202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_J.fbx
+  artifactKey: Guid(4a26bb995f0ccb841b1b303323b48e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_J.fbx using Guid(4a26bb995f0ccb841b1b303323b48e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee0fffbc2509bb51ce223c6292c951bc') in 0.016559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_K.fbx
+  artifactKey: Guid(d787807a8bd39e946895f8e07f7c79c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_K.fbx using Guid(d787807a8bd39e946895f8e07f7c79c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce520aa49988c8ed0f07b3488f89ee5a') in 0.015608 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_G.fbx
+  artifactKey: Guid(fc3884707aea3e44b8c63cc71000da86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_G.fbx using Guid(fc3884707aea3e44b8c63cc71000da86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '429991eff6cdf7c319b1bdbaf4d63657') in 0.023282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_M.fbx
+  artifactKey: Guid(a4b161a4ef292e347a542e1bcf17f261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_M.fbx using Guid(a4b161a4ef292e347a542e1bcf17f261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f56be244eee80f6a1184e87e9c191c0') in 0.017031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_I.fbx
+  artifactKey: Guid(d4524599ea74ffc42909c20b4ae0e86b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_I.fbx using Guid(d4524599ea74ffc42909c20b4ae0e86b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '768b7f8235cb1753a0627d958152fc97') in 0.014711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_L.fbx
+  artifactKey: Guid(49b01d2c02539464f98ac2754a163c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_L.fbx using Guid(49b01d2c02539464f98ac2754a163c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aba9706b60ade40b1b1e82b894122c67') in 0.014962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_F.fbx
+  artifactKey: Guid(679bd99d447c11e4a8cb03f116f4dc64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_F.fbx using Guid(679bd99d447c11e4a8cb03f116f4dc64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdc94a806542d3d6b4fa71271058ca23') in 0.025554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.868737 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_A.fbx
+  artifactKey: Guid(ff7a8545b8373424ba22aa7aeac6f8f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_A.fbx using Guid(ff7a8545b8373424ba22aa7aeac6f8f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7a0b4e81acd47d22c943e433ff1737') in 0.032110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_D.fbx
+  artifactKey: Guid(7ffd8396b0c13cf418a1717b5c8611a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_D.fbx using Guid(7ffd8396b0c13cf418a1717b5c8611a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3732a00cfb0c7e48ac5f3418273c7d6') in 0.029444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_B.fbx
+  artifactKey: Guid(e8c926a7acd350c4c89b3afae6f7f0be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_B.fbx using Guid(e8c926a7acd350c4c89b3afae6f7f0be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd298504bcd169ebf53e890590356c86') in 0.028639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_C.fbx
+  artifactKey: Guid(06f4ada5d66d1df4c85bfa5c858c36ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Resource/Hometown/POLYGON city pack/Meshes,textures/Letters FBX/Letter_C.fbx using Guid(06f4ada5d66d1df4c85bfa5c858c36ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da7430fdacca79b337c700034d9abfc') in 0.031723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 315.786413 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc172811d573b296104adb4d2728db37') in 0.006522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.800326 seconds.
+  path: Assets/Scenes/Map/MainMap.unity
+  artifactKey: Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/MainMap.unity using Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c05c442bee5ff2c0c7259395b473b1d') in 0.006242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 73.445809 seconds.
+  path: Assets/Scenes/Map/Hometown.unity
+  artifactKey: Guid(4c3f4d99beef98b47a46544425875241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Hometown.unity using Guid(4c3f4d99beef98b47a46544425875241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '549df758ed31e6fd504e5f63ed53866c') in 0.006658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.795653 seconds.
+  path: Assets/Scenes/Map/MainMap.unity
+  artifactKey: Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/MainMap.unity using Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea0dc43764c463f23b6246eee8b16766') in 0.002225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 43.840353 seconds.
+  path: Assets/Scenes/Map/garbage.unity
+  artifactKey: Guid(6f78ae4cd2b43934ea1a46eb482a719d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/garbage.unity using Guid(6f78ae4cd2b43934ea1a46eb482a719d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5ecc144bfde01e84f9d1b5b4cfde88e') in 0.006579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.650802 seconds.
+  path: Assets/Scenes/Map/MainMap.unity
+  artifactKey: Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/MainMap.unity using Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37efdad633ea8c0ceae8a89344174aba') in 0.006411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 216.344538 seconds.
+  path: Assets/Scenes/Map/park.unity
+  artifactKey: Guid(2a62ba7c5c216f34a982776768b0ca38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/park.unity using Guid(2a62ba7c5c216f34a982776768b0ca38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f16c7ddb75300236f0a8d661af5912d') in 0.006589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.009843 seconds.
+  path: Assets/Scenes/Map/MainMap.unity
+  artifactKey: Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/MainMap.unity using Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02117932e13f76886129c32660b95b35') in 0.002001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.921652 seconds.
   path: Assets/Scenes/Map/downtown.unity
   artifactKey: Guid(f48a1c3c8a0454160bb62195fc8e2f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Map/downtown.unity using Guid(f48a1c3c8a0454160bb62195fc8e2f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1407810297ea7f7cfe586c7253fde6e8') in 0.004151 seconds 
+Start importing Assets/Scenes/Map/downtown.unity using Guid(f48a1c3c8a0454160bb62195fc8e2f85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bab49caa2b18e6289803362ffe32af9') in 0.007897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.990206 seconds.
+  path: Assets/Scenes/Map/MainMap.unity
+  artifactKey: Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/MainMap.unity using Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59d6b3943cd97a428aac03abd6aa75a') in 0.002021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 51.547831 seconds.
+  path: Assets/Scenes/Map/MainMap.unity
+  artifactKey: Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/MainMap.unity using Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10e722b7a01c2df4f6cb4329ac39d669') in 0.002217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 35.125964 seconds.
+  path: Assets/Scenes/Map/MainMap.unity
+  artifactKey: Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/MainMap.unity using Guid(99e3b07a5a12af347bac19a3286809db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c857e3acfc54d5fa6a368e7c81781e7') in 0.002069 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003705 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.653 seconds
+Domain Reload Profiling:
+	ReloadAssembly (654ms)
+		BeginReloadAssembly (97ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (489ms)
+			LoadAssemblies (58ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (157ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (221ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (46ms)
+				ProcessInitializeOnLoadAttributes (135ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3251 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (25.3 KB). Loaded Objects now: 3778.
+Memory consumption went from 150.8 MB to 150.8 MB.
+Total: 2.636800 ms (FindLiveObjects: 0.170700 ms CreateObjectMapping: 0.076400 ms MarkObjects: 2.369800 ms  DeleteObjects: 0.018900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
