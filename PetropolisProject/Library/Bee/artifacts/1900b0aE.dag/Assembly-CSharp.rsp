@@ -322,8 +322,8 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
--r:"C:/Users/Hansung/Desktop/Petropolis/PetropolisProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
--r:"C:/Users/Hansung/Desktop/Petropolis/PetropolisProject/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"D:/GitHub/main/Petropolis/PetropolisProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+-r:"D:/GitHub/main/Petropolis/PetropolisProject/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Services.Core.Analytics.ref.dll"
@@ -345,6 +345,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/QuickOutline/Scripts/Outline.cs"
 "Assets/Scenes/Map/Resource/Hometown/milltype/MyTown/AntennaDirection.cs"
 "Assets/Scenes/Map/Resource/Hometown/milltype/MyTown/CylinderToCubePrefab.cs"
 "Assets/Scenes/Map/Resource/Hometown/milltype/MyTown/DayAndNightChange.cs"
@@ -362,6 +363,7 @@
 "Assets/Scripts/NpcController.cs"
 "Assets/Scripts/ObjData.cs"
 "Assets/Scripts/PlayerCamera.cs"
+"Assets/Scripts/PlayerCameraTest.cs"
 "Assets/Scripts/PlayerRigidbody.cs"
 "Assets/Scripts/SettingsOnEsc.cs"
 "Assets/Scripts/SitChair.cs"
@@ -371,6 +373,7 @@
 "Assets/Scripts/StaminaToggle.cs"
 "Assets/Scripts/TalkManager.cs"
 "Assets/Scripts/TestInteractManager.cs"
+"Assets/wakeup.cs"
 -langversion:9.0
 
 /deterministic
