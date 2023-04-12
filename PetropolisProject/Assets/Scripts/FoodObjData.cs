@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum FoodType // 음식들이 플레이어에게 주는 영향 구분 Good = 0, Bad = 1
+public enum FoodType // 음식들이 플레이어에게 주는 영향 구분 Good = 0, Fever = 1, Disease = 2, Fatal = 3
 {
     Good,
-    Bad,
+    Fever,
+    Disease,
+    Fatal,
 }
 
 public class FoodObjData : MonoBehaviour
@@ -24,11 +26,21 @@ public class FoodObjData : MonoBehaviour
                     intfoodType = (int)FoodType.Good;
                     break;
                 }
-            case FoodType.Bad:
+            case FoodType.Fever:
                 {
-                    intfoodType = (int)FoodType.Bad;
+                    intfoodType = (int)FoodType.Fever;
                     break;
                 }
+            case FoodType.Disease:
+            {
+                intfoodType = (int)FoodType.Disease;
+                break;
+            }
+            case FoodType.Fatal:
+            {
+                intfoodType = (int)FoodType.Fatal;
+                break;
+            }
             default:
                 break;
         }
