@@ -184,6 +184,11 @@ public class FoodManager : MonoBehaviour
         disease = setDisease;
     }
 
+    public void SetFatal(float setFatal)
+    {
+        fatal = setFatal;
+    }
+
     public void SetOnFever(bool setOnFever) // 병원의 치료 이벤트를 위한 함수
     {
         onFever = setOnFever;
@@ -192,6 +197,11 @@ public class FoodManager : MonoBehaviour
     public void SetOnDisease(bool setOnDisease) // 병원의 치료 이벤트를 위한 함수
     {
         onDisease = setOnDisease;
+    }
+
+    public void SetOnFatal(bool setOnFatal)
+    {
+        onFatal = setOnFatal;
     }
 
     private void IncreasingRed(RawImage rawImage, float conditionColor) // 아이콘의 색상을 점점 붉게 바꿔주는 함수
