@@ -27,6 +27,8 @@ public class InteractManager : MonoBehaviour
     private int interactionContentIndex = 0;  // foodData에서 interactbox에 표시되는 텍스트가 저장된 인덱스
     private TextMeshProUGUI interactionContent;
 
+    private Transform _selection;
+
     void Awake()
     {
         interactionData = new Dictionary<int, string[]>();
@@ -78,6 +80,16 @@ public class InteractManager : MonoBehaviour
         isHit = Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, RayMaxDistance);
         Gizmos.color = _rayColor;
 
+        //히트가 안되는 오브젝트들은 하이라이트 기능 없도록
+        if (_selection != null)
+        {
+            var selectedRender = scanObject.GetComponent<Renderer>();
+            var selectOutline = scanObject.GetComponent<Outline>();
+            selectedRender.material.color = new Color32(255, 255, 255, 255); //Default color
+            selectOutline.OutlineWidth = 0; // 아웃라인 하이라이트 제거
+            _selection = null;
+        }
+
         if (isHit)//히트가 되면
         {
             Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
@@ -86,6 +98,20 @@ public class InteractManager : MonoBehaviour
             var o = hit.collider.gameObject;
             scanObject = o;
             HitTag = o.tag;
+
+            //히트된 오브젝트의 태그가 Highlight라면
+            if (HitTag == "Highlight")
+            {
+                var selection = scanObject.transform;
+                var selectedRender = scanObject.GetComponent<Renderer>();
+                var selectOutline = scanObject.GetComponent<Outline>();
+                if (selectedRender != null)
+                {
+                    selectedRender.material.color = new Color32(255, 255, 0, 255); //노란색으로 하이라이트
+                    selectOutline.OutlineWidth = 6; //아웃라인 하이라이트
+                }
+                _selection = selection;
+            }
         }
         else //히트가 안되면
         {

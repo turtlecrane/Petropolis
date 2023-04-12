@@ -11,6 +11,10 @@ TagManager:
   - Dog
   - Interaction
   - Chair
+  - HouseWindow
+  - DoorLamp
+  - HouseAntenna
+  - Highlight
   layers:
   - Default
   - TransparentFX

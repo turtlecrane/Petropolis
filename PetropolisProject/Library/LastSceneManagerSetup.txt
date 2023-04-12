@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Map/MainMap.unity
+- path: Assets/Scenes/NPC_Interact.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
