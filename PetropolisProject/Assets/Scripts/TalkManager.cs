@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,22 +7,23 @@ using TMPro;
 
 public class TalkManager : MonoBehaviour
 {
+    public int Split;
     private NpcController npcController;
-    
     public DialogManager dialogManager;
     public InteractManager interactManager;
-    public bool isTextBox;
+
     public TextMeshProUGUI NpcName;
     public TextMeshProUGUI Context;
     public GameObject scanObject;
+
     public int talkIndex;
-    
-    public void Action(GameObject scanObj)
+
+    public void Action(GameObject scanObj)//NPC에 상호작용하면 이거 실행됨
     {
         scanObject = scanObj;
         ObjData objData = scanObject.GetComponent<ObjData>();
         npcController = scanObject.GetComponent<NpcController>();
-        NpcName.text = "[ " + scanObject.name + " ]";
+        NpcName.text = "[ " + objData.name + " ]";
         Talk(objData.id, objData.isNpc);
     }
 
@@ -29,20 +31,19 @@ public class TalkManager : MonoBehaviour
     {
         string talkData = dialogManager.GetTalk(id, talkIndex);
 
-        if (talkData == null)//다음 대화가 null 일때
+        if (talkData == null) //다음 대화가 null 일때
         {
-            isTextBox = false;
-            npcController.State = 0;//npc상태를 idle로
+            Split = 0;
+            npcController.State = 0; //npc상태를 idle로
             talkIndex = 0; //대사가 끝나면 인덱스 초기화
             interactManager.TextBox.SetActive(false);
-            return;//바로 함수의 진행을 끝냄
+            return; //바로 함수의 진행을 끝냄
         }
-        
         if (isNpc)
         {
             Context.text = talkData.Split(':')[0];
             //Debug.Log(talkData.Split(':')[1]);
-            if (talkData.Split(':')[1] == "1")//구분자를 나눠서 그 구분자에따라 NPC모션이 결정됨.
+            if (talkData.Split(':')[1] == "1")
             {
                 npcController.State = 1;
             }
@@ -50,12 +51,23 @@ public class TalkManager : MonoBehaviour
             {
                 npcController.State = 2;
             }
+            else if (talkData.Split(':')[1] == "9") //다음에 대화할때 바뀐 대사를 말하기위하여 오브젝트 ID를 바꾸기 위해 사용
+            {
+                npcController.isChange = true;
+            }
+            else if (talkData.Split(':')[1] == "10")//플레이어 대사일땐 다이얼로그 이름을 플레이어로 바꾸기
+            {
+                NpcName.text = "[ 나 ]";
+            }
+            else if (talkData.Split(':')[1] == "0")
+            {
+                npcController.State = 0;
+            }
+            talkIndex++; //그 다음 대사를 가져오기 위해서 인덱스를 늘려주기
         }
-        else
+        else//그럴일은 없겠지만 NPC가 아닌 물건과 대화를 하는 경우
         {
             Context.text = talkData;
         }
-        isTextBox = true;
-        talkIndex++;//그 다음 대사를 가져오기 위해서 인덱스를 늘려주기
     }
 }
