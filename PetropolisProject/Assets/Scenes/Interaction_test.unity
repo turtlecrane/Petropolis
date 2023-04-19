@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18359357, g: 0.22778174, b: 0.2977115, a: 1}
+  m_IndirectSpecularColor: {r: 0.18359423, g: 0.22778268, b: 0.297713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3019,6 +3019,7 @@ GameObject:
   - component: {fileID: 942131832}
   - component: {fileID: 942131836}
   - component: {fileID: 942131835}
+  - component: {fileID: 942131837}
   m_Layer: 0
   m_Name: Food
   m_TagString: Interaction
@@ -3121,6 +3122,24 @@ CapsuleCollider:
   m_Height: 1.0597134
   m_Direction: 0
   m_Center: {x: -0.0016082525, y: -0.06127854, z: -0.026238441}
+--- !u!114 &942131837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942131830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 0}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &949067861
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,6 +4476,7 @@ MonoBehaviour:
   name: 
   id: 3000
   isNpc: 1
+  isDoctor: 0
 --- !u!114 &1194445002
 MonoBehaviour:
   m_ObjectHideFlags: 0

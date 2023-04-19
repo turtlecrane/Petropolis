@@ -1154,9 +1154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea37463a953eca43bd50a2f6c9ce232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  name: "\uC758\uC0AC"
   id: 2000
   isNpc: 1
+  isDoctor: 0
 --- !u!114 &1613476463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,7 +1172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   State: 0
   isChange: 0
-  requiresDialogue: 0
+  moveStatus: 0
 --- !u!1 &3317575161395958575
 GameObject:
   m_ObjectHideFlags: 0
