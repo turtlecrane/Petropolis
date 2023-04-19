@@ -61,8 +61,10 @@
     <Compile Include="Assets\Scripts\PlayerCameraTest.cs" />
     <Compile Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\AntennaDirection.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\MiniGame_Car\Car.cs" />
     <Compile Include="Assets\Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\ObjData.cs" />
+    <Compile Include="Assets\Scripts\MiniGame_Car\ActorMove.cs" />
     <Compile Include="Assets\Scripts\TestInteractManager.cs" />
     <Compile Include="Assets\Scripts\TalkManager.cs" />
     <Compile Include="Assets\Scenes\Map\Resource\park\Waldemarst\Broccoli\Controller\BroccoTreeController_1_2_5.cs" />
@@ -80,15 +82,13 @@
     <Compile Include="Assets\Scripts\SettingsOnEsc.cs" />
     <Compile Include="Assets\Scripts\FoodObjData.cs" />
     <Compile Include="Assets\Scripts\NpcController.cs" />
+    <Compile Include="Assets\Scripts\MiniGame_Car\CameraFollow.cs" />
     <Compile Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\CylinderToCubePrefab.cs" />
     <Compile Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
     <Compile Include="Assets\Scripts\InteractManager.cs" />
     <Compile Include="Assets\wakeup.cs" />
-    <Compile Include="Assets\Scripts\SoundOptions.cs" />
     <Compile Include="Assets\Scripts\MiniGame_Car\Road.cs" />
-    <Compile Include="Assets\Scripts\MiniGame_Car\Car.cs" />
-    <Compile Include="Assets\Scripts\MiniGame_Car\ActorMove.cs" />
-    <Compile Include="Assets\Scripts\MiniGame_Car\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\SoundOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
