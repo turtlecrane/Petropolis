@@ -99,18 +99,8 @@ public class InteractManager : MonoBehaviour
             scanObject = o;
             HitTag = o.tag;
 
-            //히트된 오브젝트의 태그가 NPC라면 초록색 테두리 하이라이트 
-            if (HitTag == "NPC")
-            {
-                Debug.Log("NPC");
-                var selection = scanObject.transform;
-                //var selectedRender = scanObject.GetComponent<Renderer>();
-                var selectOutline = scanObject.GetComponent<Outline>();
-                selectOutline.OutlineWidth = 5; //아웃라인 하이라이트
-                selectOutline.OutlineColor = Color.green;
-                _selection = selection;
-            }
-            else if (HitTag == "Interaction" || HitTag == "Food") // 상호작용이랑 푸드 태그는 빨간 테두리 하이라이트
+            // Interaction, Food 태그는 빨간 테두리 하이라이트
+            if (HitTag == "Interaction" || HitTag == "Food") 
             {
                 var selection = scanObject.transform;
                 var selectedRender = scanObject.GetComponent<Renderer>();
