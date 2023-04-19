@@ -15,6 +15,10 @@ TagManager:
   - DoorLamp
   - HouseAntenna
   - Highlight
+  - Food
+  - StreetLamp
+  - LampLens
+  - DoorOpen
   layers:
   - Default
   - TransparentFX
