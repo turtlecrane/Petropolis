@@ -8,4 +8,5 @@ public class ObjData : MonoBehaviour
     public String name;
     public int id;
     public bool isNpc;//npc인지 아닌지 구분
+    public bool isDoctor;
 }

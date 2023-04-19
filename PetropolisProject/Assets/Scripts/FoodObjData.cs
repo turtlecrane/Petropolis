@@ -5,8 +5,8 @@ using UnityEngine;
 public enum FoodType // 음식들이 플레이어에게 주는 영향 구분 Good = 0, Fever = 1, Disease = 2, Fatal = 3
 {
     Good,
-    Fever,
-    Disease,
+    Bad,
+    Danger,
     Fatal,
 }
 
@@ -26,14 +26,14 @@ public class FoodObjData : MonoBehaviour
                     intfoodType = (int)FoodType.Good;
                     break;
                 }
-            case FoodType.Fever:
+            case FoodType.Bad:
                 {
-                    intfoodType = (int)FoodType.Fever;
+                    intfoodType = (int)FoodType.Bad;
                     break;
                 }
-            case FoodType.Disease:
+            case FoodType.Danger:
             {
-                intfoodType = (int)FoodType.Disease;
+                intfoodType = (int)FoodType.Danger;
                 break;
             }
             case FoodType.Fatal:

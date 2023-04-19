@@ -51,6 +51,10 @@ public class InteractManager : MonoBehaviour
                 InteractBox.SetActive(false);
                 TextBox.SetActive(true);
                 manager.Action(scanObject);
+                if (scanObject.GetComponent<ObjData>().isDoctor)
+                {
+                    scanObject.GetComponent<TreatManager>().Treatment();
+                }
             }
             else if (HitTag == "Interaction")
             {
@@ -136,6 +140,10 @@ public class InteractManager : MonoBehaviour
                 case (1):
                     scanObject.GetComponent<GotoScene>().SceneChange();
                     break;
+                case (2):
+                    break;
+                case (3):
+                    break;
                 default:
                     break;
             }
@@ -145,6 +153,8 @@ public class InteractManager : MonoBehaviour
     void InteractionTextData()
     {
         interactionData.Add(1, new string[] { "방으로 이동하시겠습니까?" });
+        interactionData.Add(2, new string[] { "병원으로 이동하시겠습니까?" });
+        interactionData.Add(3, new string[] { "병원에서 나가시겠습니까?" });
     }
 
     void SetInteractText()
