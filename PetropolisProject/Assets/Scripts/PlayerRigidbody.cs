@@ -13,6 +13,8 @@ public class PlayerRigidbody : MonoBehaviour
     private bool m_isGrounded; // 현재 땅위에 있으면 true 공중에 있으면 false
     private List<Collider> m_collisions = new List<Collider>();
 
+    private bool isDeath = false;
+
     public float stamina = 100.0f; // 달리기 스태미나
     public float recovery_stamina = 20.0f; // 대기, 걷기 중 스태미나 회복량
     public float reduction_stamina = 40.0f; // 대기, 걷기 중 스태미나 감소량
@@ -43,18 +45,21 @@ public class PlayerRigidbody : MonoBehaviour
 
     void Update()
     {
-        m_animator.SetBool("Grounded", m_isGrounded);
-
-        PlayerMove();
-        JumpingAndLanding();
-        PlaySound();
-
-        if (stamina < 100.0f && running == 0)  // 스태미나가 100보다 적고, 달리고 있지 않을 때
+        if (!isDeath)
         {
-            stamina += recovery_stamina * Time.deltaTime;
-        }
+            m_animator.SetBool("Grounded", m_isGrounded);
 
-        m_wasGrounded = m_isGrounded;
+            PlayerMove();
+            JumpingAndLanding();
+            PlaySound();
+
+            if (stamina < 100.0f && running == 0) // 스태미나가 100보다 적고, 달리고 있지 않을 때
+            {
+                stamina += recovery_stamina * Time.deltaTime;
+            }
+
+            m_wasGrounded = m_isGrounded;
+        }
     }
 
     private void PlayerMove()
@@ -215,5 +220,13 @@ public class PlayerRigidbody : MonoBehaviour
     private void move()
     {
         m_moveSpeed = 2.0f;
+    }
+
+    public void PlayerDeath()
+    {
+        isDeath = true;
+        m_animator.SetTrigger("isDeath");
+        transform.GetChild(3).gameObject.SetActive(true);
+        GameObject.Find("Directional Light").gameObject.SetActive(false);
     }
 }
