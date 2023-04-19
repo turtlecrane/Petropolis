@@ -85,7 +85,7 @@ public class InteractManager : MonoBehaviour
         {
             var selectedRender = scanObject.GetComponent<Renderer>();
             var selectOutline = scanObject.GetComponent<Outline>();
-            selectedRender.material.color = new Color32(255, 255, 255, 255); //Default color
+            //selectedRender.material.color = new Color32(255, 255, 255, 255); //Default color
             selectOutline.OutlineWidth = 0; // 아웃라인 하이라이트 제거
             _selection = null;
         }
@@ -99,16 +99,26 @@ public class InteractManager : MonoBehaviour
             scanObject = o;
             HitTag = o.tag;
 
-            //히트된 오브젝트의 태그가 Highlight라면
-            if (HitTag == "Highlight")
+            //히트된 오브젝트의 태그가 NPC라면 초록색 테두리 하이라이트 
+            if (HitTag == "NPC")
+            {
+                Debug.Log("NPC");
+                var selection = scanObject.transform;
+                //var selectedRender = scanObject.GetComponent<Renderer>();
+                var selectOutline = scanObject.GetComponent<Outline>();
+                selectOutline.OutlineWidth = 5; //아웃라인 하이라이트
+                selectOutline.OutlineColor = Color.green;
+                _selection = selection;
+            }
+            else if (HitTag == "Interaction" || HitTag == "Food") // 상호작용이랑 푸드 태그는 빨간 테두리 하이라이트
             {
                 var selection = scanObject.transform;
                 var selectedRender = scanObject.GetComponent<Renderer>();
                 var selectOutline = scanObject.GetComponent<Outline>();
                 if (selectedRender != null)
                 {
-                    selectedRender.material.color = new Color32(255, 255, 0, 255); //노란색으로 하이라이트
-                    selectOutline.OutlineWidth = 6; //아웃라인 하이라이트
+                    selectOutline.OutlineWidth = 7; //아웃라인 하이라이트
+                    selectOutline.OutlineColor = Color.red;
                 }
                 _selection = selection;
             }
