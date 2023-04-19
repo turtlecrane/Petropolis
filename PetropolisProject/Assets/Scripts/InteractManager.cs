@@ -100,6 +100,7 @@ public class InteractManager : MonoBehaviour
             HitTag = o.tag;
 
             // Interaction, Food 태그는 빨간 테두리 하이라이트
+            // 오브젝트마다 Mesh Renderer, Outline 스크립트가 있어야 동작 가능!
             if (HitTag == "Interaction" || HitTag == "Food") 
             {
                 var selection = scanObject.transform;
