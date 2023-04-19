@@ -345,7 +345,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/QuickOutline/Scripts/Outline.cs"
 "Assets/Scenes/Map/Resource/Hometown/milltype/MyTown/AntennaDirection.cs"
 "Assets/Scenes/Map/Resource/Hometown/milltype/MyTown/CylinderToCubePrefab.cs"
 "Assets/Scenes/Map/Resource/Hometown/milltype/MyTown/DayAndNightChange.cs"
@@ -359,6 +358,10 @@
 "Assets/Scripts/GotoScene.cs"
 "Assets/Scripts/InteractManager.cs"
 "Assets/Scripts/MeowAndBarkInteraction.cs"
+"Assets/Scripts/MiniGame_Car/ActorMove.cs"
+"Assets/Scripts/MiniGame_Car/CameraFollow.cs"
+"Assets/Scripts/MiniGame_Car/Car.cs"
+"Assets/Scripts/MiniGame_Car/Road.cs"
 "Assets/Scripts/MuteClick.cs"
 "Assets/Scripts/NpcController.cs"
 "Assets/Scripts/ObjData.cs"
@@ -373,6 +376,7 @@
 "Assets/Scripts/StaminaToggle.cs"
 "Assets/Scripts/TalkManager.cs"
 "Assets/Scripts/TestInteractManager.cs"
+"Assets/source/QuickOutline/Scripts/Outline.cs"
 "Assets/wakeup.cs"
 -langversion:9.0
 
