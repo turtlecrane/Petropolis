@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\PlayerCameraTest.cs" />
      <Compile Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\AntennaDirection.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\SoundSystem\BGMSlider.cs" />
      <Compile Include="Assets\Scripts\MiniGame_Car\Car.cs" />
      <Compile Include="Assets\Scripts\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\ObjData.cs" />
@@ -53,14 +54,17 @@
      <Compile Include="Assets\Scripts\TestInteractManager.cs" />
      <Compile Include="Assets\Scripts\TalkManager.cs" />
      <Compile Include="Assets\Scenes\Map\Resource\park\Waldemarst\Broccoli\Controller\BroccoTreeController_1_2_5.cs" />
+     <Compile Include="Assets\Scripts\PlayerStatus.cs" />
      <Compile Include="Assets\Scripts\BtnController.cs" />
+     <Compile Include="Assets\Scripts\SoundSystem\EffMuteClick.cs" />
      <Compile Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\DayAndNightChange.cs" />
      <Compile Include="Assets\Scripts\DontSettingPopup.cs" />
      <Compile Include="Assets\Scripts\StaminaToggle.cs" />
      <Compile Include="Assets\Scripts\FoodManager.cs" />
      <Compile Include="Assets\Scripts\SitChair.cs" />
+     <Compile Include="Assets\Scripts\SoundSystem\BGM.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
-     <Compile Include="Assets\Scripts\MuteClick.cs" />
+     <Compile Include="Assets\Scripts\SoundSystem\BGMMuteClick.cs" />
      <Compile Include="Assets\Scripts\GotoScene.cs" />
      <Compile Include="Assets\Scripts\MeowAndBarkInteraction.cs" />
      <Compile Include="Assets\Scripts\StaminaSetting.cs" />
@@ -71,11 +75,13 @@
      <Compile Include="Assets\Scripts\NpcNavigation.cs" />
      <Compile Include="Assets\Scripts\MiniGame_Car\CameraFollow.cs" />
      <Compile Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\CylinderToCubePrefab.cs" />
+     <Compile Include="Assets\Scripts\SoundSystem\EffSlider.cs" />
      <Compile Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
      <Compile Include="Assets\Scripts\InteractManager.cs" />
      <Compile Include="Assets\wakeup.cs" />
      <Compile Include="Assets\Scripts\MiniGame_Car\Road.cs" />
      <Compile Include="Assets\Scripts\SoundOptions.cs" />
+     <Compile Include="Assets\Scripts\DontDestroy.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Textures" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures\2" />
@@ -89,6 +95,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture14" />
      <Folder Include="Assets\model\Furniture\Modern Minimalist Sofa\Fabric" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\Scripts\SoundSystem" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Curve\Materials" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office" />
      <Folder Include="Assets\QuickOutline\Resources" />
@@ -102,6 +109,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Assets_Crate_Barrels\prefabs" />
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers\Demo" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <Folder Include="Assets\source\Audio\BGM" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture11" />
      <Folder Include="Assets\source\Fantasy Wooden GUI  Free" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Floor" />
@@ -417,6 +425,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Flashlight_Gold\Scenes" />
      <Folder Include="Assets\Animation\Cat" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Meshes" />
+     <Folder Include="Assets\source\Audio\Environment" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\TerrainTexture" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\StylizedTrafficCone\Mesh" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Scenes" />
@@ -505,6 +514,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House06" />
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\props_FBX\Materials" />
+     <Folder Include="Assets\source\Audio\Effect" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\SpaceZeta_StreetLamps" />
      <Folder Include="Assets\model\NPC\Bryce" />
      <Folder Include="Assets\Scenes" />

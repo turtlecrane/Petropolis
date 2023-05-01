@@ -19,6 +19,8 @@ TagManager:
   - StreetLamp
   - LampLens
   - DoorOpen
+  - BGMSlider
+  - EffSlider
   layers:
   - Default
   - TransparentFX

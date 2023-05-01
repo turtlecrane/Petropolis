@@ -913,6 +913,7 @@ GameObject:
   - component: {fileID: 3419487611274955417}
   - component: {fileID: 3419487611274955422}
   - component: {fileID: 3419487611274955416}
+  - component: {fileID: 5685639669711472295}
   - component: {fileID: 3419487611274955423}
   m_Layer: 0
   m_Name: catRig3
@@ -988,6 +989,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &5685639669711472295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572993602593077196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a996404685c3f40b69865c9c3c30b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  AreaID: 0
 --- !u!114 &3419487611274955423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,6 +1025,9 @@ MonoBehaviour:
   dog_forwardvalue: 3
   m_moveSpeed: 2
   m_jumpForce: 3
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  sitcnt: 4
 --- !u!1 &2585528984095482798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  fmanager: {fileID: 0}
   InteractBox: {fileID: 0}
   TextBox: {fileID: 0}
   RayMaxDistance: 1
