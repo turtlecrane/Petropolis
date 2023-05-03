@@ -63,6 +63,16 @@ public class TalkManager : MonoBehaviour
             {
                 npcController.State = 0;
             }
+            else if (talkData.Split(':')[1] == "98") // 질병 체크 분기점
+            {
+                npcController.isChange = true;
+                npcController.MedicalCheck();
+                talkIndex = -1; // 원활한 대사 출력을 위한 talkIndex 초기화
+            }
+            else if (talkData.Split(':')[1] == "99") // 질병 치료
+            {
+                npcController.DoTreatment();
+            }
             talkIndex++; //그 다음 대사를 가져오기 위해서 인덱스를 늘려주기
         }
         else//그럴일은 없겠지만 NPC가 아닌 물건과 대화를 하는 경우

@@ -53,7 +53,7 @@ public class InteractManager : MonoBehaviour
                 manager.Action(scanObject);
                 if (scanObject.GetComponent<ObjData>().isDoctor)
                 {
-                    scanObject.GetComponent<TreatManager>().Treatment();
+                    scanObject.GetComponent<TreatManager>().SetIsDisease();
                 }
             }
             else if (HitTag == "Interaction")
