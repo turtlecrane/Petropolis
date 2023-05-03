@@ -2054,7 +2054,7 @@ GameObject:
   - component: {fileID: 575139584}
   m_Layer: 0
   m_Name: HighlightTest
-  m_TagString: Highlight
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4536,6 +4536,7 @@ MonoBehaviour:
   name: 
   id: 3000
   isNpc: 1
+  isDoctor: 0
 --- !u!114 &1194445002
 MonoBehaviour:
   m_ObjectHideFlags: 0
