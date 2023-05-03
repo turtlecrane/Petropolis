@@ -5,7 +5,7 @@ using UnityEngine;
 public class Car : MonoBehaviour
 {
     public float MoveSpeed = 4f;
-    public float RangeDestroy = 8;
+    public float RangeDestroy = 20; // 차량 제한 이동거리
 
     void Start()
     {
