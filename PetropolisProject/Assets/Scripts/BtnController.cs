@@ -8,11 +8,11 @@ public class BtnController : MonoBehaviour
     public void OnClickStartBtn()
     {
         Debug.Log("Clicked start btn");
-        Invoke("GotoGameStage", 2f);   
+        Invoke("GotoGameStage", 1f);   
     }
     public void GotoGameStage()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MainMap");//추후에 캐릭터 선택씬으로 변경해야됨
     }
 
     public void OnClickOptionBtn()
