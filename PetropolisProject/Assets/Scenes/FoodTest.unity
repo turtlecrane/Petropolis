@@ -580,8 +580,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodManager: {fileID: 1159610979}
-  talkManager: {fileID: 0}
+  talkManager: {fileID: 991797111}
+  TextBox: {fileID: 632845177}
   isChange: 0
+  State: 0
 --- !u!1 &117400696
 GameObject:
   m_ObjectHideFlags: 0
@@ -9905,6 +9907,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1613476463, guid: 1c2e46c048655144eac0aab28dc45671, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2382234416597708485, guid: 1c2e46c048655144eac0aab28dc45671, type: 3}
       propertyPath: isDoctor
       value: 1

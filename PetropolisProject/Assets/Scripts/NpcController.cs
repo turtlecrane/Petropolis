@@ -31,32 +31,57 @@ public class NpcController : MonoBehaviour
 
     void Update()
     {
-        Vector3 currentPosition = transform.position;//현재 위치 계속 추적
-        float distance = Vector3.Distance(currentPosition, curPos);//시작 지점과 현재 위치의 거리 계산
-        if (distance > 0.001f)// 움직임 판단 임계값
+        if (!ObjData.isDoctor) // 의사 Npc가 아닐 경우
         {
-            moveStatus = true;
-            curPos = currentPosition; //현재 위치를 이전 위치로 저장
-        }
-        else
-        {
-            moveStatus = false;
-        }
-        
-        if (isChange && !settingsOnEsc.isOpen)//대사 구분자가 9였고, 대화가 완료되면
-        {
-            if (!ChangeID)
+            Vector3 currentPosition = transform.position; //현재 위치 계속 추적
+            float distance = Vector3.Distance(currentPosition, curPos); //시작 지점과 현재 위치의 거리 계산
+            if (distance > 0.001f) // 움직임 판단 임계값
             {
-                ObjData.id++;//NPC아이디를 하나 증가시킨다. (다른 존재가 되어버리는것)
-                ChangeID = true;//무한반복 방지
-                isChange = false;//초기화
+                moveStatus = true;
+                curPos = currentPosition; //현재 위치를 이전 위치로 저장
+            }
+            else
+            {
+                moveStatus = false;
+            }
+
+            if (isChange && !settingsOnEsc.isOpen) //대사 구분자가 9였고, 대화가 완료되면
+            {
+                if (!ChangeID)
+                {
+                    ObjData.id++; //NPC아이디를 하나 증가시킨다. (다른 존재가 되어버리는것)
+                    ChangeID = true; //무한반복 방지
+                    isChange = false; //초기화
+                }
+            }
+
+            if (!isChange)
+            {
+                ChangeID = false;
             }
         }
-        if (!isChange)
+        else if (ObjData.isDoctor) // 의사 NPC일 경우
         {
-            ChangeID = false;
+            if (isChange && !settingsOnEsc.isOpen) //대사 구분자가 9였고, 대화가 완료되면
+            {
+                if (!ChangeID)
+                {
+                    if (ObjData.id == 2001) { } // 상태가 좋았을 경우 
+                    else // 상태가 나빴을 경우
+                    {
+                        ObjData.id++; //NPC아이디를 하나 증가시킨다. (다른 존재가 되어버리는것)
+                    }
+                    ChangeID = true; //무한반복 방지
+                    isChange = false; //초기화
+                }
+            }
+
+            if (!isChange)
+            {
+                ChangeID = false;
+            }
         }
-        
+
         NpcAnimation.SetInteger("Status",State);
     }
 
@@ -66,5 +91,17 @@ public class NpcController : MonoBehaviour
         {
             State = 10;
         }
+    }
+
+    public void MedicalCheck() // 질병 체크
+    {
+        TreatManager treatManager = GetComponent<TreatManager>();
+        ObjData.id++; //NPC아이디를 하나 증가시킨다.
+        treatManager.DiseaseCheck();
+    }
+
+    public void DoTreatment() // 질병 치료
+    {
+        GetComponent<TreatManager>().Treatment();
     }
 }
