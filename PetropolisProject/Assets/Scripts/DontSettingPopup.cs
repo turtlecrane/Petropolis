@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DontSettingPopup : MonoBehaviour
 {
-    public GameObject Canvas;
+    private GameObject Canvas;
     private SettingsOnEsc settingsOnEsc;
     void Start()
     {
+        Canvas = GameObject.Find("Canvas");
         settingsOnEsc = Canvas.GetComponent<SettingsOnEsc>();
     }
 
