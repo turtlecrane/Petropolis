@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class EffSlider : MonoBehaviour
 {
     private Slider slider;
-    private AudioSource EffSystem;
+    private EFF EffSystem;
     void Start()
     {
-        EffSystem = GameObject.Find("EffSystem").GetComponent<AudioSource>();
+        EffSystem = GameObject.Find("EFFSystem").GetComponent<EFF>();//EFF에 있는 effVolume값으로 볼륨을 "일괄조절" 함
         slider = GetComponent<Slider>();
-        slider.value = EffSystem.volume;
+        slider.value = EffSystem.effVolume;
     }
 
     void Update()
     {
-        EffSystem.volume = slider.value;
+        EffSystem.effVolume = slider.value;
     }
 }

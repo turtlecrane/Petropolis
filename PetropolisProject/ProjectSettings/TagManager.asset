@@ -20,7 +20,8 @@ TagManager:
   - LampLens
   - DoorOpen
   - BGMSlider
-  - EffSlider
+  - EffSound
+  - Grass
   layers:
   - Default
   - TransparentFX

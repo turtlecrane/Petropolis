@@ -10,11 +10,11 @@ public class EffMuteClick : MonoBehaviour
     public Button Button;
     public GameObject MuteImage;
     public Slider VolumeSlider;
-    private AudioSource EffSystem;
+    private EFF EffSystem;
    
     void Start()
     {
-        EffSystem = GameObject.Find("EffSystem").GetComponent<AudioSource>();
+        EffSystem = GameObject.Find("EFFSystem").GetComponent<EFF>();
         isMute = false;
         Button.onClick.AddListener(toggleMute);
     }
@@ -35,14 +35,14 @@ public class EffMuteClick : MonoBehaviour
             isMute = true;
             MuteImage.SetActive(true);
             VolumeSlider.value = 0f;
-            EffSystem.volume = VolumeSlider.value;
+            EffSystem.effVolume = VolumeSlider.value;
         }
         else if (isMute)
         {
             isMute = false;
             MuteImage.SetActive(false);
             VolumeSlider.value = 0.5f;
-            EffSystem.volume = VolumeSlider.value;
+            EffSystem.effVolume = VolumeSlider.value;
         }
     }
 }
