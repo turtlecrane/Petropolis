@@ -2143,8 +2143,8 @@ MonoBehaviour:
     \uC904</color>\uC744 \uC54C\uC544\uBCF4\uAE30 \uC704\uD574 \uCD5C\uB300\uD55C
     \uAF49 \uCC28\uAC8C \uD14D\uC2A4\uD2B8\uB97C \uCC44\uC6CC \uB123\uC2B5\uB2C8\uB2E4."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 54b76386266a642dea37ed5562ab311d, type: 2}
-  m_sharedMaterial: {fileID: -3998561944074135024, guid: 54b76386266a642dea37ed5562ab311d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ed08393f51464d528c65837bcb4f4c2, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 82.99295, z: 0, w: 23.411415}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &374259666
@@ -7269,8 +7269,8 @@ MonoBehaviour:
     \uC904</color>\uC744 \uC54C\uC544\uBCF4\uAE30 \uC704\uD574 \uCD5C\uB300\uD55C
     \uAF49 \uCC28\uAC8C \uD14D\uC2A4\uD2B8\uB97C \uCC44\uC6CC \uB123\uC2B5\uB2C8\uB2E4."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 54b76386266a642dea37ed5562ab311d, type: 2}
-  m_sharedMaterial: {fileID: -3998561944074135024, guid: 54b76386266a642dea37ed5562ab311d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
