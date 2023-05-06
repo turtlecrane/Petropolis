@@ -8,6 +8,8 @@ public class LoadData : MonoBehaviour
     private GameObject[] npc;
     private GameObject player;
     private Transform playerPos;
+    
+    public MiniGameManager mgManager;
     // Start is called before the first frame update
 
     void Awake()
@@ -33,6 +35,7 @@ public class LoadData : MonoBehaviour
                 }
             }
         }
+        SetClear();
     }
 
     // Update is called once per frame
@@ -51,5 +54,12 @@ public class LoadData : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Dog");
         }
+    }
+
+    private void SetClear() // 클리어 설정
+    {
+        mgManager.SetClearRoadGame_1(saveData.GetClearRoadGame_1());
+        mgManager.SetClearRoadGame_2(saveData.GetClearRoadGame_2());
+        mgManager.SetClearRoadGame_3(saveData.GetClearRoadGame_3());
     }
 }

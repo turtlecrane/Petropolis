@@ -91,14 +91,14 @@ public class ActorMove : MonoBehaviour
             {
                 this.transform.position = EndSpawn.transform.position;  // 3번 이상 부딪히면 목적지 강제이동, 끝내기 (+다침 상태관련 기능은 여기에)
                 finishUI.SetActive(true);
-                Invoke("LoadNextScene", 2f);
+                Invoke("LoadNextScene", 1f);
             }
         }
 
         if(other.CompareTag("Clear")) // 목적지 도착시
         {
             finishUI.SetActive(true);
-            Invoke("LoadNextScene", 2f);
+            Invoke("LoadNextScene", 1f);
         }
 
     }
@@ -111,5 +111,8 @@ public class ActorMove : MonoBehaviour
     void LoadNextScene()
     {
         Debug.Log("다음 씬으로 넘어갑니다.");
+        SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+        saveData.ClearRoadGame_1();
+        GetComponent<GotoScene>().SceneChange();
     }
 }

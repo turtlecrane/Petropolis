@@ -4171,6 +4171,7 @@ GameObject:
   - component: {fileID: 1836612439}
   - component: {fileID: 1836612438}
   - component: {fileID: 1836612441}
+  - component: {fileID: 1836612442}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4239,6 +4240,19 @@ MonoBehaviour:
   EndSpawn: {fileID: 412443182}
   finishUI: {fileID: 649755617}
   m_DirectionType: 0
+--- !u!114 &1836612442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836612437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb734cb05f6984537ae0eeb7d9636840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: MainMap
 --- !u!1 &1858241634
 GameObject:
   m_ObjectHideFlags: 0

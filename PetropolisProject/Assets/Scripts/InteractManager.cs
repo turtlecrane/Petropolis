@@ -37,8 +37,11 @@ public class InteractManager : MonoBehaviour
     {
         interactionData = new Dictionary<int, string[]>();
         InteractionTextData();
-        TutorialDoor = GameObject.Find("jj_door_4_white");
-        TutorialAnimator = TutorialDoor.GetComponent<Animator>();
+        if (GameObject.Find("jj_door_4_white") != null)
+        {
+            TutorialDoor = GameObject.Find("jj_door_4_white");
+            TutorialAnimator = TutorialDoor.GetComponent<Animator>();
+        }
     }
     void Start()
     {
@@ -80,7 +83,10 @@ public class InteractManager : MonoBehaviour
             }
             else if (HitTag == "DoorOpen")
             {
-                TutorialAnimator.SetTrigger("Open");
+                if (TutorialAnimator != null)
+                {
+                    TutorialAnimator.SetTrigger("Open");
+                }
             }
             else if (HitTag == "NextScene")
             {

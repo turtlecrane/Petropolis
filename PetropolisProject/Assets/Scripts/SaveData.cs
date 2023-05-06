@@ -235,4 +235,9 @@ public class SaveData : MonoBehaviour
     {
         return playerPos;
     }
+
+    public void SetPlayerPos(Transform Pos)
+    {
+        playerPos.position = Pos.position;
+    }
 }
