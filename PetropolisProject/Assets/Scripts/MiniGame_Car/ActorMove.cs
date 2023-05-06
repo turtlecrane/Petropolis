@@ -55,19 +55,19 @@ public class ActorMove : MonoBehaviour
 
     protected void InputUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             SetActorMove(E_DirectionType.Up);
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.S))
         {
             SetActorMove(E_DirectionType.Down);
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.A))
         {
             SetActorMove(E_DirectionType.Left);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             SetActorMove(E_DirectionType.Right);
         }
