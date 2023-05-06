@@ -167,6 +167,9 @@ public class InteractManager : MonoBehaviour
                     break;
                 case (3):
                     break;
+                case (4):
+                    scanObject.GetComponent<GotoScene>().SceneChange();
+                    break;
                 default:
                     break;
             }
@@ -178,6 +181,7 @@ public class InteractManager : MonoBehaviour
         interactionData.Add(1, new string[] { "방으로 이동하시겠습니까?" });
         interactionData.Add(2, new string[] { "병원으로 이동하시겠습니까?" });
         interactionData.Add(3, new string[] { "병원에서 나가시겠습니까?" });
+        interactionData.Add(4, new string[] { "퀴즈 테스트" });
     }
 
     void SetInteractText()
