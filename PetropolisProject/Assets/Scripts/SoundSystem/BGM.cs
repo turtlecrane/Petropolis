@@ -10,6 +10,7 @@ public class BGM : MonoBehaviour
     public AudioClip ParkAudio;
     public AudioClip DownTownAudio;
     public AudioClip alleyAudio;
+    public AudioClip tutoAudio;
     
     private AudioSource audioSource;
     public int BgmFlag; //플레이어가 어느 위치에 있는지 가져와서 브금을 바꿔줌 -> PlayerStatus.cs와 연결됨
@@ -36,6 +37,12 @@ public class BGM : MonoBehaviour
         {
             audioSource.clip = mainMenuAudio;
             audioSource.volume = prevVolume;
+        }
+        else if (sceneName == "Level_house")
+        {
+            audioSource.clip = tutoAudio;
+            audioSource.volume = prevVolume;
+            audioSource.Play();
         }
         else if (sceneName == "MainMap")
         {

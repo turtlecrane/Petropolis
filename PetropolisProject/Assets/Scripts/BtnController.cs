@@ -12,7 +12,7 @@ public class BtnController : MonoBehaviour
     }
     public void GotoGameStage()
     {
-        SceneManager.LoadScene("MainMap");//추후에 캐릭터 선택씬으로 변경해야됨
+        SceneManager.LoadScene("Level_house");//튜토리얼로 -> 추후에 캐릭터 선택씬으로 변경해야됨
     }
 
     public void OnClickOptionBtn()

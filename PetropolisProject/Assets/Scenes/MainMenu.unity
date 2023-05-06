@@ -1167,6 +1167,7 @@ MonoBehaviour:
   ParkAudio: {fileID: 8300000, guid: d9b3e03fb4f32b64783a81edb513854e, type: 3}
   DownTownAudio: {fileID: 8300000, guid: e5f5a2e946ed889478f4f5f35ddccb91, type: 3}
   alleyAudio: {fileID: 8300000, guid: d57aae97ac0088c4ba12be036c6c8deb, type: 3}
+  tutoAudio: {fileID: 8300000, guid: 877e247ba5be5c74d9dad0ce3f8f46cb, type: 3}
   BgmFlag: 0
   prevVolume: 0
   fadeOutSpeed: 1
