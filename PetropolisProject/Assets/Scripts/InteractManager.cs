@@ -16,6 +16,9 @@ public class InteractManager : MonoBehaviour
     public GameObject InteractBox;
     public GameObject TextBox;
 
+    public GameObject TutorialDoor;
+    private Animator TutorialAnimator;
+
     // ray의 길이, 색상
     public float RayMaxDistance = 1.00f;
     private Color _rayColor = Color.green;
@@ -33,6 +36,8 @@ public class InteractManager : MonoBehaviour
     {
         interactionData = new Dictionary<int, string[]>();
         InteractionTextData();
+        TutorialDoor = GameObject.Find("jj_door_4_white");
+        TutorialAnimator = TutorialDoor.GetComponent<Animator>();
     }
     void Start()
     {
@@ -71,6 +76,10 @@ public class InteractManager : MonoBehaviour
                 fmanager.SetContent();
                 InteractBox.SetActive(true);
                 TextBox.SetActive(false);
+            }
+            else if (HitTag == "DoorOpen")
+            {
+                TutorialAnimator.SetTrigger("Open");
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
