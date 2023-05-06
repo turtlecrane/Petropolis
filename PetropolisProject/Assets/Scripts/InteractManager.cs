@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class InteractManager : MonoBehaviour
@@ -80,6 +81,10 @@ public class InteractManager : MonoBehaviour
             else if (HitTag == "DoorOpen")
             {
                 TutorialAnimator.SetTrigger("Open");
+            }
+            else if (HitTag == "NextScene")
+            {
+                SceneManager.LoadScene("MainMap");
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
