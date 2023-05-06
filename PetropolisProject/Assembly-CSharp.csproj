@@ -74,9 +74,11 @@
      <Compile Include="Assets\Scripts\GotoScene.cs" />
      <Compile Include="Assets\Scripts\MeowAndBarkInteraction.cs" />
      <Compile Include="Assets\Scripts\SaveData.cs" />
+     <Compile Include="Assets\Scripts\MiniGameManager.cs" />
      <Compile Include="Assets\Scripts\StaminaSetting.cs" />
      <Compile Include="Assets\Scripts\SettingsOnEsc.cs" />
      <Compile Include="Assets\Scripts\TreatManager.cs" />
+     <Compile Include="Assets\Scripts\RoadWarp.cs" />
      <Compile Include="Assets\Scripts\FoodObjData.cs" />
      <Compile Include="Assets\Scripts\NpcController.cs" />
      <Compile Include="Assets\Scripts\NpcNavigation.cs" />
