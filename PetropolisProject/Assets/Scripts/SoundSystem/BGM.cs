@@ -13,6 +13,8 @@ public class BGM : MonoBehaviour
     public AudioClip tutoAudio;
     public AudioClip RoadMiniGame;
     public AudioClip QuizMiniGame;
+    public AudioClip NameCut;
+    public AudioClip ProlCut;
     
     private AudioSource audioSource;
     public int BgmFlag; //플레이어가 어느 위치에 있는지 가져와서 브금을 바꿔줌 -> PlayerStatus.cs와 연결됨
@@ -24,9 +26,11 @@ public class BGM : MonoBehaviour
     public float prevVolume; //마지막으로 수정된 브금볼륨값이 저장됨. -> BGMSlider.cs와 연결됨
     public float fadeOutSpeed = 1f;
 
-    public bool isTuto = false;
-    public bool isRoadMiniGame = false;
-    public bool isQuizMiniGame = false;
+    private bool isTuto = false;
+    private bool isRoadMiniGame = false;
+    private bool isQuizMiniGame = false;
+    private bool isNameCut = false;
+    private bool isProlCut = false;
     void Start()
     {
         isTuto = false;
@@ -39,12 +43,26 @@ public class BGM : MonoBehaviour
     void Update()
     {
         sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        //if (sceneName == "MainMenu")
-        //{
-        //    audioSource.clip = mainMenuAudio;
-        //    audioSource.volume = prevVolume;
-        //}
-        if (sceneName == "Level_house" && !isTuto)
+        /*if (sceneName == "MainMenu")
+        {
+            audioSource.clip = mainMenuAudio;
+            audioSource.volume = prevVolume;
+        }*/
+        if (sceneName == "NameScene" && !isNameCut)
+        {
+            audioSource.clip = tutoAudio; //임시 -> 추후 NameCut
+            audioSource.volume = prevVolume;
+            audioSource.Play();
+            isNameCut = true;
+        }
+        else if (sceneName == "PrologueScene" && !isProlCut)
+        {
+            audioSource.clip = tutoAudio; //임시 -> 추후 ProlCut
+            audioSource.volume = prevVolume;
+            audioSource.Play();
+            isProlCut = true;
+        }
+        else if (sceneName == "Level_house" && !isTuto)
         {
             audioSource.clip = tutoAudio;
             audioSource.volume = prevVolume;

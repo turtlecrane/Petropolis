@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map/RoadMiniGame.unity
     guid: 039df2da987ed034c86dc0aaeee82423
+  - enabled: 1
+    path: Assets/Scenes/NameScene/NameScene/NameScene.unity
+    guid: 0a30c7fca24c6e04b8bc819d8de1e90a
+  - enabled: 1
+    path: Assets/Scenes/PrologueScene/PrologueScene.unity
+    guid: 157f9d2dd9854a14db065c1ba451214f
   m_configObjects: {}
