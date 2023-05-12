@@ -151,9 +151,11 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Park\Materials" />
      <Folder Include="Assets\model\NPC\Remy\Animation" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01\Prefabs" />
+     <Folder Include="Assets\Scenes\Level_house" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture3" />
      <Folder Include="Assets\model\kenney_car-kit\Models\DAE format" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown" />
+     <Folder Include="Assets\model\NPC\Jody" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House03" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\SpaceZeta_StreetLamps\Base Meshes" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof\A C\A C LOD" />
@@ -488,6 +490,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Old_building_NYC_3\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House07\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Road" />
+     <Folder Include="Assets\Scenes\MainMenu" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall" />
      <Folder Include="Assets\model\Furniture" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack" />
@@ -831,10 +834,10 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -1209,67 +1212,67 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
