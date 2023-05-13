@@ -85,7 +85,7 @@ public class SaveData : MonoBehaviour
     
     private void CheckScene() // 현재 씬 체크
     {
-        if (SceneManager.GetActiveScene().name == "FoodTest")
+        if (SceneManager.GetActiveScene().name == "MainMap")
             nowscene = 0;
         else
             nowscene = 1;
