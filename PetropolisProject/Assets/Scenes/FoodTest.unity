@@ -2472,6 +2472,7 @@ GameObject:
   - component: {fileID: 563698462}
   - component: {fileID: 563698461}
   - component: {fileID: 563698465}
+  - component: {fileID: 563698466}
   m_Layer: 0
   m_Name: HospitalEnter
   m_TagString: Interaction
@@ -2573,6 +2574,19 @@ MonoBehaviour:
   id: 2
   isNpc: 0
   isDoctor: 0
+--- !u!114 &563698466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563698460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb734cb05f6984537ae0eeb7d9636840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Hospital
 --- !u!1 &573215632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5924,6 +5938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7e8739985205f4fa6457b8773412e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mgManager: {fileID: 0}
+  qManager: {fileID: 0}
 --- !u!4 &1109446912
 Transform:
   m_ObjectHideFlags: 0
@@ -6693,6 +6709,7 @@ GameObject:
   - component: {fileID: 1433428867}
   - component: {fileID: 1433428866}
   - component: {fileID: 1433428870}
+  - component: {fileID: 1433428871}
   m_Layer: 0
   m_Name: HospitalExit
   m_TagString: Interaction
@@ -6794,6 +6811,19 @@ MonoBehaviour:
   id: 3
   isNpc: 0
   isDoctor: 0
+--- !u!114 &1433428871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433428865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb734cb05f6984537ae0eeb7d9636840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: MainMap
 --- !u!1 &1451139922
 GameObject:
   m_ObjectHideFlags: 0
