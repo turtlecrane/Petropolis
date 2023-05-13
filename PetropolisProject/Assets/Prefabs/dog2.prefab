@@ -45,8 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  fmanager: {fileID: 0}
   InteractBox: {fileID: 0}
   TextBox: {fileID: 0}
+  TutorialDoor: {fileID: 0}
   RayMaxDistance: 1
 --- !u!1 &818826148764975017
 GameObject:
@@ -195,7 +197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2241200423312928930
 Transform:
   m_ObjectHideFlags: 0
@@ -285,6 +287,9 @@ MonoBehaviour:
   dog_forwardvalue: 3
   m_moveSpeed: 2
   m_jumpForce: 3
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  sitcnt: 4
 --- !u!1 &1714203384639512418
 GameObject:
   m_ObjectHideFlags: 0

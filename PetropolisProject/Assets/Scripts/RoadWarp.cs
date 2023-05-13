@@ -35,6 +35,9 @@ public class RoadWarp : MonoBehaviour
                 else
                 {
                     GetComponent<GotoScene>().SceneChange();
+                    SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>(); 
+                    // saveData에서 플레이어 위치 변경
+                    saveData.SetPlayerPos(nextPortal.transform);
                 }
             }
             else if (portalNum == 3)
@@ -46,12 +49,15 @@ public class RoadWarp : MonoBehaviour
                 else
                 {
                     GetComponent<GotoScene>().SceneChange();
+                    SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>(); 
+                    // saveData에서 플레이어 위치 변경
+                    saveData.SetPlayerPos(nextPortal.transform);
                 }
             }
-            else
+            /*else
             {
                 other.gameObject.transform.position = nextPortal.transform.position;
-            }
+            }*/
         }
     }
 }

@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\SoundSystem\EffMuteClick.cs" />
      <Compile Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\DayAndNightChange.cs" />
      <Compile Include="Assets\Scripts\DontSettingPopup.cs" />
+     <Compile Include="Assets\ShowDog.cs" />
      <Compile Include="Assets\Scripts\QuizScripts\NpcLookAt.cs" />
      <Compile Include="Assets\Scripts\StaminaToggle.cs" />
      <Compile Include="Assets\Scripts\FoodManager.cs" />
@@ -111,6 +112,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_B_Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Simple city plain\Material &amp; Texture" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture14" />
      <Folder Include="Assets\model\Furniture\Modern Minimalist Sofa\Fabric" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -144,6 +146,8 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Flower" />
      <Folder Include="Assets\Scenes\Map\Resource\park\_TerrainAutoUpgrade" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\traffic signs FBX" />
+     <Folder Include="Assets\Hovl Studio\Resources\Settings" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\AoE effects" />
      <Folder Include="Assets\Scripts\PrologueScene" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures" />
@@ -162,12 +166,13 @@
      <Folder Include="Assets\model\NPC\Remy\Animation" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01\Prefabs" />
      <Folder Include="Assets\Scenes\Level_house" />
-     <Folder Include="Assets\Scenes\NameScene\KeyboardAdjustableColors" />
+     <Folder Include="Assets\Prefabs\NameScene\KeyboardAdjustableColors" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture3" />
      <Folder Include="Assets\model\kenney_car-kit\Models\DAE format" />
      <Folder Include="Assets\Scripts\NameScene" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown" />
      <Folder Include="Assets\Prefabs\NameScene" />
+     <Folder Include="Assets\model\NPC\Jody" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House03" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\SpaceZeta_StreetLamps\Base Meshes" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof\A C\A C LOD" />
@@ -198,6 +203,7 @@
      <Folder Include="Assets\Animation\UI" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Materials\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\FallPrevention" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Character auras" />
      <Folder Include="Assets\Scenes\NameScene\Meterial\Poly - white wood parquet, luxury, polished, extreme fine details" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House04" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Materials" />
@@ -216,12 +222,12 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\tumba_fur" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures" />
-     <Folder Include="Assets\Scenes\PrologueScene\Scripts" />
      <Folder Include="Assets\QuickOutline\Samples" />
      <Folder Include="Assets\model\Furniture\QA_Books\Textures" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Materials" />
      <None Include="Assets\model\kenney_car-kit\License.txt" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Old_USSR_Lamp\Materials" />
-     <Folder Include="Assets\Scenes\NameScene\KeyboardAdjustableColors\Texture" />
+     <Folder Include="Assets\Prefabs\NameScene\KeyboardAdjustableColors\Texture" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Simple city plain\Material &amp; Texture\Material mesh" />
@@ -240,6 +246,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\Park props pack" />
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Park" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Demo scene" />
      <None Include="Assets\model\Furniture\QA_Books\Readme.txt" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Street_props\Bench" />
@@ -299,6 +306,7 @@
      <Folder Include="Assets\model\Furniture\Realistic_Bed\HDRI\KirbyCove" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Street_props\Trash" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture" />
+     <Folder Include="Assets\Hovl Studio\Resources" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Park props pack\Lamps\Materials" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Barricade\Materials" />
@@ -312,6 +320,7 @@
      <Folder Include="Assets\model\Furniture\Realistic_Bed" />
      <None Include="Assets\source\UI\Shader\OutlineShader.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank\Materials" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Portals" />
      <Folder Include="Assets\Scenes\Map\Resource\park\ADG_Textures\ground_vol1\ground2" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene" />
      <Folder Include="Assets\model\Furniture\Dining Chairs" />
@@ -376,10 +385,13 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\traffic signs FBX\Materials" />
      <Folder Include="Assets\source\UI\Shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Textures" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Magic circles" />
      <Folder Include="Assets\model\VoxelAnimals\Assets\Animations" />
      <None Include="Assets\Scenes\NameScene\Meterial\Poly - white wood parquet, luxury, polished, extreme fine details\Made with Poly.txt" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\meshes\decorations" />
-     <Folder Include="Assets\Scenes\NameScene\KeyboardAdjustableColors\Model" />
+     <Folder Include="Assets\Prefabs\NameScene\KeyboardAdjustableColors\Model" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Hits and explosions" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Convenience" />
      <Folder Include="Assets\model\kenney_car-kit" />
@@ -404,7 +416,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Road\Asphalt015_2K-JPG\Plaster001_2K-PNG" />
      <Folder Include="Assets\model\kenney_car-kit\Models\GLTF format" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Convenience\Materials" />
-     <Folder Include="Assets\Scenes\NameScene\KeyboardAdjustableColors\Prefab" />
+     <Folder Include="Assets\Prefabs\NameScene\KeyboardAdjustableColors\Prefab" />
      <Folder Include="Assets\source\UI\Sprite" />
      <Folder Include="Assets\source\font" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1" />
@@ -455,8 +467,10 @@
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Free_Building_01" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\interior\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Dumpster\Textures" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Slash effects" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures\icons\64x64" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\Hovl Studio" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office\Models" />
      <Folder Include="Assets\model\VoxelAnimals\Assets\Textures" />
      <Folder Include="Assets\QuickOutline\Samples\Materials" />
@@ -509,6 +523,7 @@
      <Folder Include="Assets\model\Furniture\Dining Chairs\Prefabs" />
      <Folder Include="Assets\model\kenney_car-kit\Models\OBJ format" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Props" />
      <Folder Include="Assets\Scenes\Map" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\PBR Folding Chairs\Meshes" />
@@ -534,11 +549,11 @@
      <Folder Include="Assets\source\UI\FreeButtonSet\Fonts" />
      <Folder Include="Assets\Tools\TerrainRotator" />
      <Folder Include="Assets\QuickOutline\Scripts" />
-     <Folder Include="Assets\Scenes\PrologueScene\Animation" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House01" />
      <None Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes\_skybox info.txt" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\screen\Materials" />
      <Folder Include="Assets\model\kenney_car-kit\Previews" />
+     <Folder Include="Assets\Hovl Studio\Magic effects pack\Models" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01\Textures" />
      <Folder Include="Assets\model\Furniture\cabinet" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01\PavingStone-01-Ruin" />
@@ -585,6 +600,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games\Textures" />
      <Folder Include="Assets\model\NPC\Remy\Tex" />
+     <None Include="Assets\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\meshes" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown" />
      <Folder Include="Assets\Scenes\Map\Materials" />
@@ -860,10 +876,10 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -1238,67 +1254,67 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

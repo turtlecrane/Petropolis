@@ -58,27 +58,39 @@ public class DialogManager : MonoBehaviour
         //레오널드
         talkData.Add(8000, new string[]{ "오늘 날씨 좋다! \n 산책하기 딱 좋은 날씨인걸? :0"});
         
-        //공원 미니게임 NPC
-        talkData.Add(10000, new string[]{ "못보던 아이구나? :0", "음... 혹시 프리스비 게임을 같이 하고싶니? :0"});
-        talkData.Add(10001, new string[]{ "좋아! 그럼 같이 해보자! :1"});
-        talkData.Add(10002, new string[]{ "안하고 싶은가보네? 생각이 바뀌면 알려줘 :0"});
+        //공원 메건
+        talkData.Add(10000, new string[]
+        {
+            "검둥아! 어디갔었니! :0", 
+            "한참 찾았잖아~! 그래도 찾아서 정말 다행이야!:88", // NPC옆에 개가 나옴
+            "너가 우리 검둥이를 도와줬구나?:0", "어머.. 친절한 고양이구나~ 호호! :0",
+            "고마워~ 작은 친구!:0", "이제 집에 가자 검둥아~:0",
+            ":87" // 대화가 끝나며 NPC + 개 사라짐
+        });
+        /*talkData.Add(10001, new string[]{ "좋아! 그럼 같이 해보자! :1"});
+        talkData.Add(10002, new string[]{ "안하고 싶은가보네? 생각이 바뀌면 알려줘 :0"});*/
         
         //공원 홀로있는 동물NPC
         talkData.Add(11000,  new string[]{ "안녕? 공원에서 혼자 뭐하고 있니? :10",
-            "음..가족이랑 함께 산책을 나왔는데 어느샌가 사라졌지 뭐야 :0", "혼자 떨어져 있으니까 너무 불안해... :0",
-            "그럼 나도 함께 가족을 찾아줄게.:10", "그 사람 어떻게 생겼는지 알려줄래? :10",
+            "응.. 가족이랑 함께 산책을 나왔는데 어느샌가 사라졌지 뭐야? :0", "혼자 떨어져 있으니까 너무 불안해... :0",
+            "그렇구나.. 그러면 나도 함께 가족을 찾아줄게.:10", "그 사람 어떻게 생겼는지 알려줄래? :10",
             "정말? 고마워 그 사람은 빨간 옷에 어쩌구 저쩌구..:0", 
             "좋아. 우리 같이 한 번 찾아보자! :10",
-            "응! 가자! :9"
+            "응! 가자! :9",
+            "과연 어디에 있을까? 공원을 한 번 돌아보자 :89", // 개가 사라짐
         });
-        talkData.Add(11001, new string[]{ "먼저 출발해~:0"});
-            //주인을 찾으면 아이디가 증가(++)하게 구현되어야함.
+
+        
+        //공원 조디
+        talkData.Add(12000, new string[]{ "어머~ 너희는 누구니~? 길을 잃어버렸나~?:0", "음... 아무래도 찾는 사람은 아닌거 같아.. :10"});
+        
+
         talkData.Add(11002, new string[]{ "와! 맞아 바로 이 사람이야! :0", "덕분에 바로 가족을 찾았어 고마워! :0", "앞으로 산책할 땐 잃어버리지 않게 조심해야겠다 :0"});
         
         //퀴즈 NPC
-        talkData.Add(12000, new string[]{ " Quiz Test :101"});
-        talkData.Add(12001, new string[]{ " Quiz Failed :2"});
-        talkData.Add(12002, new string[]{ " Quiz Clear :1"});
+        talkData.Add(14000, new string[]{ " Quiz Test :101"});
+        talkData.Add(14001, new string[]{ " Quiz Failed :2"});
+        talkData.Add(14002, new string[]{ " Quiz Clear :1"});
         
         // 쓰레기장 퀘스트
         talkData.Add(13000, new string[]{ " Quest Test :102"});
@@ -87,6 +99,7 @@ public class DialogManager : MonoBehaviour
         talkData.Add(13003, new string[]{ " Quest End :1"});
         
         talkData.Add(13010, new string[]{ " Quest NPC :103"});
+
     }
 
     //한 문장씩 이 함수가 가져와서 리턴해주는 방식
@@ -98,7 +111,7 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            return talkData[id][talkIndex];//끝이 아니면 뒤에 있는 대사 날리기
+            return talkData[id][talkIndex]; //끝이 아니면 뒤에 있는 대사 날리기
         }
         
     }

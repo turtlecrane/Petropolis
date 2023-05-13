@@ -73,6 +73,20 @@ public class TalkManager : MonoBehaviour
             {
                 npcController.DoTreatment();
             }
+
+            else if (talkData.Split(':')[1] == "89") // 개 사라짐
+            {
+                npcController.HideDog();
+            }
+            else if (talkData.Split(':')[1] == "88") // NPC옆으로 개 나옴
+            {
+                npcController.FindDog();
+            }
+            else if (talkData.Split(':')[1] == "87") // 개 + NPC 동시에 사라짐
+            {
+                npcController.HideBoth();
+            }
+            
             else if (talkData.Split(':')[1] == "101")
             {
                 npcController.isChange = true;
