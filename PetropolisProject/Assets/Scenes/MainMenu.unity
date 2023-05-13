@@ -1170,10 +1170,11 @@ MonoBehaviour:
   tutoAudio: {fileID: 8300000, guid: 877e247ba5be5c74d9dad0ce3f8f46cb, type: 3}
   RoadMiniGame: {fileID: 8300000, guid: 3c912f6be0e874d4580bea71178664f2, type: 3}
   QuizMiniGame: {fileID: 8300000, guid: a8f8c93d7f6d78c48b0a6c5c5ca8e07e, type: 3}
+  NameCut: {fileID: 8300000, guid: 504d710f028637949a719d42eca53c2b, type: 3}
+  ProlCut: {fileID: 8300000, guid: 76f038084d743744bb38acc2c811b695, type: 3}
   BgmFlag: 0
   prevVolume: 0
   fadeOutSpeed: 1
-  isTuto: 0
 --- !u!82 &284781879
 AudioSource:
   m_ObjectHideFlags: 0

@@ -50,14 +50,14 @@ public class BGM : MonoBehaviour
         }*/
         if (sceneName == "NameScene" && !isNameCut)
         {
-            audioSource.clip = tutoAudio; //임시 -> 추후 NameCut
+            audioSource.clip = NameCut;
             audioSource.volume = prevVolume;
             audioSource.Play();
             isNameCut = true;
         }
         else if (sceneName == "PrologueScene" && !isProlCut)
         {
-            audioSource.clip = tutoAudio; //임시 -> 추후 ProlCut
+            audioSource.clip = ProlCut;
             audioSource.volume = prevVolume;
             audioSource.Play();
             isProlCut = true;
