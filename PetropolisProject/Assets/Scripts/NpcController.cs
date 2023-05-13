@@ -109,7 +109,8 @@ public class NpcController : MonoBehaviour
     {
         /*GameObject npcDog = GameObject.Find("NPCdog");
         npcDog.transform.position = Vector3(0,0,-10);*/
-        gameObject.transform.position = new Vector3(-50,0,110); // 안보이는 곳에 숨겨 사라진것처럼 처리
+        //gameObject.transform.position = new Vector3(-50,0,110); // 안보이는 곳에 숨겨 사라진것처럼 처리
+        gameObject.SetActive(false);
     }
 
     public void FindDog() // 개가 나옴

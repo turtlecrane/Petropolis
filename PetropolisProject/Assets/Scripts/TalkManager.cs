@@ -83,6 +83,7 @@ public class TalkManager : MonoBehaviour
 
             else if (talkData.Split(':')[1] == "89") // 개 사라짐
             {
+                talkIndex = -1;
                 npcController.HideDog();
             }
             else if (talkData.Split(':')[1] == "88") // NPC옆으로 개 나옴
