@@ -175,8 +175,10 @@ public class InteractManager : MonoBehaviour
                     scanObject.GetComponent<GotoScene>().SceneChange();
                     break;
                 case (2):
+                    scanObject.GetComponent<GotoScene>().SceneChange();
                     break;
                 case (3):
+                    scanObject.GetComponent<GotoScene>().SceneChange();
                     break;
                 case (4):
                     scanObject.GetComponent<GotoScene>().SceneChange();

@@ -74,6 +74,19 @@ public class DialogManager : MonoBehaviour
         talkData.Add(11001, new string[]{ "먼저 출발해~:0"});
             //주인을 찾으면 아이디가 증가(++)하게 구현되어야함.
         talkData.Add(11002, new string[]{ "와! 맞아 바로 이 사람이야! :0", "덕분에 바로 가족을 찾았어 고마워! :0", "앞으로 산책할 땐 잃어버리지 않게 조심해야겠다 :0"});
+        
+        //퀴즈 NPC
+        talkData.Add(12000, new string[]{ " Quiz Test :101"});
+        talkData.Add(12001, new string[]{ " Quiz Failed :2"});
+        talkData.Add(12002, new string[]{ " Quiz Clear :1"});
+        
+        // 쓰레기장 퀘스트
+        talkData.Add(13000, new string[]{ " Quest Test :102"});
+        talkData.Add(13001, new string[]{ " Quest Ing :1"});
+        talkData.Add(13002, new string[]{ " Quest Clear :104"});
+        talkData.Add(13003, new string[]{ " Quest End :1"});
+        
+        talkData.Add(13010, new string[]{ " Quest NPC :103"});
     }
 
     //한 문장씩 이 함수가 가져와서 리턴해주는 방식

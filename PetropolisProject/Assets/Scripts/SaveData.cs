@@ -19,10 +19,13 @@ public class SaveData : MonoBehaviour
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     
     // 퀘스트 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+    private bool ingQuest_1 = false;
+    private bool ingQuest_2 = false;
+    private bool ingQuest_3 = false;
+
     private bool clearQuest_1 = false;
     private bool clearQuest_2 = false;
     private bool clearQuest_3 = false;
-    private bool clearQuest_4 = false;
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     
     private int nowscene; // 현재 씬
@@ -140,10 +143,6 @@ public class SaveData : MonoBehaviour
         clearQuest_3 = true;
     }
     
-    public void ClearQuest_4()
-    {
-        clearQuest_4 = true;
-    }
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
     // 클리어 여부 로드 함수
@@ -192,11 +191,40 @@ public class SaveData : MonoBehaviour
         return clearQuest_3;
     }
     
-    public bool GetClearQuest_4()
-    {
-        return clearQuest_4;
-    }
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+    
+    // 퀘스트 진행중
+    public void SetIngQuest_1(bool ing)
+    {
+        ingQuest_1 = ing;
+    }
+    
+    public void SetIngQuest_2(bool ing)
+    {
+        ingQuest_2 = ing;
+    }
+    
+    public void SetIngQuest_3(bool ing)
+    {
+        ingQuest_3 = ing;
+    }
+
+    public bool GetIngQuest_1()
+    {
+        return ingQuest_1;
+    }
+    
+    public bool GetIngQuest_2()
+    {
+        return ingQuest_2;
+    }
+    
+    public bool GetIngQuest_3()
+    {
+        return ingQuest_3;
+    }
+    
+    // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     
     public void SearchAndSaveChangedId(GameObject Npc) // Npc의 ObjData에서 Id 변화를 감지하면
     {
