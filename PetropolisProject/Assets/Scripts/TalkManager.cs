@@ -73,6 +73,19 @@ public class TalkManager : MonoBehaviour
             {
                 npcController.DoTreatment();
             }
+            else if (talkData.Split(':')[1] == "89") // 개 사라짐
+            {
+                npcController.HideDog();
+            }
+            else if (talkData.Split(':')[1] == "88") // NPC옆으로 개 나옴
+            {
+                npcController.FindDog();
+            }
+            else if (talkData.Split(':')[1] == "87") // 개 + NPC 동시에 사라짐
+            {
+                npcController.HideBoth();
+            }
+            
             talkIndex++; //그 다음 대사를 가져오기 위해서 인덱스를 늘려주기
         }
         else//그럴일은 없겠지만 NPC가 아닌 물건과 대화를 하는 경우
