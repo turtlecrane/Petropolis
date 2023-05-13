@@ -10,6 +10,8 @@ public class LoadData : MonoBehaviour
     private Transform playerPos;
     
     public MiniGameManager mgManager;
+
+    public QuestManager qManager;
     // Start is called before the first frame update
 
     void Awake()

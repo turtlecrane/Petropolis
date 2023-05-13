@@ -73,6 +73,35 @@ public class TalkManager : MonoBehaviour
             {
                 npcController.DoTreatment();
             }
+            else if (talkData.Split(':')[1] == "101")
+            {
+                npcController.isChange = true;
+            }
+            else if (talkData.Split(':')[1] == "102") // 쓰레기장 퀘스트
+            {
+                npcController.isChange = true;
+                SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+                saveData.SetIngQuest_3(true);
+                QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
+                qManager.SetIngQuest_3(saveData.GetIngQuest_3());
+            }
+            else if (talkData.Split(':')[1] == "103") // 쓰레기장 퀘스트
+            {
+                SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+                saveData.ClearQuest_3();
+                QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
+                qManager.SetClearQuest_3(saveData.GetClearQuest_3());
+                Quest3 q3 = GameObject.Find("QuestManager").GetComponent<Quest3>();
+                q3.Clear();
+            }
+            else if (talkData.Split(':')[1] == "104") // 쓰레기장 퀘스트
+            {
+                npcController.isChange = true;
+                SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+                saveData.SetIngQuest_3(false);
+                QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
+                qManager.SetIngQuest_3(saveData.GetIngQuest_3());
+            }
             talkIndex++; //그 다음 대사를 가져오기 위해서 인덱스를 늘려주기
         }
         else//그럴일은 없겠지만 NPC가 아닌 물건과 대화를 하는 경우
