@@ -7,15 +7,7 @@ public class ShowDog : MonoBehaviour
 {
     public GameObject dog;
     public Transform pos;
-    public bool isFind = false;
-
-    void Update()
-    {
-        if (isFind)
-        {
-            FindDog();
-        }
-    }
+    
     public void FindDog()
     {
         dog.SetActive(true);
