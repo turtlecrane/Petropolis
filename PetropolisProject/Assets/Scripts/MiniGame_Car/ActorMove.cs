@@ -112,7 +112,25 @@ public class ActorMove : MonoBehaviour
     {
         Debug.Log("다음 씬으로 넘어갑니다.");
         SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
-        saveData.ClearRoadGame_1();
+        if (!saveData.GetClearRoadGame_1())
+        {
+            saveData.ClearRoadGame_1();
+        }
+        else
+        {
+            if (!saveData.GetClearRoadGame_2())
+            {
+                saveData.ClearRoadGame_2();
+            }
+            else
+            {
+                if (!saveData.GetClearRoadGame_3())
+                {
+                    saveData.ClearRoadGame_3();
+                }
+            }
+        }
+
         GetComponent<GotoScene>().SceneChange();
     }
 }
