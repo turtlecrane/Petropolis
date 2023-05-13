@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+     <Compile Include="Assets\Scripts\Quest\QuestManager.cs" />
      <Compile Include="Assets\Scripts\PlayerRigidbody.cs" />
      <Compile Include="Assets\Scripts\PlayerCameraTest.cs" />
      <Compile Include="Assets\Scripts\NameScene\NameSceneTalk.cs" />
@@ -83,8 +84,10 @@
      <Compile Include="Assets\Scripts\StaminaSetting.cs" />
      <Compile Include="Assets\Scripts\SettingsOnEsc.cs" />
      <Compile Include="Assets\Scripts\TreatManager.cs" />
+     <Compile Include="Assets\Scripts\Quest\Quest3.cs" />
      <Compile Include="Assets\Scripts\RoadWarp.cs" />
      <Compile Include="Assets\Scripts\NameScene\isCameraPlay.cs" />
+     <Compile Include="Assets\Scripts\QuizScripts\GoToQuiz.cs" />
      <Compile Include="Assets\Scripts\FoodObjData.cs" />
      <Compile Include="Assets\Scripts\NpcController.cs" />
      <Compile Include="Assets\Scripts\NameScene\AnimationController.cs" />
@@ -113,6 +116,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Simple city plain\Material &amp; Texture" />
      <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs" />
+     <Folder Include="Assets\model\Quiz\Cartoon Cat\fbx" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture14" />
      <Folder Include="Assets\model\Furniture\Modern Minimalist Sofa\Fabric" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -185,8 +189,10 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture4" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Lamps" />
      <Folder Include="Assets\source\Materials" />
+     <Folder Include="Assets\model\Quiz\Cartoon Cat" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Textures" />
+     <Folder Include="Assets\model\Quiz" />
      <Folder Include="Assets\source\font\NaverNanumSquareNeo\TMP" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Meshes" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01" />
@@ -536,6 +542,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\BlackPineTree_D_Textures" />
      <Folder Include="Assets\model\Furniture\skitsch_zucca_fbx_obj" />
+     <Folder Include="Assets\Scripts\Quest" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures\WornOutA" />
      <Folder Include="Assets\model\NPC" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture5" />
@@ -549,6 +556,7 @@
      <Folder Include="Assets\source\UI\FreeButtonSet\Fonts" />
      <Folder Include="Assets\Tools\TerrainRotator" />
      <Folder Include="Assets\QuickOutline\Scripts" />
+     <Folder Include="Assets\model\Quiz\Cartoon Cat\fbx\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House01" />
      <None Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes\_skybox info.txt" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\screen\Materials" />

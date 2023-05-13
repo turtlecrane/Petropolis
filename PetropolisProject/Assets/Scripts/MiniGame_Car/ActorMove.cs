@@ -13,9 +13,17 @@ public class ActorMove : MonoBehaviour
 
     private int cnt = 0; // 차량 부딪힌 횟수 카운트
 
+    private bool inputEnabled = false;
+
     void Start()
     {
-        
+        StartCoroutine(EnableInputAfterDelay());
+    }
+
+    IEnumerator EnableInputAfterDelay() //3초가 지나면 값변경
+    {
+        yield return new WaitForSeconds(3f); 
+        inputEnabled = true;
     }
 
     public enum E_DirectionType
@@ -75,7 +83,11 @@ public class ActorMove : MonoBehaviour
     
     void Update()
     {
-        InputUpdate();
+        if (inputEnabled) // 3초가 지났으면
+        {
+            InputUpdate();
+        }
+        
     }
 
     protected void OnTriggerEnter(Collider other)
