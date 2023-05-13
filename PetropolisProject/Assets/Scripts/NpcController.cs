@@ -116,14 +116,16 @@ public class NpcController : MonoBehaviour
     public void FindDog() // 개가 나옴
     {
         ShowDog showDog = GetComponent<ShowDog>();
-        showDog.isFind = true; // 개가 NPC옆으로 나오게 하는 함수
+        showDog.FindDog(); // 개가 NPC옆으로 나오게 하는 함수
     }
 
     public void HideBoth()
     {
         var dog = GameObject.Find("dog2");
-        gameObject.transform.position = new Vector3(-51,0,110); // 안보이는 곳에 숨겨 사라진 것처럼 처리
-        dog.transform.position = new Vector3(-52,0,110);        // 안보이는 곳에 숨겨 사라진 것처럼 처리
+        //gameObject.transform.position = new Vector3(-51,0,110); // 안보이는 곳에 숨겨 사라진 것처럼 처리
+        gameObject.SetActive(false);
+        dog.SetActive(false);
+        //dog.transform.position = new Vector3(-52,0,110);        // 안보이는 곳에 숨겨 사라진 것처럼 처리
 
     }
     

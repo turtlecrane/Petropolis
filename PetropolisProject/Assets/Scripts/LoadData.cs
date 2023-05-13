@@ -24,6 +24,7 @@ public class LoadData : MonoBehaviour
     }
     void Start()
     {
+        SetClear();
         if (saveData.GetNpcLength() != 0) // 저장된 Npc 데이터가 있다면
         {
             npc = GameObject.FindGameObjectsWithTag("NPC");
@@ -35,9 +36,31 @@ public class LoadData : MonoBehaviour
                 {
                     npc[i].GetComponent<ObjData>().id = saveData.GetNpcId(i);
                 }
+
+                if (npc[i].GetComponent<ObjData>().name == "메건" ||
+                    npc[i].GetComponent<ObjData>().name == "검둥이")
+                {
+                    if (qManager.GetIngQuest_1())
+                    {
+                        if (npc[i].GetComponent<ObjData>().name == "검둥이")
+                        {
+                            npc[i].gameObject.SetActive(false);
+                        }
+                    }
+                    else
+                    {
+                        if (qManager.GetClearQuest_1())
+                        {
+                            npc[i].gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            npc[i].gameObject.SetActive(true);
+                        }
+                    }
+                }
             }
         }
-        SetClear();
     }
 
     // Update is called once per frame
@@ -63,6 +86,8 @@ public class LoadData : MonoBehaviour
         mgManager.SetClearRoadGame_1(saveData.GetClearRoadGame_1());
         mgManager.SetClearRoadGame_2(saveData.GetClearRoadGame_2());
         mgManager.SetClearRoadGame_3(saveData.GetClearRoadGame_3());
+        qManager.SetIngQuest_1(saveData.GetIngQuest_1());
+        qManager.SetClearQuest_1(saveData.GetClearQuest_1());
         qManager.SetIngQuest_3(saveData.GetIngQuest_3());
         qManager.SetClearQuest_3(saveData.GetClearQuest_3());
     }

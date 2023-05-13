@@ -85,6 +85,10 @@ public class TalkManager : MonoBehaviour
             {
                 talkIndex = -1;
                 npcController.HideDog();
+                SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+                saveData.SetIngQuest_1(true);
+                QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
+                qManager.SetIngQuest_1(saveData.GetIngQuest_1());
             }
             else if (talkData.Split(':')[1] == "88") // NPC옆으로 개 나옴
             {
@@ -92,7 +96,14 @@ public class TalkManager : MonoBehaviour
             }
             else if (talkData.Split(':')[1] == "87") // 개 + NPC 동시에 사라짐
             {
+                talkIndex = -1;
                 npcController.HideBoth();
+                SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+                saveData.SetIngQuest_1(false);
+                saveData.ClearQuest_1();
+                QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
+                qManager.SetIngQuest_1(saveData.GetIngQuest_1());
+                qManager.SetClearQuest_1(saveData.GetClearQuest_1());
             }
             
             else if (talkData.Split(':')[1] == "101")
