@@ -54,10 +54,15 @@ public class RoadWarp : MonoBehaviour
                     saveData.SetPlayerPos(nextPortal.transform);
                 }
             }
-            /*else
+            else if (portalNum == 4)
+            {
+                GetComponent<ResetDoctorId>().Reset();
+                other.gameObject.transform.position = nextPortal.transform.position;
+            }
+            else
             {
                 other.gameObject.transform.position = nextPortal.transform.position;
-            }*/
+            }
         }
     }
 }

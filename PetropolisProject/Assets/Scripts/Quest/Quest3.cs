@@ -30,7 +30,10 @@ public class Quest3 : MonoBehaviour
             else
             {
                 doctorExclamation.gameObject.SetActive(true);
-                target.gameObject.SetActive(false);
+                if (target.GetComponent<ObjData>().id == 13011)
+                {
+                    target.gameObject.SetActive(false);
+                }
             }
         }
         else
