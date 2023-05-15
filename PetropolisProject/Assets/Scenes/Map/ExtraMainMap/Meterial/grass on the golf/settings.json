@@ -1,0 +1,23 @@
+{
+  "prompt_text": "Green grass on the golf course, very realistic details",
+  "prompt_image": {
+    "ext": "png",
+    "dtype": "uint8",
+    "width": 512,
+    "height": 512,
+    "url": "https://static-dev.withpoly.com/v3/textures/patches/bbc05abc-c5a5-4717-8dda-82b69f42f8ee.png",
+    "patch_id": "C86bjEBBcu"
+  },
+  "seamless_prompt_text": "",
+  "seamless_patch_scale": 1.14,
+  "upscale_prompt_text": "",
+  "upscale_resolution": 4096,
+  "is_seamless": true,
+  "pbr_mode": "matte",
+  "pbr_generate_color": true,
+  "pbr_generate_normal": true,
+  "pbr_generate_height": true,
+  "pbr_generate_ao": true,
+  "pbr_generate_roughness": true,
+  "pbr_generate_metallic": false
+}
