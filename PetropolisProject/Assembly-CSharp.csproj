@@ -121,6 +121,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture14" />
      <Folder Include="Assets\model\Furniture\Modern Minimalist Sofa\Fabric" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\van\van_1" />
      <Folder Include="Assets\Scripts\SoundSystem" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Curve\Materials" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office" />
@@ -149,6 +150,7 @@
      <Folder Include="Assets\model\Cat" />
      <Folder Include="Assets\Prefabs\Garbage" />
      <Folder Include="Assets\Scenes\PrologueScene\PrologueScene" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\car\car_5" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Flower" />
      <Folder Include="Assets\Scenes\Map\Resource\park\_TerrainAutoUpgrade" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\traffic signs FBX" />
@@ -158,7 +160,10 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Ground Textures" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\van\van_1" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\prefabs" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\car\car_5" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\bus" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\StylizedTrafficCone\Materials" />
      <Folder Include="Assets\Animation\NameScene" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank\Environment" />
@@ -180,11 +185,14 @@
      <Folder Include="Assets\Prefabs\NameScene" />
      <Folder Include="Assets\model\NPC\Jody" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House03" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\bus" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\SpaceZeta_StreetLamps\Base Meshes" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof\A C\A C LOD" />
      <Folder Include="Assets\Prefabs" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Bed\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures\Leaves" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\bus\bus_1" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Prefabs\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -205,6 +213,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture1" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Free_Building_01\Prefab" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\truck\truck_1" />
      <Folder Include="Assets\model\NPC\Doctor" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture2" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_C_Textures" />
@@ -224,6 +233,7 @@
      <Folder Include="Assets\Prefabs\UI" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof" />
      <Folder Include="Assets\Prefabs\npc" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Straight\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_D_Textures" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
@@ -246,6 +256,7 @@
      <Folder Include="Assets\Prefabs\InteractModel" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck\Textures\garbage_truck_no_damage" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\Shops_FBX" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Prefabs" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
@@ -305,6 +316,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Buildings" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Old_USSR_Lamp\Prefabs" />
      <Folder Include="Assets\model\NPC\Sophie" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\car\car_6" />
      <Folder Include="Assets\model\NPC\Doctor\Animation" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Misc" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House05\Materials" />
@@ -320,6 +332,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Barricade\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Prefabs" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01\Materials" />
+     <Folder Include="Assets\asset_free_Ukraine_cars" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures" />
      <Folder Include="Assets\source\UI\StatusIcons" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\A" />
@@ -334,6 +347,7 @@
      <Folder Include="Assets\model\Furniture\Dining Chairs" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Park props pack\Lamps" />
      <Folder Include="Assets\model" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\car\car_6" />
      <Folder Include="Assets\Scenes\NameScene\NameScene" />
      <Folder Include="Assets\Scenes\NameScene" />
      <Folder Include="Assets\Prefabs\Hometown" />
@@ -366,8 +380,10 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\Materials" />
      <None Include="Assets\Scenes\Map\Resource\garbage\TerrainTexture\Poly - garbage, highly detailed, extreme fine details\Made with Poly.txt" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\car" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Models" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Letters" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART" />
@@ -425,6 +441,7 @@
      <Folder Include="Assets\model\kenney_car-kit\Models\GLTF format" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Convenience\Materials" />
      <Folder Include="Assets\Prefabs\NameScene\KeyboardAdjustableColors\Prefab" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh" />
      <Folder Include="Assets\source\UI\Sprite" />
      <Folder Include="Assets\source\font" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1" />
@@ -455,6 +472,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House03\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\truck" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\JapaneseMapleTree_B_Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House05" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck\Textures" />
@@ -465,6 +483,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank\Prefabs" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\tumba_fur\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Flashlight_Gold\Materials" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\road" />
      <Folder Include="Assets\QuickOutline\Resources\Shaders" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\FloorTextures" />
@@ -478,8 +497,11 @@
      <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Slash effects" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures\icons\64x64" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\truck\truck_1" />
      <Folder Include="Assets\Hovl Studio" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office\Models" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\car" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\van" />
      <Folder Include="Assets\model\VoxelAnimals\Assets\Textures" />
      <Folder Include="Assets\QuickOutline\Samples\Materials" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office\Textures" />
@@ -521,6 +543,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Street_props" />
      <Folder Include="Assets\Scenes\Map\Resource\park\ADG_Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Power\Materials" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\truck" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture8" />
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers\Textures\GrassFlowers" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Materials" />
@@ -535,6 +558,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Props" />
      <Folder Include="Assets\Scenes\Map" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\PBR Folding Chairs\Meshes" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\van" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Old_building_NYC_3\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House07\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Road" />
@@ -558,6 +582,7 @@
      <Folder Include="Assets\source\UI\FreeButtonSet\Fonts" />
      <Folder Include="Assets\Tools\TerrainRotator" />
      <Folder Include="Assets\QuickOutline\Scripts" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\materials" />
      <Folder Include="Assets\model\Quiz\Cartoon Cat\fbx\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House01" />
      <None Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes\_skybox info.txt" />
@@ -579,12 +604,14 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers\Demo\DemoGrassFlowers" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\meshes\buildings_col" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Small Tree" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_E_Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Grass" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures\Bark" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\model\NPC\Kate" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\road_colliiders" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House06" />
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\props_FBX\Materials" />
@@ -600,6 +627,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\BlackPineTree_B_Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\ModularLowpolyStreetsFree" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\bus\bus_1" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\A\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\B\B LOD" />
