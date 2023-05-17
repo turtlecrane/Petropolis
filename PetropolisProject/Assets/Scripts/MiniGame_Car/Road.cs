@@ -12,6 +12,8 @@ public class Road : MonoBehaviour
     public float CloneDelaySec = 1f;    // 딜레이 시간
 
     protected float NextSecToClone = 0f;
+
+    public float carsetposY = 0.5f;
     
     void Start()
     {
@@ -38,7 +40,7 @@ public class Road : MonoBehaviour
     {
         Transform clonepos = GenerationPos;
         Vector3 offsetpos = clonepos.position;
-        offsetpos.y = 0.5f;
+        offsetpos.y = carsetposY;
 
         GameObject cloneobj = GameObject.Instantiate(CloneTarget.gameObject, offsetpos, GenerationPos.rotation, this.transform);
 

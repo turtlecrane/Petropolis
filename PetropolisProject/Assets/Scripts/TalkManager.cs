@@ -18,6 +18,13 @@ public class TalkManager : MonoBehaviour
 
     public int talkIndex;
 
+    private PlayerName playerName;
+
+    private void Start()
+    {
+        playerName = GameObject.Find("PlayerName").GetComponent<PlayerName>();
+    }
+    
     public void Action(GameObject scanObj)//NPC에 상호작용하면 이거 실행됨
     {
         scanObject = scanObj;
@@ -57,7 +64,7 @@ public class TalkManager : MonoBehaviour
             }
             else if (talkData.Split(':')[1] == "10")//플레이어 대사일땐 다이얼로그 이름을 플레이어로 바꾸기
             {
-                NpcName.text = "[ 나 ]";
+                NpcName.text = "[ "+ playerName.Name +" ]";
             }
             else if (talkData.Split(':')[1] == "0")
             {
@@ -76,7 +83,12 @@ public class TalkManager : MonoBehaviour
 
             else if (talkData.Split(':')[1] == "89") // 개 사라짐
             {
+                talkIndex = -1;
                 npcController.HideDog();
+                SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+                saveData.SetIngQuest_1(true);
+                QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
+                qManager.SetIngQuest_1(saveData.GetIngQuest_1());
             }
             else if (talkData.Split(':')[1] == "88") // NPC옆으로 개 나옴
             {
@@ -84,7 +96,14 @@ public class TalkManager : MonoBehaviour
             }
             else if (talkData.Split(':')[1] == "87") // 개 + NPC 동시에 사라짐
             {
+                talkIndex = -1;
                 npcController.HideBoth();
+                SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+                saveData.SetIngQuest_1(false);
+                saveData.ClearQuest_1();
+                QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
+                qManager.SetIngQuest_1(saveData.GetIngQuest_1());
+                qManager.SetClearQuest_1(saveData.GetClearQuest_1());
             }
             
             else if (talkData.Split(':')[1] == "101")

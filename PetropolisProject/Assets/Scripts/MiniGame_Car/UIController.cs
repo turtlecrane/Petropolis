@@ -11,20 +11,27 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("ActiveUI", 0.5f);
+        Invoke("ActiveUI", 0.2f);
+        Invoke("HideUI", 3.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-        {
-            startUI.SetActive(false);
-        }
+        
     }
 
     void ActiveUI()
     {
         startUI.SetActive(isActive);
+    }
+
+    void HideUI()
+    {
+        /*if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            startUI.SetActive(false);
+        }*/
+        startUI.SetActive(false);
     }
 }
