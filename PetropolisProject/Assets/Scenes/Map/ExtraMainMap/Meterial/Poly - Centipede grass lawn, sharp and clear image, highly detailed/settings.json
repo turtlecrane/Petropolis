@@ -1,0 +1,23 @@
+{
+  "prompt_text": "Centipede grass lawn, sharp and clear image, highly detailed. 5 meter",
+  "patch": {
+    "ext": "png",
+    "dtype": "uint8",
+    "width": 512,
+    "height": 512,
+    "url": "https://static-dev.withpoly.com/v3/textures/patches/54ee8b63-1546-40f4-ae07-54d2ba320224.png",
+    "patch_id": "5Yj8qDMvxu"
+  },
+  "seamless_prompt_text": "Centipede grass lawn, sharp and clear image, highly detailed. 5 meter",
+  "seamless_patch_scale": 0.8,
+  "upscale_prompt_text": "Centipede grass lawn, sharp and clear image, highly detailed.",
+  "upscale_resolution": 2048,
+  "is_seamless": true,
+  "pbr_mode": "diverse",
+  "pbr_generate_color": true,
+  "pbr_generate_normal": true,
+  "pbr_generate_height": true,
+  "pbr_generate_ao": true,
+  "pbr_generate_roughness": true,
+  "pbr_generate_metallic": false
+}
