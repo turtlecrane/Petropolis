@@ -151,8 +151,8 @@
      <Folder Include="Assets\model\Cat" />
      <Folder Include="Assets\Prefabs\Garbage" />
      <Folder Include="Assets\Scenes\PrologueScene\PrologueScene" />
-     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\car\car_5" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\AllSkyFree\_AllSkyFreeDemoEnvironment\Materials" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\car\car_5" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Flower" />
      <Folder Include="Assets\Scenes\Map\Resource\park\_TerrainAutoUpgrade" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\traffic signs FBX" />
@@ -197,8 +197,8 @@
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Bed\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures\Leaves" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\bus\bus_1" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Prefabs\Mobile" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Prefabs\Mobile" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture4" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Lamps" />
@@ -224,7 +224,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture2" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_C_Textures" />
      <Folder Include="Assets\Animation\UI" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Materials\Mobile" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Materials\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\FallPrevention" />
      <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Character auras" />
      <Folder Include="Assets\Scenes\NameScene\Meterial\Poly - white wood parquet, luxury, polished, extreme fine details" />
@@ -268,7 +268,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\Shops_FBX" />
      <Folder Include="Assets\asset_free_Ukraine_cars\scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Prefabs" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Prefabs" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\BrokenVector\LowPolyRoadPack\Demo" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\Buildings_FBX\Materials" />
@@ -382,7 +382,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers\Textures\Ground" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck\Material" />
      <Folder Include="Assets\Scripts\QuizScripts" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Textures\Mobile" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Textures\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\JapaneseMapleTree_D_Textures" />
      <None Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures\Credits.txt" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09" />
@@ -448,6 +448,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\B" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Textures" />
+     <Folder Include="Assets\Scenes\Map\ExtraMainMap\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Old_USSR_Lamp" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\screen" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank\Models" />
@@ -476,7 +477,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Models" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Models" />
      <Folder Include="Assets\model\Furniture\QA_Books\Prefabs" />
      <Folder Include="Assets\Scenes\PrologueScene" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Prefab" />
@@ -540,7 +541,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\StylizedTrafficCone\Mesh" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Scenes" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Simple city plain\Prefabs" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Textures" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Slope\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01\PavingStone-01-Good" />
@@ -561,15 +562,15 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures\GrassBillboards" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\interior" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture9" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Materials" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Dumpster\Prefab" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Misc\Flashlight.fbm" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Street_props" />
      <Folder Include="Assets\Scenes\Map\Resource\park\ADG_Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Power\Materials" />
-     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\truck" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\BrokenVector\LowPolyRoadPack\Demo\Textures" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\AllSkyFree" />
+     <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\truck" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture8" />
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers\Textures\GrassFlowers" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Materials" />
@@ -600,7 +601,7 @@
      <Folder Include="Assets\model\NPC" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture5" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\lamps fbx" />
-     <Folder Include="Assets\Scenes\Map\Resource\Hometown\Simple Vehicle Pack\Models\Materials" />
+     <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Models\Materials" />
      <Folder Include="Assets\source\Fantasy Wooden GUI  Free\Scene" />
      <None Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Read_me.txt" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Bed\Textures" />
