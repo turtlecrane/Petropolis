@@ -16,6 +16,8 @@ public class SaveData : MonoBehaviour
     private bool clearQuiz = false;
     private bool clearFrisbee = false;
     private bool clearTimeAttack = false;
+
+    private int quizScore;
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     
     // 퀘스트 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
@@ -117,6 +119,11 @@ public class SaveData : MonoBehaviour
     {
         clearQuiz = true;
     }
+
+    public void SetQuizScore(int score)
+    {
+        quizScore = score;
+    }
     
     public void ClearFrisbee()
     {
@@ -164,6 +171,11 @@ public class SaveData : MonoBehaviour
     public bool GetClearQuiz()
     {
         return clearQuiz;
+    }
+
+    public int GetQuizScore()
+    {
+        return quizScore;
     }
     
     public bool GetClearFrisbee()

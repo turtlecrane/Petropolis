@@ -18,18 +18,22 @@ public class QuizManager : MonoBehaviour
     public GameObject GoPanel; // 종료 화면
     public GameObject btnNext; // 다음 버튼
     public GameObject QuizNPC;
+    public GameObject npcTextbg;
+    public TextMeshPro npcText;
     public TextMeshProUGUI QuestionText; // 문제 텍스트
     public TextMeshProUGUI SolutionText; // 해설 텍스트
     public TextMeshProUGUI ScoreText; // 점수 표기 텍스트
 
     private int totalQuestions = 0; // 총 문제 개수
-    private bool isPlus = false;
+    private int answerCount = 0;
+    private bool isSelect = false;
     private Animator npcAnimator;
 
     public int score; // 점수
     // Start is called before the first frame update
     void Start()
     {
+        npcTextbg.SetActive(false);
         npcAnimator = QuizNPC.GetComponent<Animator>();
         totalQuestions = QnA.Count;
         StartPanel.SetActive(true);
@@ -58,28 +62,45 @@ public class QuizManager : MonoBehaviour
 
     public void Correct() // 정답
     {
-        if (!isPlus)
+        if (!isSelect)
         {
             score += 1;
-            isPlus = true;
+            isSelect = true;
+            npcTextbg.SetActive(true);
+            npcText.text = "정답이야!";
+            QnA.RemoveAt(currentQuestion); // 현재 진행된 문제를 리스트에서 제거
+            npcAnimator.SetInteger("Status", 1);
+            npcAnimator.SetTrigger("Trigger");
+            SetSolution();
         }
-        QnA.RemoveAt(currentQuestion); // 현재 진행된 문제를 리스트에서 제거
-        npcAnimator.SetInteger("Status", 1);
-        npcAnimator.SetTrigger("Trigger");
-        SetSolution();
     }
 
     public void Wrong() // 오답
     {
-        QnA.RemoveAt(currentQuestion);
-        npcAnimator.SetInteger("Status", 2);
-        npcAnimator.SetTrigger("Trigger");
-        SetSolution();
+        if (!isSelect)
+        {
+            isSelect = true;
+            npcTextbg.SetActive(true);
+            npcText.text = "오답이네.";
+            QnA.RemoveAt(currentQuestion); // 현재 진행된 문제를 리스트에서 제거
+            npcAnimator.SetInteger("Status", 2);
+            npcAnimator.SetTrigger("Trigger");
+            SetSolution();
+        }
     }
 
     void SetAnswers() // 선택지 버튼의 Text 오브젝트에 선택지들을 작성
     {
-        for (int i = 0; i < options.Length; i++)
+        answerCount = QnA[currentQuestion].Answers.Length;
+        if (answerCount == 2)
+        {
+            options[2].SetActive(false);
+        }
+        else
+        {
+            options[2].SetActive(true);
+        }
+        for (int i = 0; i < answerCount; i++)
         {
             options[i].transform.GetChild(1).gameObject.SetActive(false); // 직전 문제의 O, X 끄기
             options[i].transform.GetChild(2).gameObject.SetActive(false);
@@ -91,6 +112,7 @@ public class QuizManager : MonoBehaviour
                 options[i].GetComponent<AnswerScript>().isCorrect = true; // 정답 버튼 설정
             }
         }
+
     }
 
     void GenerateQuestion() // 문제 설정
@@ -112,7 +134,8 @@ public class QuizManager : MonoBehaviour
 
     public void NextQuestion() // 다음 문제
     {
-        isPlus = false;
+        isSelect = false;
+        npcTextbg.SetActive(false);
         npcAnimator.SetInteger("Status", 0);
         GenerateQuestion();
         btnNext.SetActive(false);
@@ -127,7 +150,7 @@ public class QuizManager : MonoBehaviour
 
     void SetCorrectWrong() // 정답, 오답에 따라 버튼 위에 O, X 표기 GetChild(1) = O, GetChild(2) = X
     {
-        for (int i = 0; i < options.Length; i++)
+        for (int i = 0; i < answerCount; i++)
         {
             if (options[i].GetComponent<AnswerScript>().isCorrect == true)
             {
