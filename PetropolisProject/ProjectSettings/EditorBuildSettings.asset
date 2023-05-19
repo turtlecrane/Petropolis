@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hospital.unity
     guid: 20103d8b8c6bb704cafe27483177e5fc
+  - enabled: 1
+    path: Assets/Scenes/EndingScene/EndingScene.unity
+    guid: ef715338404a8544c8498b64fb0e4fd9
   m_configObjects: {}

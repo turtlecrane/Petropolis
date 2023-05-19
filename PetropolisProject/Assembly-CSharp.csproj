@@ -106,6 +106,8 @@
      <Compile Include="Assets\Scripts\SoundOptions.cs" />
      <Compile Include="Assets\Scripts\LoadData.cs" />
      <Compile Include="Assets\Scripts\DontDestroy.cs" />
+     <Compile Include="Assets\Scripts\EndingScene\EndAniController.cs" />
+     <Compile Include="Assets\Scripts\EndingScene\EndingSceneTalk.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Textures" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures\2" />
@@ -211,6 +213,7 @@
      <Folder Include="Assets\source\font\NaverNanumSquareNeo\TMP" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Meshes" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Scenes" />
+     <Folder Include="Assets\Scripts\EndingScene" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\kiti\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Park props pack\Lamps\Textures 1" />
@@ -381,6 +384,8 @@
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Old_building_NYC_3\Prefabs" />
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers\Textures\Ground" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck\Material" />
+     <Folder Include="Assets\Prefabs\EndingScene" />
+     <Folder Include="Assets\Animation\EndingScene" />
      <Folder Include="Assets\Scripts\QuizScripts" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Textures\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\JapaneseMapleTree_D_Textures" />
@@ -648,6 +653,7 @@
      <Folder Include="Assets\source\Audio\Effect" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\SpaceZeta_StreetLamps" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games\Textures\512" />
+     <Folder Include="Assets\Scenes\EndingScene" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\AllSkyFree\Epic_BlueSunset" />
      <Folder Include="Assets\model\NPC\Bryce" />
      <Folder Include="Assets\Scenes" />
