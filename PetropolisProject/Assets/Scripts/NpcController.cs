@@ -122,9 +122,9 @@ public class NpcController : MonoBehaviour
     public void HideBoth()
     {
         var dog = GameObject.Find("dog2");
-        //gameObject.transform.position = new Vector3(-51,0,110); // 안보이는 곳에 숨겨 사라진 것처럼 처리
         gameObject.SetActive(false);
         dog.SetActive(false);
+        //gameObject.transform.position = new Vector3(-51,0,110); // 안보이는 곳에 숨겨 사라진 것처럼 처리
         //dog.transform.position = new Vector3(-52,0,110);        // 안보이는 곳에 숨겨 사라진 것처럼 처리
 
     }
