@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
 public enum FoodType // 음식들이 플레이어에게 주는 영향 구분 Good = 0, Fever = 1, Disease = 2, Fatal = 3
@@ -50,4 +51,17 @@ public class FoodObjData : MonoBehaviour
     {
         return intfoodType;
     }
+
+    public int GetFoodId()
+    {
+        return foodId;
+    }
+
+    public void Eat()
+    {
+        SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+        saveData.AddEatList(GetComponent<FoodObjData>());
+        transform.gameObject.SetActive(false);
+    }
+
 }

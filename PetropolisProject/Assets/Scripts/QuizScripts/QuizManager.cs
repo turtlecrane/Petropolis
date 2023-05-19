@@ -28,11 +28,13 @@ public class QuizManager : MonoBehaviour
     private int answerCount = 0;
     private bool isSelect = false;
     private Animator npcAnimator;
+    private SaveData saveData;
 
     public int score; // 점수
     // Start is called before the first frame update
     void Start()
     {
+        saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
         npcTextbg.SetActive(false);
         npcAnimator = QuizNPC.GetComponent<Animator>();
         totalQuestions = QnA.Count;
@@ -57,6 +59,16 @@ public class QuizManager : MonoBehaviour
     {
         QuizPanel.SetActive(false);
         GoPanel.SetActive(true);
+        npcTextbg.SetActive(true);
+        if (score < 8)
+        {
+            npcText.text = "흥.";
+        }
+        else
+        {
+            npcText.text = "굉장한데?";
+        }
+        
         ScoreText.text = score + "/" + totalQuestions;
     }
 
@@ -162,5 +174,10 @@ public class QuizManager : MonoBehaviour
             }
         }
     }
-    
+
+    public void SetQuiz()
+    {
+        saveData.ClearQuiz();
+        saveData.SetQuizScore(score);
+    }
 }

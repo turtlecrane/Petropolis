@@ -7,8 +7,16 @@ public class SaveData : MonoBehaviour
     public static SaveData Instance; // SaveData 객체 저장
     private GameObject player; // 플레이어
     private GameObject[] npc; // Npc 리스트
+    private GameObject[] food;
     private ObjData[] npcObjData; // Npc 리스트의 ObjData 저장
+    public int[] eatList;
+    private int foodEatIndex = 0;
     public Transform playerPos; // 플레이어 위치 저장
+    
+    private float disease = 0.0f; 
+    private float hungry = 0.0f; 
+    private bool onDisease = false; // 감염 상태 확인
+    private Color diseaseColor;
     // 미니게임 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     private bool clearRoadGame_1 = false;
     private bool clearRoadGame_2 = false;
@@ -57,6 +65,9 @@ public class SaveData : MonoBehaviour
         {
             npcObjData[i] = npc[i].GetComponent<ObjData>(); // npcObjData에 데이터 저장
         }
+        
+        food = GameObject.FindGameObjectsWithTag("Food");
+        eatList = new int[food.Length];
     }
 
     // Update is called once per frame
@@ -72,6 +83,17 @@ public class SaveData : MonoBehaviour
         }
         
     }
+
+    public void AddEatList(FoodObjData nowEat)
+    {
+        eatList[foodEatIndex] = nowEat.GetFoodId();
+        foodEatIndex++;
+    }
+
+    public int[] GetEatList()
+    {
+        return eatList;
+    }
     
     private void SetPlayer() // 플레이어 찾기
     {
@@ -83,6 +105,46 @@ public class SaveData : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Dog"); // 없으면 Dog를 등록
         }
+    }
+
+    public void SaveDisease(float disease)
+    {
+        this.disease = disease;
+    }
+    
+    public void SaveHungry(float hungry)
+    {
+        this.hungry = hungry;
+    }
+    
+    public void SaveOnDisease(bool od)
+    {
+        onDisease = od;
+    }
+
+    public void SaveDiseaseStateColor(Color color)
+    {
+        diseaseColor = color;
+    }
+    
+    public float GetSaveDisease()
+    {
+        return disease;
+    }
+    
+    public float GetSaveHungry()
+    {
+        return hungry;
+    }
+    
+    public bool GetSaveOnDisease()
+    {
+        return onDisease;
+    }
+
+    public Color GetSaveDiseaseStateColor()
+    {
+        return diseaseColor;
     }
     
     private void CheckScene() // 현재 씬 체크
@@ -96,7 +158,9 @@ public class SaveData : MonoBehaviour
     private void ChangeScene() // 메인 씬으로 돌아온다면
     {
         if (nowscene == 0 && nowscene != beforescene)
+        {
             SetPlayer();
+        }
     }
 
     // 클리어 설정 함수 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
