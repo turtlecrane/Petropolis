@@ -17,6 +17,11 @@ public class SaveData : MonoBehaviour
     private float hungry = 0.0f; 
     private bool onDisease = false; // 감염 상태 확인
     private Color diseaseColor;
+
+    private int goodFoodCount = 0;
+    private int badFoodCount = 0;
+    private int dangerFoodCount = 0;
+    private int fatalFoodCount = 0;
     // 미니게임 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     private bool clearRoadGame_1 = false;
     private bool clearRoadGame_2 = false;
@@ -88,6 +93,53 @@ public class SaveData : MonoBehaviour
     {
         eatList[foodEatIndex] = nowEat.GetFoodId();
         foodEatIndex++;
+        if (nowEat.GetFoodId() < 2000 && nowEat.GetFoodId() > 1000)
+        {
+            goodFoodCount++;
+        }
+        else if (nowEat.GetFoodId() < 3000 && nowEat.GetFoodId() > 2000)
+        {
+            badFoodCount++;
+        }
+        else if (nowEat.GetFoodId() < 4000 && nowEat.GetFoodId() > 3000)
+        {
+            dangerFoodCount++;
+        }
+        else if (nowEat.GetFoodId() < 5000 && nowEat.GetFoodId() > 4000)
+        {
+            fatalFoodCount++;
+        }
+    }
+
+    public int[] ReturnFoodCount()
+    {
+        int[] counts = new int[4];
+        counts[0] = goodFoodCount;
+        counts[1] = badFoodCount;
+        counts[2] = dangerFoodCount;
+        counts[3] = fatalFoodCount;
+
+        return counts;
+    }
+
+    public bool[] ReturnQuestCount()
+    {
+        bool[] counts = new bool[2];
+        counts[0] = GetClearQuest_1();
+        counts[1] = GetClearQuest_3();
+
+        return counts;
+    }
+    
+    public bool[] ReturnMinigameCount()
+    {
+        bool[] counts = new bool[4];
+        counts[0] = GetClearRoadGame_1();
+        counts[1] = GetClearRoadGame_2();
+        counts[2] = GetClearRoadGame_3();
+        counts[3] = GetClearQuiz();
+
+        return counts;
     }
 
     public int[] GetEatList()
