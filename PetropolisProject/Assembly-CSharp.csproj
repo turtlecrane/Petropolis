@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\ObjData.cs" />
      <Compile Include="Assets\Scripts\MiniGame_Car\ActorMove.cs" />
+     <Compile Include="Assets\Scripts\FoodRotate.cs" />
      <Compile Include="Assets\Scripts\SoundSystem\EFF.cs" />
      <Compile Include="Assets\Scripts\TestInteractManager.cs" />
      <Compile Include="Assets\Scripts\TalkManager.cs" />
@@ -107,8 +108,10 @@
      <Compile Include="Assets\wakeup.cs" />
      <Compile Include="Assets\Scripts\MiniGame_Car\Road.cs" />
      <Compile Include="Assets\Scripts\SoundOptions.cs" />
+     <Compile Include="Assets\Scripts\EndingScene\ResultManager.cs" />
      <Compile Include="Assets\Scripts\LoadData.cs" />
      <Compile Include="Assets\Scripts\DontDestroy.cs" />
+     <Compile Include="Assets\Scripts\ResultConfirm.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Textures" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures\2" />
@@ -151,6 +154,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\A\A LOD" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Park props pack\Bench" />
      <None Include="Assets\Scenes\Map\Resource\garbage\TerrainTexture\Poly - garbage, highly detailed, extreme fine details\settings.json" />
+     <Folder Include="Assets\FoodImports\DigitalKonstrukt" />
      <Folder Include="Assets\model\VoxelAnimals" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\model\Cat" />
@@ -172,6 +176,7 @@
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\car\car_5" />
      <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\bus" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\StylizedTrafficCone\Materials" />
+     <Folder Include="Assets\Food Pack-Demo\Prefabs" />
      <Folder Include="Assets\Animation\NameScene" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank\Environment" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures\icons\128x128" />
@@ -195,6 +200,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House03" />
      <Folder Include="Assets\model\Realistic\Dogs\Shepherd\Texture" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\bus" />
+     <Folder Include="Assets\FoodImports\FREE Food Pack" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\SpaceZeta_StreetLamps\Base Meshes" />
      <Folder Include="Assets\model\BallAssets\TennisBall\Material" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof\A C\A C LOD" />
@@ -219,11 +225,13 @@
      <Folder Include="Assets\source\font\NaverNanumSquareNeo\TMP" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Meshes" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Scenes" />
+     <Folder Include="Assets\Food Pack-Demo\Prefabs with colliders" />
      <Folder Include="Assets\Scripts\EndingScene" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\kiti\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Park props pack\Lamps\Textures 1" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\Letters FBX" />
+     <Folder Include="Assets\Food Pack-Demo\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Dumpster\Model" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture1" />
@@ -235,6 +243,7 @@
      <Folder Include="Assets\Animation\UI" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Materials\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\FallPrevention" />
+     <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Resources\Meshes" />
      <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Character auras" />
      <Folder Include="Assets\Scenes\NameScene\Meterial\Poly - white wood parquet, luxury, polished, extreme fine details" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House04" />
@@ -269,6 +278,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Simple city plain\Material &amp; Texture\Material mesh" />
+     <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Resources" />
      <Folder Include="Assets\model\kenney_car-kit\Models" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Asphalt015_2K-JPG\Materials" />
      <Folder Include="Assets\Animation\Dog" />
@@ -278,6 +288,7 @@
      <Folder Include="Assets\Prefabs\InteractModel" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck\Textures\garbage_truck_no_damage" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\Shops_FBX" />
+     <Folder Include="Assets\FoodImports\Icons" />
      <Folder Include="Assets\asset_free_Ukraine_cars\scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Prefabs" />
@@ -330,6 +341,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Prefabs\3D" />
      <Folder Include="Assets\Prefabs\oldPrefabs" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Prefabs" />
+     <None Include="Assets\FoodImports\FREE Food Pack\Shaders\Food.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank" />
      <Folder Include="Assets\model\NPC\Brian" />
@@ -377,6 +389,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\ADG_Textures\ground_vol1\ground2" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene" />
      <Folder Include="Assets\model\Furniture\Dining Chairs" />
+     <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Park props pack\Lamps" />
      <Folder Include="Assets\model" />
      <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\car\car_6" />
@@ -401,6 +414,7 @@
      <Folder Include="Assets\Animation\EndingScene" />
      <Folder Include="Assets\model\NPC\Alex" />
      <Folder Include="Assets\Scripts\QuizScripts" />
+     <Folder Include="Assets\FoodImports\Icons\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Textures\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\JapaneseMapleTree_D_Textures" />
      <None Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures\Credits.txt" />
@@ -421,6 +435,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Letters" />
      <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures" />
+     <Folder Include="Assets\FoodImports\Icons\Texture" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\BrokenVector\LowPolyRoadPack" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART" />
@@ -476,10 +491,13 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Prefabs" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Assets_Crate_Barrels\models" />
+     <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Resources\Prefabs" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01\PavingStone-01-Perfect" />
+     <Folder Include="Assets\FoodImports" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\TerrainTexture\Poly - garbage, highly detailed, extreme fine details" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Asphalt015_2K-JPG\Plaster001_2K-PNG" />
+     <Folder Include="Assets\Food Pack-Demo\Mesh Collider" />
      <Folder Include="Assets\model\kenney_car-kit\Models\GLTF format" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Convenience\Materials" />
      <Folder Include="Assets\Prefabs\NameScene\KeyboardAdjustableColors\Prefab" />
@@ -492,16 +510,19 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Old_building_NYC_3" />
      <None Include="Assets\QuickOutline\Readme.txt" />
+     <Folder Include="Assets\Food Pack-Demo\Scenes" />
      <Folder Include="Assets\model\NPC\Roth" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Shaders" />
+     <Folder Include="Assets\FoodImports\FREE Food Pack\Shaders" />
      <Folder Include="Assets\model\Realistic\Dogs\Shepherd\Scenes" />
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs" />
      <Folder Include="Assets\model\BallAssets\TennisBall\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Models" />
+     <Folder Include="Assets\Food Pack-Demo" />
      <Folder Include="Assets\model\Furniture\QA_Books\Prefabs" />
      <Folder Include="Assets\Scenes\PrologueScene" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Prefab" />
@@ -525,6 +546,7 @@
      <None Include="Assets\Scenes\NameScene\Meterial\Poly - white wood parquet, luxury, polished, extreme fine details\settings.json" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Simple city plain" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof\A C" />
+     <Folder Include="Assets\FoodImports\FREE Food Pack\Mesh" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank\Prefabs" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\tumba_fur\Materials" />
@@ -583,6 +605,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01\PavingStone-01-Bad" />
      <Folder Include="Assets\source\UI\FreeButtonSet" />
      <None Include="Assets\source\Audio\BGM\README.txt" />
+     <Folder Include="Assets\FoodImports\FREE Food Pack\Prefabs" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\Sky" />
      <Folder Include="Assets\source\Fantasy Wooden GUI  Free\normal_ui_set A" />
      <Folder Include="Assets\model\BallAssets" />
@@ -642,7 +665,9 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Model" />
      <Folder Include="Assets\source\UI\FreeButtonSet\Fonts" />
      <Folder Include="Assets\Tools\TerrainRotator" />
+     <Folder Include="Assets\Food Pack-Demo\Texture" />
      <Folder Include="Assets\QuickOutline\Scripts" />
+     <Folder Include="Assets\FoodImports\FREE Food Pack\Textures" />
      <Folder Include="Assets\model\Realistic\Dogs\Shepherd" />
      <Folder Include="Assets\asset_free_Ukraine_cars\materials" />
      <Folder Include="Assets\model\Quiz\Cartoon Cat\fbx\Materials" />
@@ -661,6 +686,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01\Models" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Textures\Knobs" />
      <Folder Include="Assets\source\UI" />
+     <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Resources\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\JapaneseMapleTree_C_Textures" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Meshes\Materials" />
@@ -670,6 +696,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers\Demo\DemoGrassFlowers" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\meshes\buildings_col" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures" />
+     <Folder Include="Assets\Food Pack-Demo\Mesh" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Small Tree" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_E_Textures" />
@@ -678,6 +705,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\model\NPC\Kate" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\road_colliiders" />
+     <Folder Include="Assets\FoodImports\FREE Food Pack\Scenes" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House06" />
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\props_FBX\Materials" />
@@ -689,6 +717,7 @@
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\AllSkyFree\Epic_BlueSunset" />
      <Folder Include="Assets\model\NPC\Bryce" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\FoodImports\FREE Food Pack\Materials" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Materials" />
@@ -715,9 +744,11 @@
      <Folder Include="Assets\Scenes\Map\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight" />
      <Folder Include="Assets\model\VoxelAnimals\Demo" />
+     <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Demo" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Park props pack\Lamps\Textures 1\LOD1" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Free_Building_01\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\BlackPineTree_A_Textures" />
+     <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Resources\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes\Textures\Sunny1" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\lamps fbx\Materials" />
      <Folder Include="Assets\Scenes\EndingScene\EndingScene" />
@@ -1369,23 +1400,11 @@
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -1420,11 +1439,29 @@
      <Reference Include="Unity.Services.Core">
      <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.State">
-     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State">
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

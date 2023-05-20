@@ -15,6 +15,7 @@ public class BGM : MonoBehaviour
     public AudioClip QuizMiniGame;
     public AudioClip NameCut;
     public AudioClip ProlCut;
+    public AudioClip ResAudio;
     
     private AudioSource audioSource;
     public int BgmFlag; //플레이어가 어느 위치에 있는지 가져와서 브금을 바꿔줌 -> PlayerStatus.cs와 연결됨
@@ -26,12 +27,14 @@ public class BGM : MonoBehaviour
     public float prevVolume; //마지막으로 수정된 브금볼륨값이 저장됨. -> BGMSlider.cs와 연결됨
     public float fadeOutSpeed = 1f;
 
-    private bool isTuto = false;
-    private bool isRoadMiniGame = false;
-    private bool isQuizMiniGame = false;
-    private bool isNameCut = false;
-    private bool isProlCut = false;
-    private bool isEndlCut = false;
+    public bool isMenu = false;
+    public bool isTuto = false;
+    public bool isRoadMiniGame = false;
+    public bool isQuizMiniGame = false;
+    public bool isNameCut = false;
+    public bool isProlCut = false;
+    public bool isEndlCut = false;
+    public bool isRes = false;
     void Start()
     {
         isTuto = false;
@@ -44,9 +47,17 @@ public class BGM : MonoBehaviour
     void Update()
     {
         sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        
+        if (sceneName == "MainMenu_Played" && !isMenu)
+        {
+            isRes = false;
+            audioSource.clip = mainMenuAudio;
+            audioSource.volume = prevVolume;
+            audioSource.Play();
+            isMenu = true;
+        }
         if (sceneName == "NameScene" && !isNameCut)
         {
+            isMenu = false;
             audioSource.clip = NameCut;
             audioSource.volume = prevVolume;
             audioSource.Play();
@@ -54,6 +65,7 @@ public class BGM : MonoBehaviour
         }
         else if (sceneName == "PrologueScene" && !isProlCut)
         {
+            isNameCut = false;
             audioSource.clip = ProlCut;
             audioSource.volume = prevVolume;
             audioSource.Play();
@@ -66,8 +78,18 @@ public class BGM : MonoBehaviour
             audioSource.Play();
             isEndlCut = true;
         }
+        else if (sceneName == "Result" && !isRes)
+        {
+            isMenu = false;
+            isEndlCut = false;
+            audioSource.clip = ResAudio;
+            audioSource.volume = prevVolume;
+            audioSource.Play();
+            isRes = true;
+        }
         else if (sceneName == "Level_house" && !isTuto)
         {
+            isProlCut = false;
             audioSource.clip = tutoAudio;
             audioSource.volume = prevVolume;
             audioSource.Play();
@@ -75,6 +97,7 @@ public class BGM : MonoBehaviour
         }
         else if (sceneName == "Quiz" && !isRoadMiniGame)
         {
+            isQuizMiniGame = false;
             audioSource.clip = RoadMiniGame;
             audioSource.volume = prevVolume;
             audioSource.Play();
@@ -82,6 +105,7 @@ public class BGM : MonoBehaviour
         }
         else if (sceneName == "RoadMiniGame" && !isQuizMiniGame)
         {
+            isRoadMiniGame = false;
             audioSource.clip = QuizMiniGame;
             audioSource.volume = prevVolume;
             audioSource.Play();
@@ -89,6 +113,8 @@ public class BGM : MonoBehaviour
         }
         else if (sceneName == "MainMap")
         {
+            isRoadMiniGame = false;
+            isQuizMiniGame = false;
             isTuto = false;
             PlayerStatus playerStatus = GameObject.Find("catRig3").GetComponent<PlayerStatus>();
             BgmFlag = playerStatus.AreaID; //플레이어의 위치정보를 가져와서 브금 바꿔주기

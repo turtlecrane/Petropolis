@@ -1172,6 +1172,7 @@ MonoBehaviour:
   QuizMiniGame: {fileID: 8300000, guid: a8f8c93d7f6d78c48b0a6c5c5ca8e07e, type: 3}
   NameCut: {fileID: 8300000, guid: 504d710f028637949a719d42eca53c2b, type: 3}
   ProlCut: {fileID: 8300000, guid: 76f038084d743744bb38acc2c811b695, type: 3}
+  ResAudio: {fileID: 8300000, guid: cf6d37eb597f8b248af4c758e42f4151, type: 3}
   BgmFlag: 0
   prevVolume: 0
   fadeOutSpeed: 1
