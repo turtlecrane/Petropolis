@@ -128,5 +128,4 @@ public class NpcController : MonoBehaviour
         //dog.transform.position = new Vector3(-52,0,110);        // 안보이는 곳에 숨겨 사라진 것처럼 처리
 
     }
-    
 }

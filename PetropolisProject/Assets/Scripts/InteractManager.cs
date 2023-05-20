@@ -33,6 +33,8 @@ public class InteractManager : MonoBehaviour
 
     private Transform _selection;
 
+    public TimeattackManager TAManager;
+
     void Awake()
     {
         interactionData = new Dictionary<int, string[]>();
@@ -91,6 +93,11 @@ public class InteractManager : MonoBehaviour
             else if (HitTag == "NextScene")
             {
                 SceneManager.LoadScene("MainMap");
+            }
+            else if (HitTag == "Target" && TAManager.isGameRunning == true)
+            {
+                TAManager.InteractTarget();
+                scanObject.SetActive(false);
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -193,7 +200,7 @@ public class InteractManager : MonoBehaviour
 
     void InteractionTextData()
     {
-        interactionData.Add(1, new string[] { "방으로 이동하시겠습니까?" });
+        interactionData.Add(1, new string[] { "방으로 이동하시겠습니까? ( 엔딩 )" });
         interactionData.Add(2, new string[] { "병원으로 이동하시겠습니까?" });
         interactionData.Add(3, new string[] { "병원에서 나가시겠습니까?" });
         interactionData.Add(4, new string[] { "퀴즈 테스트" });
