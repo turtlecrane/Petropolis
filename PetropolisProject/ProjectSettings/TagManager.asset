@@ -23,6 +23,9 @@ TagManager:
   - EffSound
   - Grass
   - NextScene
+  - Crash
+  - EffSlider
+  - Target
   layers:
   - Default
   - TransparentFX

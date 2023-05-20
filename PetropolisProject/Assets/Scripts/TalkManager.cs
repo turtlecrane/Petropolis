@@ -11,6 +11,7 @@ public class TalkManager : MonoBehaviour
     private NpcController npcController;
     public DialogManager dialogManager;
     public InteractManager interactManager;
+    public TimeattackManager TAManager;
 
     public TextMeshProUGUI NpcName;
     public TextMeshProUGUI Context;
@@ -135,6 +136,11 @@ public class TalkManager : MonoBehaviour
                 saveData.SetIngQuest_3(false);
                 QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
                 qManager.SetIngQuest_3(saveData.GetIngQuest_3());
+            }
+            else if (talkData.Split(':')[1] == "111")
+            {
+                npcController.isChange = true;
+                TAManager.StartGame();
             }
             talkIndex++; //그 다음 대사를 가져오기 위해서 인덱스를 늘려주기
         }

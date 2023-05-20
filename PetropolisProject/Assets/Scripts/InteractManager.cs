@@ -33,6 +33,8 @@ public class InteractManager : MonoBehaviour
 
     private Transform _selection;
 
+    public TimeattackManager TAManager;
+
     void Awake()
     {
         interactionData = new Dictionary<int, string[]>();
@@ -91,6 +93,11 @@ public class InteractManager : MonoBehaviour
             else if (HitTag == "NextScene")
             {
                 SceneManager.LoadScene("MainMap");
+            }
+            else if (HitTag == "Target" && TAManager.isGameRunning == true)
+            {
+                TAManager.InteractTarget();
+                scanObject.SetActive(false);
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
