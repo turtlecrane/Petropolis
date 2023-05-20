@@ -31,6 +31,7 @@ public class BGM : MonoBehaviour
     private bool isQuizMiniGame = false;
     private bool isNameCut = false;
     private bool isProlCut = false;
+    private bool isEndlCut = false;
     void Start()
     {
         isTuto = false;
@@ -43,11 +44,7 @@ public class BGM : MonoBehaviour
     void Update()
     {
         sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        /*if (sceneName == "MainMenu")
-        {
-            audioSource.clip = mainMenuAudio;
-            audioSource.volume = prevVolume;
-        }*/
+        
         if (sceneName == "NameScene" && !isNameCut)
         {
             audioSource.clip = NameCut;
@@ -61,6 +58,13 @@ public class BGM : MonoBehaviour
             audioSource.volume = prevVolume;
             audioSource.Play();
             isProlCut = true;
+        }
+        else if (sceneName == "EndingScene" && !isEndlCut)
+        {
+            audioSource.clip = ProlCut;
+            audioSource.volume = prevVolume;
+            audioSource.Play();
+            isEndlCut = true;
         }
         else if (sceneName == "Level_house" && !isTuto)
         {

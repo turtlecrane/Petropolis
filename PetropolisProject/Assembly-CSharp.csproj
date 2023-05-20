@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\PlayerRigidbody.cs" />
      <Compile Include="Assets\Scripts\PlayerCameraTest.cs" />
      <Compile Include="Assets\Scripts\NameScene\NameSceneTalk.cs" />
+     <Compile Include="Assets\Scripts\EndingScene\EndAniController.cs" />
      <Compile Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\AntennaDirection.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\SoundSystem\BGMSlider.cs" />
@@ -73,6 +74,7 @@
      <Compile Include="Assets\Scripts\StaminaToggle.cs" />
      <Compile Include="Assets\Scripts\FoodManager.cs" />
      <Compile Include="Assets\Scripts\SitChair.cs" />
+     <Compile Include="Assets\Scripts\TimeattackManager.cs" />
      <Compile Include="Assets\Scripts\QuizScripts\AnswerScript.cs" />
      <Compile Include="Assets\Scripts\SoundSystem\BGM.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
@@ -86,6 +88,7 @@
      <Compile Include="Assets\Scripts\SettingsOnEsc.cs" />
      <Compile Include="Assets\Scripts\TreatManager.cs" />
      <Compile Include="Assets\Scripts\Quest\Quest3.cs" />
+     <Compile Include="Assets\Scripts\EndingScene\EndingSceneTalk.cs" />
      <Compile Include="Assets\Scripts\RoadWarp.cs" />
      <Compile Include="Assets\Scripts\NameScene\isCameraPlay.cs" />
      <Compile Include="Assets\Scripts\QuizScripts\GoToQuiz.cs" />
@@ -106,13 +109,12 @@
      <Compile Include="Assets\Scripts\SoundOptions.cs" />
      <Compile Include="Assets\Scripts\LoadData.cs" />
      <Compile Include="Assets\Scripts\DontDestroy.cs" />
-     <Compile Include="Assets\Scripts\EndingScene\EndAniController.cs" />
-     <Compile Include="Assets\Scripts\EndingScene\EndingSceneTalk.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Textures" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures\2" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures\1" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\glass_table" />
+     <Folder Include="Assets\model\NPC\Martha" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\PBR Folding Chairs\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\FallPrevention\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_B_Textures" />
@@ -126,6 +128,7 @@
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\van\van_1" />
      <Folder Include="Assets\Scripts\SoundSystem" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\BrokenVector\LowPolyRoadPack\Demo\Landscape" />
+     <Folder Include="Assets\model\BallAssets\Baseballs\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Curve\Materials" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office" />
      <Folder Include="Assets\QuickOutline\Resources" />
@@ -190,10 +193,13 @@
      <Folder Include="Assets\model\NPC\Jody" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House03" />
+     <Folder Include="Assets\model\Realistic\Dogs\Shepherd\Texture" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\bus" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\SpaceZeta_StreetLamps\Base Meshes" />
+     <Folder Include="Assets\model\BallAssets\TennisBall\Material" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof\A C\A C LOD" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Scenes\SceneDemoAsset" />
+     <Folder Include="Assets\model\Realistic\Dogs" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Bed\Materials" />
@@ -243,15 +249,18 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\AllSkyFree\_AllSkyFreeDemoEnvironment" />
      <Folder Include="Assets\Prefabs\npc" />
+     <Folder Include="Assets\model\Realistic\Dogs\Shepherd\Prefabs" />
      <Folder Include="Assets\asset_free_Ukraine_cars\textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Straight\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_D_Textures" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
+     <Folder Include="Assets\Images\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\tumba_fur" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures" />
      <Folder Include="Assets\QuickOutline\Samples" />
      <Folder Include="Assets\model\Furniture\QA_Books\Textures" />
+     <Folder Include="Assets\model\Realistic\Dogs\Shepherd\FBX" />
      <None Include="Assets\Scenes\Map\ExtraMainMap\Meterial\Poly - Centipede grass lawn, sharp and clear image, highly detailed\Made with Poly.txt" />
      <Folder Include="Assets\Hovl Studio\Magic effects pack\Materials" />
      <None Include="Assets\model\kenney_car-kit\License.txt" />
@@ -286,6 +295,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\3D" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Barricade" />
      <Folder Include="Assets\Scripts" />
+     <Folder Include="Assets\model\NPC\Pete" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Materials" />
      <None Include="Assets\source\UI\StatusIcons\copyRight.txt" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Scenes\PrefabsScene" />
@@ -325,6 +335,7 @@
      <Folder Include="Assets\model\NPC\Brian" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <Folder Include="Assets\model\BallAssets\Baseballs" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\GuardRail" />
      <Folder Include="Assets\source\font\NaverNanumSquareNeo" />
@@ -333,8 +344,10 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Buildings" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Old_USSR_Lamp\Prefabs" />
      <Folder Include="Assets\model\NPC\Sophie" />
+     <Folder Include="Assets\model\NPC\Amy" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\car\car_6" />
      <Folder Include="Assets\model\NPC\Doctor\Animation" />
+     <Folder Include="Assets\model\Realistic\Dogs\Shepherd\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Misc" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House05\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Prefabs\Props\Road" />
@@ -386,6 +399,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck\Material" />
      <Folder Include="Assets\Prefabs\EndingScene" />
      <Folder Include="Assets\Animation\EndingScene" />
+     <Folder Include="Assets\model\NPC\Alex" />
      <Folder Include="Assets\Scripts\QuizScripts" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Textures\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\JapaneseMapleTree_D_Textures" />
@@ -426,6 +440,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\ModularLowpolyStreetsFree\Materials\Roads" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <Folder Include="Assets\model\NPC\Adam" />
      <Folder Include="Assets\source" />
      <Folder Include="Assets\model\Furniture\Realistic_Bed\Bed" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\ModularLowpolyStreetsFree\Materials\Roads\Textures" />
@@ -451,6 +466,7 @@
      <Folder Include="Assets\source\UI\FreeButtonSet\Textures\icons\32x32" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\BrokenVector\LowPolyRoadPack\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\B" />
+     <Folder Include="Assets\Resources\playermaterials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Textures" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Materials" />
@@ -476,12 +492,15 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Old_building_NYC_3" />
      <None Include="Assets\QuickOutline\Readme.txt" />
+     <Folder Include="Assets\model\NPC\Roth" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Shaders" />
+     <Folder Include="Assets\model\Realistic\Dogs\Shepherd\Scenes" />
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs" />
+     <Folder Include="Assets\model\BallAssets\TennisBall\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Models" />
      <Folder Include="Assets\model\Furniture\QA_Books\Prefabs" />
      <Folder Include="Assets\Scenes\PrologueScene" />
@@ -518,6 +537,7 @@
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Materials\Frames" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Flashlight_Gold\Textures" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial" />
+     <Folder Include="Assets\model\BallAssets\TennisBall\Model" />
      <Folder Include="Assets\Scenes\Map\Resource" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Free_Building_01" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\interior\Materials" />
@@ -528,6 +548,7 @@
      <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\truck\truck_1" />
      <Folder Include="Assets\Hovl Studio" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office\Models" />
+     <Folder Include="Assets\model\NPC\Elizabeth" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\car" />
      <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\van" />
      <Folder Include="Assets\model\VoxelAnimals\Assets\Textures" />
@@ -543,6 +564,7 @@
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Meshes" />
      <Folder Include="Assets\source\Audio\Environment" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\TerrainTexture" />
+     <Folder Include="Assets\model\BallAssets\TennisBall" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\StylizedTrafficCone\Mesh" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Scenes" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Simple city plain\Prefabs" />
@@ -552,8 +574,10 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01\PavingStone-01-Good" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank\Models\Fuel Tank" />
      <None Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Readme.txt" />
+     <Folder Include="Assets\model\NPC\Suzie" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games\Textures\2k" />
+     <Folder Include="Assets\model\Realistic" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof\C" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\meshes\buildings_low" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01\PavingStone-01-Bad" />
@@ -561,12 +585,14 @@
      <None Include="Assets\source\Audio\BGM\README.txt" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\Sky" />
      <Folder Include="Assets\source\Fantasy Wooden GUI  Free\normal_ui_set A" />
+     <Folder Include="Assets\model\BallAssets" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\Buildings_FBX" />
      <Folder Include="Assets\Animation\PrologueScene" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House04\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures\GrassBillboards" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\interior" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture9" />
+     <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Dumpster\Prefab" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Misc\Flashlight.fbm" />
@@ -590,6 +616,8 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Prefabs\Props" />
      <Folder Include="Assets\Scenes\Map" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\PBR Folding Chairs\Meshes" />
+     <None Include="Assets\model\Realistic\Dogs\Shepherd\Readme.txt" />
+     <Folder Include="Assets\model\NPC\Joe" />
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\van" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Old_building_NYC_3\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House07\Materials" />
@@ -615,12 +643,15 @@
      <Folder Include="Assets\source\UI\FreeButtonSet\Fonts" />
      <Folder Include="Assets\Tools\TerrainRotator" />
      <Folder Include="Assets\QuickOutline\Scripts" />
+     <Folder Include="Assets\model\Realistic\Dogs\Shepherd" />
      <Folder Include="Assets\asset_free_Ukraine_cars\materials" />
      <Folder Include="Assets\model\Quiz\Cartoon Cat\fbx\Materials" />
      <None Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Shaders\SimpleWater.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House01" />
+     <Folder Include="Assets\model\BallAssets\Baseballs\TExuters" />
      <None Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes\_skybox info.txt" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\screen\Materials" />
+     <Folder Include="Assets\model\Realistic\Dogs\Shepherd\FBX\Anim" />
      <Folder Include="Assets\model\kenney_car-kit\Previews" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\Poly - Centipede grass lawn, sharp and clear image, highly detailed" />
      <Folder Include="Assets\Hovl Studio\Magic effects pack\Models" />
@@ -650,6 +681,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House06" />
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\props_FBX\Materials" />
+     <Folder Include="Assets\Images" />
      <Folder Include="Assets\source\Audio\Effect" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\SpaceZeta_StreetLamps" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games\Textures\512" />
@@ -665,6 +697,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\downtown\ModularLowpolyStreetsFree" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage" />
      <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\bus\bus_1" />
+     <Folder Include="Assets\Meshs" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\A\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\B\B LOD" />
@@ -687,6 +720,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\BlackPineTree_A_Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes\Textures\Sunny1" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\lamps fbx\Materials" />
+     <Folder Include="Assets\Scenes\EndingScene\EndingScene" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\GuardRail\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
