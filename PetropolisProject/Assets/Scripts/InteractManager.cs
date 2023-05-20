@@ -173,6 +173,8 @@ public class InteractManager : MonoBehaviour
         if (HitTag == "Food")
         {
             fmanager.SetCondition();
+            var fod = scanObject.GetComponent<FoodObjData>();
+            fod.Eat();
         }
         else if (HitTag == "Interaction")
         {

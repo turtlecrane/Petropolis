@@ -7,17 +7,34 @@ public class LoadData : MonoBehaviour
     private SaveData saveData;
     private GameObject[] npc;
     private GameObject player;
+    private GameObject[] food;
     private Transform playerPos;
     
     public MiniGameManager mgManager;
 
     public QuestManager qManager;
+
+    public FoodManager fManager;
     // Start is called before the first frame update
 
     void Awake()
     {
         saveData = GameObject.Find("SaveData").GetComponent<SaveData>(); // SaveData 불러오기
         SetPlayer();
+        if (saveData.GetSaveHungry() != 0.0f)
+        {
+            fManager.LoadHungry(saveData.GetSaveHungry());
+            if (saveData.GetSaveOnDisease())
+            {
+                fManager.LoadOnDisease(saveData.GetSaveOnDisease());
+                fManager.LoadDisease(saveData.GetSaveDisease());
+            }
+        }
+        else
+        {
+            fManager.LoadHungry(fManager.maxHungry);
+        }
+
         playerPos = saveData.GetPlayerPos(); // PlayerPos 불러오기
         player.transform.position = playerPos.position; // player에 이전 transform 적용
         player.transform.rotation = playerPos.rotation;
@@ -25,6 +42,8 @@ public class LoadData : MonoBehaviour
     void Start()
     {
         SetClear();
+        
+        ///ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         if (saveData.GetNpcLength() != 0) // 저장된 Npc 데이터가 있다면
         {
             npc = GameObject.FindGameObjectsWithTag("NPC");
@@ -61,6 +80,31 @@ public class LoadData : MonoBehaviour
                 }
             }
         }
+        ///ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+        int[] eatList = saveData.GetEatList();
+        if (eatList != null)
+        {
+            food = GameObject.FindGameObjectsWithTag("Food");
+            for (int i = 0; i < eatList.Length; i++)
+            {
+                if (eatList[i] == 0)
+                {
+                    break;
+                }
+                else
+                {
+                    for (int j = 0; j < food.Length; j++)
+                    {
+                        if (food[j].GetComponent<FoodObjData>().foodId == eatList[i])
+                        {
+                            food[j].SetActive(false);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // Update is called once per frame
@@ -86,6 +130,12 @@ public class LoadData : MonoBehaviour
         mgManager.SetClearRoadGame_1(saveData.GetClearRoadGame_1());
         mgManager.SetClearRoadGame_2(saveData.GetClearRoadGame_2());
         mgManager.SetClearRoadGame_3(saveData.GetClearRoadGame_3());
+        mgManager.SetClearQuiz(saveData.GetClearQuiz());
+        if (mgManager.GetClearQuiz())
+        {
+            mgManager.SetQuizScore(saveData.GetQuizScore());
+            mgManager.SetQuizNpcId();
+        }
         qManager.SetIngQuest_1(saveData.GetIngQuest_1());
         qManager.SetClearQuest_1(saveData.GetClearQuest_1());
         qManager.SetIngQuest_3(saveData.GetIngQuest_3());

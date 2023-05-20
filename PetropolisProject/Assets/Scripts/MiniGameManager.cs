@@ -11,6 +11,9 @@ public class MiniGameManager : MonoBehaviour
     private bool clearFrisbee = false;
     private bool clearTimeAttack = false;
 
+    private int quizScore = 0;
+
+    public GameObject quizNpc;
 
     // Set ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     public void SetClearRoadGame_1(bool clear)
@@ -31,6 +34,11 @@ public class MiniGameManager : MonoBehaviour
     public void SetClearQuiz(bool clear)
     {
         clearQuiz = clear;
+    }
+
+    public void SetQuizScore(int score)
+    {
+        quizScore = score;
     }
     
     public void SetClearFrisbee(bool clear)
@@ -64,6 +72,11 @@ public class MiniGameManager : MonoBehaviour
     {
         return clearQuiz;
     }
+
+    public int GetQuizScore()
+    {
+        return quizScore;
+    }
     
     public bool GetClearFrisbee()
     {
@@ -75,4 +88,16 @@ public class MiniGameManager : MonoBehaviour
         return clearTimeAttack;
     }
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+    public void SetQuizNpcId()
+    {
+        if (quizScore < 8)
+        {
+            quizNpc.GetComponent<ObjData>().id = 14002;
+        }
+        else
+        {
+            quizNpc.GetComponent<ObjData>().id = 14003;
+        }
+    }
 }

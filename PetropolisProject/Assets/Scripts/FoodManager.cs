@@ -27,6 +27,7 @@ public class FoodManager : MonoBehaviour
     private RawImage diseaseImage; // disease 아이콘
     private int diseaseImageIndex = 1; // disease 아이콘의 Child 인덱스
     private GameObject hungrys; // 배부름, 보통, 배고픔, 매우 배고픔 아이콘
+    private SaveData saveData;
     
     private int foodId;  // Food 객체의 id
     private int foodType = 0; // 0 = GoodFood, 1 = BadFood
@@ -55,13 +56,20 @@ public class FoodManager : MonoBehaviour
 
     private void Start()
     {
-        disease = maxDisease;
+        saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+        if (!onDisease)
+        {
+            disease = maxDisease;
+        }
         diseaseConditionColor = 1.0f / maxDisease;
         d_image = conditions.transform.GetChild(1).gameObject;
         diseaseImage = d_image.GetComponent<RawImage>();
         diseaseImagePos = d_image.transform.position;
-        
-        hungry = maxHungry;
+        if (onDisease)
+        {
+            d_image.SetActive(true);
+            diseaseImage.color = saveData.GetSaveDiseaseStateColor();
+        }
         hungrys = conditions.transform.GetChild(0).gameObject;
     }
 
@@ -72,6 +80,7 @@ public class FoodManager : MonoBehaviour
             hungry += reduce * Time.deltaTime; // 게임 시작부터 지속적으로 감소
             // hungry += reduce * 20.0f * Time.deltaTime;
             //Debug.Log(hungry);
+            saveData.SaveHungry(hungry);
             if (hungry < 0.0f || disease < 0.0f)
             {
                 player.PlayerDeath();
@@ -83,6 +92,7 @@ public class FoodManager : MonoBehaviour
             {
                 Vector3 v = diseaseImagePos;
                 disease += reduce * Time.deltaTime;
+                saveData.SaveDisease(disease);
                 if (disease < 0.0f)
                 {
                     disease = 0.0f;
@@ -100,7 +110,11 @@ public class FoodManager : MonoBehaviour
             if (hungry >= 400.0f) // 배부름 상태
             {
                 if (hungry > maxHungry)
+                {
                     hungry = maxHungry;
+                    saveData.SaveHungry(hungry);
+                }
+
                 SetActiveHungry(0);
             }
             else if (hungry >= 250.0f && hungry < 400.0f) // 보통 상태
@@ -118,16 +132,61 @@ public class FoodManager : MonoBehaviour
             else if (hungry < 0.0f)
             {
                 hungry = 0.0f;
+                saveData.SaveHungry(hungry);
             }
         }
     }
 
     void FoodTextData()
     {
+        //GoodFood
         foodData.Add(1000, new string[] { "GoodFood 테스트", "GoodFood를 먹고 포만감을 얻었다!" });
+        
+        foodData.Add(1001, new string[] { "맛있어보이는 삶은 고기다. 먹을까?", "삶은 고기를 먹고 포만감을 얻었다!" });
+        foodData.Add(1002, new string[] { "맛있어보이는 고구마다. 먹을까?", "고구마를 먹고 포만감을 얻었다!" });
+        foodData.Add(1003, new string[] { "맛있어보이는 수박이다. 먹을까?", "수박을 먹고 수분과 비타민을 보충했다!" });
+        foodData.Add(1004, new string[] { "맛있어보이는 삶은 완두콩이다. 먹을까?", "삶은 완두콩을 먹고 영양분을 얻었다!" });
+        foodData.Add(1005, new string[] { "맛있어보이는 호박이다. 먹을까?", "호박을 먹고 비타민, 섬유질, 칼슘을 보충했다!" });
+        foodData.Add(1006, new string[] { "맛있어보이는 고양이용 연어통조림이다. 먹을까?", "연어통조림을 먹고 포만감을 얻었다!" });
+        foodData.Add(1007, new string[] { "맛있어보이는 고양이용 참치통조림이다. 먹을까?", "참치통조림을 먹고 포만감을 얻었다!" });
+        foodData.Add(1008, new string[] { "맛있어보이는 요거트다. 먹을까?", "요거트를 먹고 건강이 좋아졌다!" });
+        foodData.Add(1009, new string[] { "맛있어보이는 버섯이다. 먹을까?", "버섯을 먹고 포만감을 얻었다!" });
+        //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        
+        //BadFood
         foodData.Add(2000, new string[] { "BadFood 테스트", "BadFood를 먹고 고열이 발생했다!" });
+        
+        
+        foodData.Add(2001, new string[] { "맛있어보이는 아이스크림이다. 먹을까?", "아이스크림을 먹고 배탈이 나버렸다! 바로 상점가의 병원으로 가자." });
+        foodData.Add(2002, new string[] { "맛있어보이는 소시지다. 먹을까?", "소시지를 먹고 비만이 발생했다! 바로 상점가의 병원으로 가자." });
+        foodData.Add(2003, new string[] { "맛있어보이는 떡이다. 먹을까?", "떡을 먹다 목에 걸려버렸다! 바로 상점가의 병원으로 가자." });
+        foodData.Add(2004, new string[] { "맛있어보이는 아보카도다. 먹을까?", "아보카도를 먹고 퍼신 성분에 중독되었다! 바로 상점가의 병원으로 가자." });
+        foodData.Add(2005, new string[] { "맛있어보이는 치즈다. 먹을까?", "치즈를 먹고 배탈이 나버렸다! 바로 상점가의 병원으로 가자." });
+        foodData.Add(2006, new string[] { "맛있어보이는 빵이다. 먹을까?", "빵을 먹고 비만이 발생했다! 바로 상점가의 병원으로 가자." });
+        foodData.Add(2007, new string[] { "맛있어보이는 감자칩이다. 먹을까?", "감자칩을 먹고 배탈이 나버렸다! 바로 상점가의 병원으로 가자." });
+        foodData.Add(2008, new string[] { "맛있어보이는 감자튀김이다. 먹을까?", "감자튀김을 먹고 비만이 발생했다! 바로 상점가의 병원으로 가자." });
+        //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        
+        //DangerFood
         foodData.Add(3000, new string[] { "DangerFood 테스트", "DangerFood를 먹고 질병에 감염되었다!" });
+        
+        foodData.Add(3001, new string[] { "통조림이 열려있다. 먹을까?", "부패된 통조림을 먹고 식중독이 발생했다! 즉시 병원에 가자." });
+        foodData.Add(3002, new string[] { "맛있어보이는 뼈 있는 닭고기다. 먹을까?", "닭뼈가 뾰족하게 부서져 목을 찌르고 있다! 즉시 병원에 가자."});
+        foodData.Add(3003, new string[] { "맛있어보이는 생고기다. 먹을까?", "생고기를 먹고 톡소플라즈마에 감염되어버렸다! 즉시 병원에 가자." });
+        foodData.Add(3004, new string[] { "맛있어보이는 생새우다. 먹을까?", "생새우를 먹고 티아민 결핍이 발생했다! 즉시 병원에 가자." });
+        //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+        
+        //FatalFood
         foodData.Add(4000, new string[] { "FatalFood 테스트", "FatalFood를 먹고 치명적인 상황이 되었다! "});
+        
+        foodData.Add(4001, new string[] { "맛있어보이는 초콜릿이다. 먹을까?", "초콜릿을 먹고 치명적인 테오브로민 중독에 걸려버렸다! 한시라도 빨리 병원에 가야해!"});
+        foodData.Add(4002, new string[] { "맛있어보이는 와인이다. 먹을까?", "초콜릿을 먹고 치명적인 알코올 중독에 걸려버렸다! 한시라도 빨리 병원에 가야해!"});
+        foodData.Add(4003, new string[] { "맛있어보이는 포도다. 먹을까?", "초콜릿을 먹고 치명적인 급성 신부전에 걸려버렸다! 한시라도 빨리 병원에 가야해!"});
+        foodData.Add(4004, new string[] { "맛있어보이는 마늘이다. 먹을까?", "초콜릿을 먹고 치명적인 용혈성 빈혈에 걸려버렸다! 한시라도 빨리 병원에 가야해!"});
+        foodData.Add(4005, new string[] { "맛있어보이는 양파다. 먹을까?", "초콜릿을 먹고 치명적인 용혈성 빈혈에 걸려버렸다! 한시라도 빨리 병원에 가야해!"});
+        foodData.Add(4006, new string[] { "맛있어보이는 만두다. 먹을까?", "만두 속의 파, 양파때문에 치명적인 용혈성 빈혈에 걸려버렸다! 한시라도 빨리 병원에 가야해!"});
+        foodData.Add(4007, new string[] { "맛있어보이는 피자다. 먹을까?", "피자 속의 양파와 마늘때문에 치명적인 용혈성 빈혈에 걸려버렸다! 한시라도 빨리 병원에 가야해!" });
+        //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     }
 
     public void Action(GameObject scanObj)
@@ -148,6 +207,7 @@ public class FoodManager : MonoBehaviour
         if (foodType == 0) // GoodFood
         {
             hungry += satiety;
+            saveData.SaveHungry(hungry);
         }
         else // BadFood, DangerFood, FatalFood
         {
@@ -176,11 +236,28 @@ public class FoodManager : MonoBehaviour
     public void SetDisease(float setDisease) // 병원의 치료 이벤트를 위한 함수
     {
         disease = setDisease;
+        saveData.SaveDisease(setDisease);
     }
 
     public void SetOnDisease(bool setOnDisease) // 병원의 치료 이벤트를 위한 함수
     {
         onDisease = setOnDisease;
+        saveData.SaveOnDisease(setOnDisease);
+    }
+
+    public void LoadDisease(float saveDisease)
+    {
+        disease = saveDisease;
+    }
+
+    public void LoadOnDisease(bool saveOndisease)
+    {
+        onDisease = saveOndisease;
+    }
+    
+    public void LoadHungry(float savehungry)
+    {
+        hungry = savehungry;
     }
     
     private void SetActiveHungry(int index) // Hungry 값에 따라 아이콘을 변경해주는 함수
@@ -207,6 +284,7 @@ public class FoodManager : MonoBehaviour
         float state = 0.0f;
         Color color = diseaseImage.color;
         onDisease = true;
+        saveData.SaveOnDisease(onDisease);
         if (!conditions.transform.GetChild(diseaseImageIndex).gameObject.activeSelf) // 이미 Active 상태일 경우 연산하지 않음
         {
             conditions.transform.GetChild(diseaseImageIndex).gameObject.SetActive(true);
@@ -227,6 +305,7 @@ public class FoodManager : MonoBehaviour
         color.g += reduce * state * diseaseConditionColor;
         color.b += reduce * state * diseaseConditionColor;
         diseaseImage.color = color;
+        saveData.SaveDiseaseStateColor(color);
     }
 
     public void SetInactiveCondition() // 병원의 치료 이벤트를 위한 함수
@@ -249,10 +328,20 @@ public class FoodManager : MonoBehaviour
             color.b = 0.0f;
         }
         rawImage.color = color;
+        saveData.SaveDiseaseStateColor(color);
     }
 
     private void SetActiveGameOver()
     {
-        gameOver.gameObject.SetActive(true);
+        TextMeshProUGUI gameOverText = gameOver.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        if (hungry <= 0.0f)
+        {
+            gameOverText.text = "배고픔을 견디지 못하고 쓰러져버렸다...";
+        }
+        else if (disease <= 0.0f)
+        {
+            gameOverText.text = "질병을 치료하지 못해 쓰러져버렸다...";
+        }
+        gameOver.SetActive(true);
     }
 }

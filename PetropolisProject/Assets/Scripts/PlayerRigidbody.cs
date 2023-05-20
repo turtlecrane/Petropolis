@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -43,7 +44,7 @@ public class PlayerRigidbody : MonoBehaviour
         playercam = Camera.main;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!isDeath)
         {
@@ -72,7 +73,11 @@ public class PlayerRigidbody : MonoBehaviour
         Vector3 moveVertical = new Vector3(playercam.transform.forward.x, 0.0f, playercam.transform.forward.z) * v;
         Vector3 velocity = (moveHorizontal + moveVertical).normalized;
 
-        transform.LookAt(transform.position + velocity);
+        //transform.LookAt(transform.position + velocity);
+        if (velocity != Vector3.zero)
+        {
+            transform.forward = velocity;
+        }
 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetMouseButton(1))
         {
@@ -85,7 +90,8 @@ public class PlayerRigidbody : MonoBehaviour
         }
         else { running = 0; }
         
-        transform.Translate(velocity * m_moveSpeed * Time.deltaTime, Space.World);
+        m_rigidBody.velocity = velocity * m_moveSpeed;
+        //transform.Translate(velocity * m_moveSpeed * Time.deltaTime, Space.World);
         m_animator.SetFloat("MoveSpeed", velocity.magnitude);
      }
 

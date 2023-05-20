@@ -7,8 +7,21 @@ public class SaveData : MonoBehaviour
     public static SaveData Instance; // SaveData 객체 저장
     private GameObject player; // 플레이어
     private GameObject[] npc; // Npc 리스트
+    private GameObject[] food;
     private ObjData[] npcObjData; // Npc 리스트의 ObjData 저장
+    public int[] eatList;
+    private int foodEatIndex = 0;
     public Transform playerPos; // 플레이어 위치 저장
+    
+    private float disease = 0.0f; 
+    private float hungry = 0.0f; 
+    private bool onDisease = false; // 감염 상태 확인
+    private Color diseaseColor;
+
+    private int goodFoodCount = 0;
+    private int badFoodCount = 0;
+    private int dangerFoodCount = 0;
+    private int fatalFoodCount = 0;
     // 미니게임 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     private bool clearRoadGame_1 = false;
     private bool clearRoadGame_2 = false;
@@ -16,6 +29,8 @@ public class SaveData : MonoBehaviour
     private bool clearQuiz = false;
     private bool clearFrisbee = false;
     private bool clearTimeAttack = false;
+
+    private int quizScore;
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     
     // 퀘스트 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
@@ -55,6 +70,9 @@ public class SaveData : MonoBehaviour
         {
             npcObjData[i] = npc[i].GetComponent<ObjData>(); // npcObjData에 데이터 저장
         }
+        
+        food = GameObject.FindGameObjectsWithTag("Food");
+        eatList = new int[food.Length];
     }
 
     // Update is called once per frame
@@ -70,6 +88,64 @@ public class SaveData : MonoBehaviour
         }
         
     }
+
+    public void AddEatList(FoodObjData nowEat)
+    {
+        eatList[foodEatIndex] = nowEat.GetFoodId();
+        foodEatIndex++;
+        if (nowEat.GetFoodId() < 2000 && nowEat.GetFoodId() > 1000)
+        {
+            goodFoodCount++;
+        }
+        else if (nowEat.GetFoodId() < 3000 && nowEat.GetFoodId() > 2000)
+        {
+            badFoodCount++;
+        }
+        else if (nowEat.GetFoodId() < 4000 && nowEat.GetFoodId() > 3000)
+        {
+            dangerFoodCount++;
+        }
+        else if (nowEat.GetFoodId() < 5000 && nowEat.GetFoodId() > 4000)
+        {
+            fatalFoodCount++;
+        }
+    }
+
+    public int[] ReturnFoodCount()
+    {
+        int[] counts = new int[4];
+        counts[0] = goodFoodCount;
+        counts[1] = badFoodCount;
+        counts[2] = dangerFoodCount;
+        counts[3] = fatalFoodCount;
+
+        return counts;
+    }
+
+    public bool[] ReturnQuestCount()
+    {
+        bool[] counts = new bool[2];
+        counts[0] = GetClearQuest_1();
+        counts[1] = GetClearQuest_3();
+
+        return counts;
+    }
+    
+    public bool[] ReturnMinigameCount()
+    {
+        bool[] counts = new bool[4];
+        counts[0] = GetClearRoadGame_1();
+        counts[1] = GetClearRoadGame_2();
+        counts[2] = GetClearRoadGame_3();
+        counts[3] = GetClearQuiz();
+
+        return counts;
+    }
+
+    public int[] GetEatList()
+    {
+        return eatList;
+    }
     
     private void SetPlayer() // 플레이어 찾기
     {
@@ -81,6 +157,46 @@ public class SaveData : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Dog"); // 없으면 Dog를 등록
         }
+    }
+
+    public void SaveDisease(float disease)
+    {
+        this.disease = disease;
+    }
+    
+    public void SaveHungry(float hungry)
+    {
+        this.hungry = hungry;
+    }
+    
+    public void SaveOnDisease(bool od)
+    {
+        onDisease = od;
+    }
+
+    public void SaveDiseaseStateColor(Color color)
+    {
+        diseaseColor = color;
+    }
+    
+    public float GetSaveDisease()
+    {
+        return disease;
+    }
+    
+    public float GetSaveHungry()
+    {
+        return hungry;
+    }
+    
+    public bool GetSaveOnDisease()
+    {
+        return onDisease;
+    }
+
+    public Color GetSaveDiseaseStateColor()
+    {
+        return diseaseColor;
     }
     
     private void CheckScene() // 현재 씬 체크
@@ -94,7 +210,9 @@ public class SaveData : MonoBehaviour
     private void ChangeScene() // 메인 씬으로 돌아온다면
     {
         if (nowscene == 0 && nowscene != beforescene)
+        {
             SetPlayer();
+        }
     }
 
     // 클리어 설정 함수 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
@@ -116,6 +234,11 @@ public class SaveData : MonoBehaviour
     public void ClearQuiz()
     {
         clearQuiz = true;
+    }
+
+    public void SetQuizScore(int score)
+    {
+        quizScore = score;
     }
     
     public void ClearFrisbee()
@@ -164,6 +287,11 @@ public class SaveData : MonoBehaviour
     public bool GetClearQuiz()
     {
         return clearQuiz;
+    }
+
+    public int GetQuizScore()
+    {
+        return quizScore;
     }
     
     public bool GetClearFrisbee()
