@@ -124,9 +124,10 @@ public class SaveData : MonoBehaviour
 
     public bool[] ReturnQuestCount()
     {
-        bool[] counts = new bool[2];
+        bool[] counts = new bool[3];
         counts[0] = GetClearQuest_1();
-        counts[1] = GetClearQuest_3();
+        counts[1] = GetClearQuest_2();
+        counts[2] = GetClearQuest_3();
 
         return counts;
     }

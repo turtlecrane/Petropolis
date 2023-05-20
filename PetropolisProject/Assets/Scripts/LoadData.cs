@@ -138,6 +138,8 @@ public class LoadData : MonoBehaviour
         }
         qManager.SetIngQuest_1(saveData.GetIngQuest_1());
         qManager.SetClearQuest_1(saveData.GetClearQuest_1());
+        qManager.SetIngQuest_2(saveData.GetIngQuest_2());
+        qManager.SetClearQuest_1(saveData.GetClearQuest_2());
         qManager.SetIngQuest_3(saveData.GetIngQuest_3());
         qManager.SetClearQuest_3(saveData.GetClearQuest_3());
     }

@@ -42,13 +42,13 @@ public class ResultManager : MonoBehaviour
         
         bool[] quests = saveData.ReturnQuestCount();
         bool[] minigames = saveData.ReturnMinigameCount();
-        Count(quests, questCount);
-        Count(minigames, minigameCount);
+        Count(quests, ref questCount);
+        Count(minigames, ref minigameCount);
 
         SetTexts();
     }
 
-    private void Count(bool[] games, int count)
+    private void Count(bool[] games, ref int count)
     {
         for (int i = 0; i < games.Length; i++)
         {

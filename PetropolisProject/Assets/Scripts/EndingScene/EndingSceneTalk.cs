@@ -118,6 +118,6 @@ public class EndingSceneTalk : MonoBehaviour
 
     public void GotoResult()
     {
-        SceneManager.LoadScene("Level_house");//튜토리얼로
+        SceneManager.LoadScene("Result");
     }
 }

@@ -38,10 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndingScene/EndingScene.unity
     guid: ef715338404a8544c8498b64fb0e4fd9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMap123.unity
     guid: ca69e4a5cf91e3a43b288217060a4fbe
   - enabled: 1
-    path: Assets/Scenes/Map/MyRoom.unity
+    path: Assets/Scenes/Map/Result.unity
     guid: e8b19535e0b75e144aae7d12b9236fe3
   m_configObjects: {}

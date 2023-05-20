@@ -16,9 +16,11 @@ public class TimeattackManager : MonoBehaviour
 
     public ObjData ObjData;
     public NpcController npcController;
+    private SaveData saveData;
 
     void Start()
     {
+        saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
         isGameRunning = false;
         isCorrect = false;
     }
@@ -46,6 +48,7 @@ public class TimeattackManager : MonoBehaviour
     public void StartGame()
     {
         isGameRunning = true;
+        saveData.SetIngQuest_2(true);
         timer = gameTime;
         UpdateUITime();
     }
@@ -53,6 +56,7 @@ public class TimeattackManager : MonoBehaviour
     public void EndGame()
     {
         isGameRunning = false;
+        saveData.SetIngQuest_2(false);
         gameObject.SetActive(false);
     }
 
@@ -60,6 +64,7 @@ public class TimeattackManager : MonoBehaviour
     {
         if(isGameRunning == true){
             isCorrect = true;
+            saveData.ClearQuest_2();
             ObjData.id = 15003;
             EndGame();
         }
