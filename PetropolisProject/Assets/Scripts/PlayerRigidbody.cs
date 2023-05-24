@@ -90,7 +90,7 @@ public class PlayerRigidbody : MonoBehaviour
         }
         else { running = 0; }
         
-        m_rigidBody.velocity = velocity * m_moveSpeed;
+        m_rigidBody.velocity = new Vector3(velocity.x * m_moveSpeed, m_rigidBody.velocity.y, velocity.z * m_moveSpeed);
         //transform.Translate(velocity * m_moveSpeed * Time.deltaTime, Space.World);
         //m_rigidBody.MovePosition(transform.position + velocity * m_moveSpeed * Time.deltaTime);
         m_animator.SetFloat("MoveSpeed", velocity.magnitude);
