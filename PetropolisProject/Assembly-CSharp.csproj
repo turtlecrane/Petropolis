@@ -57,7 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\ObjData.cs" />
      <Compile Include="Assets\Scripts\MiniGame_Car\ActorMove.cs" />
-     <Compile Include="Assets\Scripts\FoodRotate.cs" />
+     <Compile Include="Assets\Scripts\ObjRotate.cs" />
      <Compile Include="Assets\Scripts\SoundSystem\EFF.cs" />
      <Compile Include="Assets\Scripts\TestInteractManager.cs" />
      <Compile Include="Assets\Scripts\TalkManager.cs" />
@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\SoundSystem\EffMuteClick.cs" />
      <Compile Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\DayAndNightChange.cs" />
      <Compile Include="Assets\Scripts\DontSettingPopup.cs" />
+     <Compile Include="Assets\Scripts\Quest\Quest2.cs" />
      <Compile Include="Assets\ShowDog.cs" />
      <Compile Include="Assets\Scripts\QuizScripts\NpcLookAt.cs" />
      <Compile Include="Assets\Scripts\StaminaToggle.cs" />
@@ -87,6 +88,7 @@
      <Compile Include="Assets\Scripts\MiniGameManager.cs" />
      <Compile Include="Assets\Scripts\StaminaSetting.cs" />
      <Compile Include="Assets\Scripts\SettingsOnEsc.cs" />
+     <Compile Include="Assets\Scripts\Quest\Quest1.cs" />
      <Compile Include="Assets\Scripts\TreatManager.cs" />
      <Compile Include="Assets\Scripts\Quest\Quest3.cs" />
      <Compile Include="Assets\Scripts\EndingScene\EndingSceneTalk.cs" />
@@ -94,6 +96,7 @@
      <Compile Include="Assets\Scripts\NameScene\isCameraPlay.cs" />
      <Compile Include="Assets\Scripts\ResultConfirm.cs" />
      <Compile Include="Assets\Scripts\QuizScripts\GoToQuiz.cs" />
+     <Compile Include="Assets\Scripts\PlayerRigidBodyTest.cs" />
      <Compile Include="Assets\Scripts\FoodObjData.cs" />
      <Compile Include="Assets\Scripts\NpcController.cs" />
      <Compile Include="Assets\Scripts\NameScene\AnimationController.cs" />
@@ -221,6 +224,7 @@
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Textures" />
      <Folder Include="Assets\model\Quiz" />
+     <Folder Include="Assets\source\Fantasy Wooden GUI  Free\normal_ui_set A\Materials" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Materials" />
      <Folder Include="Assets\source\font\NaverNanumSquareNeo\TMP" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Meshes" />
@@ -244,6 +248,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Materials\Mobile" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\FallPrevention" />
      <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Resources\Meshes" />
+     <Folder Include="Assets\Japanese-Style Series\Props\Cushion Pack" />
      <Folder Include="Assets\Hovl Studio\Magic effects pack\Prefabs\Character auras" />
      <Folder Include="Assets\Scenes\NameScene\Meterial\Poly - white wood parquet, luxury, polished, extreme fine details" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\House04" />
@@ -317,6 +322,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\props_FBX" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Base\Materials" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\sek\Materials" />
+     <Folder Include="Assets\Japanese-Style Series\Props\Cushion Pack\scene" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\Letters FBX\Materials" />
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Materials\Knobs" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights" />
@@ -346,6 +352,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\AK STUDIO ART\Fuel Tank" />
      <Folder Include="Assets\model\NPC\Brian" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\materials" />
+     <Folder Include="Assets\Japanese-Style Series\Props\Cushion Pack\texture" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\model\BallAssets\Baseballs" />
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games" />
@@ -426,6 +433,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture10" />
      <Folder Include="Assets\model\Furniture\QA_Books\Models\Materials" />
      <Folder Include="Assets\model\NPC\Doctor\Tex" />
+     <Folder Include="Assets\Japanese-Style Series\Props\Cushion Pack\model\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\House\Materials" />
      <None Include="Assets\Scenes\Map\Resource\garbage\TerrainTexture\Poly - garbage, highly detailed, extreme fine details\Made with Poly.txt" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\BrokenVector\LowPolyRoadPack\Demo\Materials" />
@@ -559,8 +567,10 @@
      <Folder Include="Assets\model\Furniture\DoorPack_V1\Materials\Frames" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Flashlight\Flashlight_Gold\Textures" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial" />
+     <Folder Include="Assets\Japanese-Style Series\Props" />
      <Folder Include="Assets\model\BallAssets\TennisBall\Model" />
      <Folder Include="Assets\Scenes\Map\Resource" />
+     <Folder Include="Assets\Japanese-Style Series\Props\Cushion Pack\prefab" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Free_Building_01" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\interior\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Dumpster\Textures" />
@@ -604,7 +614,6 @@
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\meshes\buildings_low" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01\PavingStone-01-Bad" />
      <Folder Include="Assets\source\UI\FreeButtonSet" />
-     <None Include="Assets\source\Audio\BGM\README.txt" />
      <Folder Include="Assets\FoodImports\FREE Food Pack\Prefabs" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\Sky" />
      <Folder Include="Assets\source\Fantasy Wooden GUI  Free\normal_ui_set A" />
@@ -615,6 +624,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Textures\GrassBillboards" />
      <Folder Include="Assets\model\Furniture\Furniture_ges1\interior" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture9" />
+     <Folder Include="Assets\Japanese-Style Series\Props\Cushion Pack\model" />
      <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Simple Vehicle Pack\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Dumpster\Prefab" />
@@ -728,6 +738,7 @@
      <Folder Include="Assets\asset_free_Ukraine_cars\mesh\cars\bus\bus_1" />
      <Folder Include="Assets\Meshs" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\A\Materials" />
+     <Folder Include="Assets\Japanese-Style Series" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Wall\B\B LOD" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Textures" />
@@ -1017,10 +1028,10 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -1395,73 +1406,73 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>D:\GitHub\lhj6\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>C:\Users\Hansung\Desktop\Petropolis\PetropolisProject\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

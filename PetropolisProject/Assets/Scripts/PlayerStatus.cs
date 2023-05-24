@@ -25,20 +25,35 @@ public class PlayerStatus : MonoBehaviour
     }
     void Update()
     {
+        //
         Vector3 currentPosition = transform.position; //현재 위치 계속 추적
         float distance = Vector3.Distance(currentPosition, curPos); //시작 지점과 현재 위치의 거리 계산
+
+        
+        
         if (distance > 0.001f) // 움직임 판단 임계값
         {
-            moveStatus = 2;
             curPos = currentPosition; //현재 위치를 이전 위치로 저장
-            if (playerIsRun.running == 1)//달리는중이면
+            if (playerIsRun.running == 1)
             {
-                moveStatus = 1; //달리는중이다(끄덕)
+                Debug.Log("달리고있는중");
             }
+            else
+            {
+                Debug.Log("걷고있는중");
+            }
+            
+            //moveStatus = 2;
+            
+            //if (playerIsRun.running == 1)//달리는중이면
+            //{
+            //    moveStatus = 1; //달리는중이다(끄덕)
+            //}
         }
         else
         {
-            moveStatus = 0;
+            Debug.Log("멈춰 있는 중");
+            //moveStatus = 0;
         }
     }
     
