@@ -66,9 +66,9 @@ public class QuestManager : MonoBehaviour
         clearQuest_3 = clear;
     }
 
-    public void SetFailQuest_2()
+    public void SetFailQuest_2(bool clear)
     {
-        failQuest_2 = true;
+        failQuest_2 = clear;
     }
 
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ

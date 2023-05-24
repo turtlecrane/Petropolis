@@ -44,7 +44,7 @@ public class TimeattackManager : MonoBehaviour
                 qManager.SetIngQuest_2(false);
                 saveData.SetIngQuest_2(false);
                 saveData.FailQuest_2();
-                qManager.SetFailQuest_2();
+                qManager.SetFailQuest_2(true);
                 qManager.Quest2SetEx();
                 EndGame();
                 ObjData.id = 15002;
