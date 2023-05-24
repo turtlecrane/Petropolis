@@ -29,7 +29,7 @@ public class PlayerRigidbody : MonoBehaviour
     public float dog_jumpvalue = 1.3f; // 개 점프 시 높이, 전진 가중치
     public float dog_forwardvalue = 3.0f;
 
-    public float m_moveSpeed = 2.0f; // 이동속도
+    public float m_moveSpeed = 8.0f; // 이동속도
     public float m_jumpForce = 3.0f; // 점프의 힘
     private float m_jumpTimeStamp = 0; 
     private float m_minJumpInterval = 0.25f;
@@ -193,6 +193,8 @@ public class PlayerRigidbody : MonoBehaviour
             {
                 cnt++;
                 var obj = collision.gameObject;
+                /*Vector3 targetpos = new Vector3(obj.transform.position.x, 0, obj.transform.position.z);
+                transform.position = targetpos;*/
                 transform.position = obj.transform.position; //충돌한 오브젝트의 위치로 이동(=의자로 이동)
                 m_moveSpeed = 0; // 움직임 멈추게 하기
                 PlayerSit();
@@ -225,7 +227,7 @@ public class PlayerRigidbody : MonoBehaviour
     }
     private void move()
     {
-        m_moveSpeed = 2.0f;
+        m_moveSpeed = 8.0f;
     }
 
     public void PlayerDeath()
