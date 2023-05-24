@@ -382,6 +382,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Barricade\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Prefabs" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\Freebie_01\Materials" />
+     <Folder Include="Assets\Resources\Materials" />
      <Folder Include="Assets\asset_free_Ukraine_cars" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures" />
      <Folder Include="Assets\source\UI\StatusIcons" />
@@ -699,6 +700,7 @@
      <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Resources\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\JapaneseMapleTree_C_Textures" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <Folder Include="Assets\Prefabs\Downtown" />
      <Folder Include="Assets\Scenes\Map\Resource\Road\Tarbo-CITY-TrafficLights\Meshes\Materials" />
      <Folder Include="Assets\model\Furniture\Modern Minimalist Sofa\Leather" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture7" />
