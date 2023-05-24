@@ -17,10 +17,12 @@ public class TimeattackManager : MonoBehaviour
     public ObjData ObjData;
     public NpcController npcController;
     private SaveData saveData;
+    private QuestManager qManager;
 
     void Start()
     {
         saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+        qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
         isGameRunning = false;
         isCorrect = false;
     }
@@ -39,6 +41,11 @@ public class TimeattackManager : MonoBehaviour
             // 시간초과시 종료
             if (timer <= 0f)
             {
+                qManager.SetIngQuest_2(false);
+                saveData.SetIngQuest_2(false);
+                saveData.FailQuest_2();
+                qManager.SetFailQuest_2();
+                qManager.Quest2SetEx();
                 EndGame();
                 ObjData.id = 15002;
             }
@@ -48,7 +55,9 @@ public class TimeattackManager : MonoBehaviour
     public void StartGame()
     {
         isGameRunning = true;
+        qManager.SetIngQuest_2(true);
         saveData.SetIngQuest_2(true);
+        qManager.Quest2SetEx();
         timer = gameTime;
         UpdateUITime();
     }
@@ -56,7 +65,6 @@ public class TimeattackManager : MonoBehaviour
     public void EndGame()
     {
         isGameRunning = false;
-        saveData.SetIngQuest_2(false);
         gameObject.SetActive(false);
     }
 
@@ -64,7 +72,9 @@ public class TimeattackManager : MonoBehaviour
     {
         if(isGameRunning == true){
             isCorrect = true;
+            qManager.SetClearQuest_2(true);
             saveData.ClearQuest_2();
+            qManager.Quest2SetEx();
             ObjData.id = 15003;
             EndGame();
         }
