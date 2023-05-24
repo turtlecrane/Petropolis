@@ -40,6 +40,7 @@ public class SaveData : MonoBehaviour
 
     private bool clearQuest_1 = false;
     private bool clearQuest_2 = false;
+    private bool failQuest_2 = false;
     private bool clearQuest_3 = false;
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     
@@ -262,6 +263,11 @@ public class SaveData : MonoBehaviour
         clearQuest_2 = true;
     }
 
+    public void FailQuest_2()
+    {
+        failQuest_2 = true;
+    }
+
     public void ClearQuest_3()
     {
         clearQuest_3 = true;
@@ -313,6 +319,11 @@ public class SaveData : MonoBehaviour
     public bool GetClearQuest_2()
     {
         return clearQuest_2;
+    }
+
+    public bool GetFailQuest_2()
+    {
+        return failQuest_2;
     }
 
     public bool GetClearQuest_3()

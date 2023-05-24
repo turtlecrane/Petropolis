@@ -90,6 +90,7 @@ public class TalkManager : MonoBehaviour
                 saveData.SetIngQuest_1(true);
                 QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
                 qManager.SetIngQuest_1(saveData.GetIngQuest_1());
+                qManager.Quest1SetEx();
             }
             else if (talkData.Split(':')[1] == "88") // NPC옆으로 개 나옴
             {
@@ -105,6 +106,7 @@ public class TalkManager : MonoBehaviour
                 QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
                 qManager.SetIngQuest_1(saveData.GetIngQuest_1());
                 qManager.SetClearQuest_1(saveData.GetClearQuest_1());
+                qManager.Quest1SetEx();
             }
             
             else if (talkData.Split(':')[1] == "101")
@@ -141,6 +143,14 @@ public class TalkManager : MonoBehaviour
             {
                 npcController.isChange = true;
                 TAManager.StartGame();
+            }
+            else if (talkData.Split(':')[1] == "112")
+            {
+                SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+                saveData.SetIngQuest_2(false);
+                QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
+                qManager.SetIngQuest_2(saveData.GetIngQuest_3());
+                qManager.Quest2SetEx();
             }
             talkIndex++; //그 다음 대사를 가져오기 위해서 인덱스를 늘려주기
         }

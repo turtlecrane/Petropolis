@@ -58,17 +58,17 @@ public class PlayerRigidbody : MonoBehaviour
             {
                 stamina += recovery_stamina * Time.deltaTime;
             }
-
             m_wasGrounded = m_isGrounded;
+            //
         }
     }
+    
 
     private void PlayerMove()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        // 카메라가 바라보는 방향에 따라 플레이어 캐릭터의 전진 방향 변환
         Vector3 moveHorizontal = new Vector3(playercam.transform.right.x, 0.0f, playercam.transform.right.z) * h;
         Vector3 moveVertical = new Vector3(playercam.transform.forward.x, 0.0f, playercam.transform.forward.z) * v;
         Vector3 velocity = (moveHorizontal + moveVertical).normalized;
@@ -90,8 +90,9 @@ public class PlayerRigidbody : MonoBehaviour
         }
         else { running = 0; }
         
-        m_rigidBody.velocity = velocity * m_moveSpeed;
+        //m_rigidBody.velocity = velocity * m_moveSpeed;
         //transform.Translate(velocity * m_moveSpeed * Time.deltaTime, Space.World);
+        m_rigidBody.MovePosition(transform.position + velocity * m_moveSpeed * Time.deltaTime);
         m_animator.SetFloat("MoveSpeed", velocity.magnitude);
      }
 
@@ -115,8 +116,11 @@ public class PlayerRigidbody : MonoBehaviour
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
+            {
                 m_rigidBody.AddRelativeForce(Vector3.forward * forwardvalue, ForceMode.Impulse);
+            }
             m_rigidBody.AddForce(Vector3.up * m_jumpForce * jumpvalue, ForceMode.Impulse);
+            //m_rigidBody.velocity = Vector3.up * m_jumpForce * jumpvalue;
         }
 
         if (!m_wasGrounded && m_isGrounded) // 공중에 떠있었고 지금 땅에 착지

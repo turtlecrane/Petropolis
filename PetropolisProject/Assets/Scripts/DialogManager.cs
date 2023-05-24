@@ -130,7 +130,7 @@ public class DialogManager : MonoBehaviour
 
         talkData.Add(15002, new string[]{ "못찾았나보네... :0", "괜찮아 이미 버려진건 어쩔 수 없지... \n 대신 찾아봐줘서 고마워 :0"
         });
-        talkData.Add(15003, new string[]{ "정말로 찾아줬구나! :0", "대신 찾아줘서 고마워! :0", "누가 다시 못버리게 해야겠다 :0"
+        talkData.Add(15003, new string[]{ "정말로 찾아줬구나! :112", "대신 찾아줘서 고마워! :0", "누가 다시 못버리게 해야겠다 :0"
         });
     }
 
