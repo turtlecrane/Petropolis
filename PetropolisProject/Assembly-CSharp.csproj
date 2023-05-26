@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
      <Compile Include="Assets\Scripts\SoundSystem\WalkSound.cs" />
      <Compile Include="Assets\Scripts\InteractManager.cs" />
+     <Compile Include="Assets\Scenes\TutoSystem\Script\OpenTuto.cs" />
      <Compile Include="Assets\Scripts\MiniGame_Car\UIController.cs" />
      <Compile Include="Assets\Scripts\NameScene\PlayerName.cs" />
      <Compile Include="Assets\wakeup.cs" />
@@ -134,6 +135,7 @@
      <Folder Include="Assets\asset_free_Ukraine_cars\prefabs_With_Colliders\cars_colliiders\van\van_1" />
      <Folder Include="Assets\Scripts\SoundSystem" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\BrokenVector\LowPolyRoadPack\Demo\Landscape" />
+     <Folder Include="Assets\Scenes\Quiz" />
      <Folder Include="Assets\model\BallAssets\Baseballs\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Curve\Materials" />
      <Folder Include="Assets\model\Furniture\Office Room Furniture\Office" />
@@ -267,6 +269,7 @@
      <Folder Include="Assets\asset_free_Ukraine_cars\textures" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\Straight\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\SakuraTree_D_Textures" />
+     <Folder Include="Assets\Scenes\TutoSystem\Script" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\Images\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck" />
@@ -612,6 +615,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\RoadMiniGame\Road props for games\Textures\2k" />
      <Folder Include="Assets\model\Realistic" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof\C" />
+     <Folder Include="Assets\Scenes\TutoSystem" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\russian_buildings\meshes\buildings_low" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone\Textures\PavingStone-01\PavingStone-01-Bad" />
      <Folder Include="Assets\source\UI\FreeButtonSet" />
@@ -732,6 +736,7 @@
      <Folder Include="Assets\FoodImports\FREE Food Pack\Materials" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes" />
+     <Folder Include="Assets\Scenes\TutoSystem\TutoImg" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Materials" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs\BlackPineTree_B_Textures" />
