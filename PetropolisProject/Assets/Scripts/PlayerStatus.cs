@@ -17,44 +17,91 @@ public class PlayerStatus : MonoBehaviour
     
     private PlayerRigidbody playerIsRun;
     private Vector3 curPos;
+    private bool isWalking = false;
+    private bool isRunning = false;
+    private Animator _animator;
     
     void Start()
     {
         playerIsRun = GameObject.FindWithTag("Cat").gameObject.GetComponent<PlayerRigidbody>();
         curPos = transform.position;
+        _animator = GetComponent<Animator>();
     }
     void Update()
     {
         //
+        float moveSpeed = _animator.GetFloat("MoveSpeed");
         Vector3 currentPosition = transform.position; //현재 위치 계속 추적
         float distance = Vector3.Distance(currentPosition, curPos); //시작 지점과 현재 위치의 거리 계산
 
+        bool wasWalking = isWalking;
+        bool wasRunning = isRunning;
+
+        if (moveSpeed == 0f) // 멈춰 있을 때 소리가 안나오게
+        {
+            Debug.Log("멈춰 있는 중");
+            moveStatus = 0;
+        }
         
+        if (distance > 0.001f)
+        {
+            curPos = currentPosition;
+
+            if (playerIsRun.running == 1)
+            {
+                isRunning = true;
+                isWalking = false;
+            }
+            else
+            {
+                isRunning = false;
+                isWalking = true;
+            }
+        }
+        else
+        {
+            isWalking = false;
+            isRunning = false;
+        }
         
-        if (distance > 0.001f) // 움직임 판단 임계값
+        if (isWalking && !wasWalking)  // 걸을 때
+        {
+            Debug.Log("걷고 있는 중");
+            moveStatus = 2;
+        }
+        else if (isRunning && !wasRunning)
+        {
+            Debug.Log("달리고 있는 중"); // 달릴 때
+            moveStatus = 1;
+        }
+        /*else if (!isWalking && !isRunning && (wasWalking || wasRunning))
+        {
+            //Debug.Log("멈춰 있는 중");
+            //moveStatus = 0;
+        }*/
+
+        /*if (distance > 0.001f) // 움직임 판단 임계값
         {
             curPos = currentPosition; //현재 위치를 이전 위치로 저장
             if (playerIsRun.running == 1)
             {
                 Debug.Log("달리고있는중");
+                //moveStatus = 1; //달리는중이다(끄덕)
             }
             else
-            {
+            {	
                 Debug.Log("걷고있는중");
+                //moveStatus = 2;
             }
-            
-            //moveStatus = 2;
-            
-            //if (playerIsRun.running == 1)//달리는중이면
-            //{
-            //    moveStatus = 1; //달리는중이다(끄덕)
-            //}
+                        
         }
         else
         {
             Debug.Log("멈춰 있는 중");
-            //moveStatus = 0;
-        }
+            //moveStatus = 0;           
+        }*/
+        
+        
     }
     
     //구역 판단
