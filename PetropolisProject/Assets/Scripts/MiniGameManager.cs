@@ -91,13 +91,16 @@ public class MiniGameManager : MonoBehaviour
 
     public void SetQuizNpcId()
     {
+        SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
         if (quizScore < 8)
         {
             quizNpc.GetComponent<ObjData>().id = 14002;
+            saveData.SearchAndSaveChangedId(quizNpc);
         }
         else
         {
             quizNpc.GetComponent<ObjData>().id = 14003;
+            saveData.SearchAndSaveChangedId(quizNpc);
         }
     }
 }
