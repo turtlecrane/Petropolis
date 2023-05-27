@@ -18,6 +18,9 @@ public class OpenTuto : MonoBehaviour
 
         switch (count)
         {
+            case 0:
+                tutoImg[0].SetActive(true);
+                break;
             case 1:
                 tutoImg[0].SetActive(false);
                 tutoImg[1].SetActive(true);

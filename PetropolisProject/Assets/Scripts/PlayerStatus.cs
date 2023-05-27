@@ -29,7 +29,6 @@ public class PlayerStatus : MonoBehaviour
     }
     void Update()
     {
-        //
         float moveSpeed = _animator.GetFloat("MoveSpeed");
         Vector3 currentPosition = transform.position; //현재 위치 계속 추적
         float distance = Vector3.Distance(currentPosition, curPos); //시작 지점과 현재 위치의 거리 계산
@@ -39,7 +38,7 @@ public class PlayerStatus : MonoBehaviour
 
         if (moveSpeed == 0f) // 멈춰 있을 때 소리가 안나오게
         {
-            Debug.Log("멈춰 있는 중");
+            //Debug.Log("멈춰 있는 중");
             moveStatus = 0;
         }
         
@@ -66,12 +65,12 @@ public class PlayerStatus : MonoBehaviour
         
         if (isWalking && !wasWalking)  // 걸을 때
         {
-            Debug.Log("걷고 있는 중");
+            //Debug.Log("걷고 있는 중");
             moveStatus = 2;
         }
         else if (isRunning && !wasRunning)
         {
-            Debug.Log("달리고 있는 중"); // 달릴 때
+            //Debug.Log("달리고 있는 중"); // 달릴 때
             moveStatus = 1;
         }
         /*else if (!isWalking && !isRunning && (wasWalking || wasRunning))

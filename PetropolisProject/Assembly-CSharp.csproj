@@ -94,6 +94,7 @@
      <Compile Include="Assets\Scripts\EndingScene\EndingSceneTalk.cs" />
      <Compile Include="Assets\Scripts\RoadWarp.cs" />
      <Compile Include="Assets\Scripts\NameScene\isCameraPlay.cs" />
+     <Compile Include="Assets\Scripts\EffectDestroy.cs" />
      <Compile Include="Assets\Scripts\ResultConfirm.cs" />
      <Compile Include="Assets\Scripts\QuizScripts\GoToQuiz.cs" />
      <Compile Include="Assets\Scripts\PlayerRigidBodyTest.cs" />
@@ -458,6 +459,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Garbage_Truck\Model" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\source\font\ElliotSix" />
+     <None Include="Assets\source\UI\Shader\BlurShader.shader" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\fbx" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Old_USSR_Lamp\Textures" />
      <Folder Include="Assets\model\NPC\Leonard" />
