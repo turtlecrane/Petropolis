@@ -106,8 +106,8 @@ public class DialogManager : MonoBehaviour
 
 
         //퀴즈 NPC
-        talkData.Add(14000, new string[]{ " Quiz Test :101"});
-        talkData.Add(14001, new string[]{ " Quiz Failed :2"});
+        talkData.Add(14000, new string[]{ " 너, 그 녀석을 찾고 있는거지? :0", "내가 내는 문제를 맞추면 힌트를 주지. :101"});
+        talkData.Add(14001, new string[]{ " :"});
         talkData.Add(14002, new string[]{ " 흥. 너에게 알려줄 것은 없어 :2"});
         talkData.Add(14003, new string[]{ " 쓰레기장의 주위를 잘 둘러보면 구멍이 있을거야. 장애물들을 잘 피해보라구! :1"});
         
