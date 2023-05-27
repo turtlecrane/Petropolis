@@ -13,6 +13,8 @@ public class FoodManager : MonoBehaviour
     public GameObject scanObject;
     public GameObject conditions;
     public GameObject gameOver;
+    public GameObject goodEffect;
+    public GameObject badEffect;
     public TextMeshProUGUI content;   // interactbox에 표시되는 텍스트
     public TextMeshProUGUI conditionText;  // Food와 상호작용을 했을 때 UI에 표시되는 텍스트
     public int ConditionTextDelayTime = 3;  // ConditionText가 표시되고 사라지기까지의 시간
@@ -48,6 +50,9 @@ public class FoodManager : MonoBehaviour
     private Vector3 diseaseImagePos;
     private float diseaseImagePosMax = 2.0f; // 좌(우)로 이동가능한 (x)최대값
     private float diseaseImagePosSpeed = 50.0f; // 이동속도
+
+    private AudioSource goodSound;
+    private AudioSource badSound;
     void Awake()
     {
         foodData = new Dictionary<int, string[]>();//초기화
@@ -56,6 +61,8 @@ public class FoodManager : MonoBehaviour
 
     private void Start()
     {
+        goodSound = transform.GetChild(0).GetComponent<AudioSource>();
+        badSound = transform.GetChild(1).GetComponent<AudioSource>();
         saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
         if (!onDisease)
         {
@@ -208,10 +215,14 @@ public class FoodManager : MonoBehaviour
         {
             hungry += satiety;
             saveData.SaveHungry(hungry);
+            Instantiate(goodEffect, player.transform.position, player.transform.rotation);
+            goodSound.Play();
         }
         else // BadFood, DangerFood, FatalFood
         {
             SetActiveCondition(foodType);
+            Instantiate(badEffect, player.transform.position, player.transform.rotation);
+            badSound.Play();
         }
         ConditionTextActive();
         conditionText.text = foodData[foodId][foodResultIndex];
