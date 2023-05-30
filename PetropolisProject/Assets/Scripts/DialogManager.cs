@@ -59,7 +59,8 @@ public class DialogManager : MonoBehaviour
         talkData.Add(8000, new string[]{ "오늘 날씨가 참 좋구나... 너도 산책 나왔니? \n 허허.. 즐거운 시간 보내려무나.. :0"});
         
         //공원 메건
-        talkData.Add(10000, new string[]
+        talkData.Add(10000, new string[]{ "얘가 참... 어디로 간걸까~? \n 어머, 너도 산책나온거니? :0"});
+        talkData.Add(10001, new string[]
         {
             "검둥아! 어디갔었니! :0", 
             "한참 찾았잖아..! 그래도 찾아서 정말 다행이야!:88", // NPC옆에 개가 나옴

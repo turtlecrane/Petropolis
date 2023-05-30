@@ -16,9 +16,9 @@ public class TalkManager : MonoBehaviour
     public TextMeshProUGUI NpcName;
     public TextMeshProUGUI Context;
     public GameObject scanObject;
-
+    
     public int talkIndex;
-
+    private GameObject megan;
     private PlayerName playerName;
 
     private void Start()
@@ -91,6 +91,8 @@ public class TalkManager : MonoBehaviour
                 QuestManager qManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
                 qManager.SetIngQuest_1(saveData.GetIngQuest_1());
                 qManager.Quest1SetEx();
+                megan = GameObject.Find("Megan");
+                megan.GetComponent<ObjData>().id = 10001; // 메건 대화창 바뀜
             }
             else if (talkData.Split(':')[1] == "88") // NPC옆으로 개 나옴
             {
