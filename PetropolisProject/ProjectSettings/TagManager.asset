@@ -26,6 +26,9 @@ TagManager:
   - Crash
   - EffSlider
   - Target
+  - Clear
+  - Box
+  - Box1
   layers:
   - Default
   - TransparentFX
