@@ -13,7 +13,8 @@ public class ActorMove : MonoBehaviour
     public GameObject finishUI;
     
     private int cnt = 0; // 차량 부딪힌 횟수 카운트
-
+    private int moveableXRange = 10;
+    
     private bool inputEnabled = false;
 
     void Start()
@@ -89,7 +90,8 @@ public class ActorMove : MonoBehaviour
             InputUpdate();
         }
        
-        
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -moveableXRange, moveableXRange),
+            transform.position.y, Mathf.Clamp(transform.position.z, -1, 10));
     }
 
    

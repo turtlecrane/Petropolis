@@ -39,9 +39,9 @@ public class InteractManager : MonoBehaviour
     {
         interactionData = new Dictionary<int, string[]>();
         InteractionTextData();
-        if (GameObject.Find("jj_door_4_white") != null)
+        if (GameObject.Find("doorWing") != null)
         {
-            TutorialDoor = GameObject.Find("jj_door_4_white");
+            TutorialDoor = GameObject.Find("doorWing");
             TutorialAnimator = TutorialDoor.GetComponent<Animator>();
         }
     }
@@ -87,6 +87,7 @@ public class InteractManager : MonoBehaviour
             {
                 if (TutorialAnimator != null)
                 {
+                    Debug.Log("튜토리얼 성공");
                     TutorialAnimator.SetTrigger("Open");
                 }
             }

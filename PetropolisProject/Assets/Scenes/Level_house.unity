@@ -3160,7 +3160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1025757258912038, guid: b571015d967a73b4cadb57317d7d0547, type: 3}
       propertyPath: m_TagString
-      value: DoorOpen
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1071020668844466, guid: b571015d967a73b4cadb57317d7d0547, type: 3}
       propertyPath: m_TagString
@@ -7175,6 +7175,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9189026, y: 1.9499999, z: 0.07811414}
   m_Center: {x: -0.4489161, y: 0.97499996, z: -0.029933672}
+--- !u!95 &1440605588
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440605580}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39b2b58a3ae934e4c8489bebecd29f51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1445054313
 GameObject:
   m_ObjectHideFlags: 0
