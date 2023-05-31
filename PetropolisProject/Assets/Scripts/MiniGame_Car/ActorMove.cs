@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class ActorMove : MonoBehaviour
     public GameObject EndSpawn;
 
     public GameObject finishUI;
-
+    
     private int cnt = 0; // 차량 부딪힌 횟수 카운트
 
     private bool inputEnabled = false;
@@ -87,8 +88,11 @@ public class ActorMove : MonoBehaviour
         {
             InputUpdate();
         }
+       
         
     }
+
+   
 
     protected void OnTriggerEnter(Collider other)
     {
@@ -111,6 +115,16 @@ public class ActorMove : MonoBehaviour
         {
             finishUI.SetActive(true);
             Invoke("LoadNextSceneClear", 1f);
+        }
+        
+        if (other.tag.Contains("Box") )
+        {
+            transform.position = new Vector3(-1, transform.position.y, transform.position.z);
+            
+        }
+        if (other.tag.Contains("Box1") )
+        {
+            transform.position = new Vector3(3, transform.position.y, transform.position.z);
         }
 
     }
