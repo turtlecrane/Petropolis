@@ -35,6 +35,8 @@ public class InteractManager : MonoBehaviour
 
     public TimeattackManager TAManager;
 
+    public RaycastHit hit;
+
     void Awake()
     {
         interactionData = new Dictionary<int, string[]>();
@@ -106,14 +108,9 @@ public class InteractManager : MonoBehaviour
             InteractBox.SetActive(false);
             TextBox.SetActive(false);
         }
-    }
-
-    void OnDrawGizmos()
-    {
-        //isHit = Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, RayMaxDistance);
-        isHit = Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, RayMaxDistance);
-        Gizmos.color = _rayColor;
-
+        
+        //////////////////////////////////////////////////////////////////////
+        isHit = Physics.Raycast(transform.position, transform.forward, out hit, RayMaxDistance);
         //히트가 안되는 오브젝트들은 하이라이트 기능 없도록
         if (_selection != null)
         {
@@ -124,28 +121,11 @@ public class InteractManager : MonoBehaviour
             _selection = null;
         }
 
-        if (isHit)//히트가 되면
+        if (isHit) //히트가 되면
         {
-            Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
-            //Gizmos.DrawWireCube(transform.position + transform.forward * hit.distance, transform.lossyScale);
-
             var o = hit.collider.gameObject;
             scanObject = o;
             HitTag = o.tag;
-
-            //히트된 오브젝트의 태그가 NPC라면 초록색 테두리 하이라이트 
-            /*
-            if (HitTag == "NPC")
-            {
-                Debug.Log("NPC");
-                var selection = scanObject.transform;
-                //var selectedRender = scanObject.GetComponent<Renderer>();
-                var selectOutline = scanObject.GetComponent<Outline>();
-                selectOutline.OutlineWidth = 5; //아웃라인 하이라이트
-                selectOutline.OutlineColor = Color.green;
-                _selection = selection;
-            }
-            */
             if (HitTag == "Interaction" || HitTag == "Food") // 상호작용이랑 푸드 태그는 빨간 테두리 하이라이트
             {
                 var selection = scanObject.transform;
@@ -159,13 +139,26 @@ public class InteractManager : MonoBehaviour
                 _selection = selection;
             }
         }
-        else //히트가 안되면
+        else
         {
-            Gizmos.DrawRay(transform.position, transform.forward * RayMaxDistance);
             InteractBox.SetActive(false);
             TextBox.SetActive(false);
             scanObject = null;
             HitTag = "";
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = _rayColor;
+
+        if (isHit)//히트가 되면
+        {
+            Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
+        }
+        else //히트가 안되면
+        {
+            Gizmos.DrawRay(transform.position, transform.forward * RayMaxDistance);
         }
     }
 

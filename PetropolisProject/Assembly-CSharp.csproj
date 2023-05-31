@@ -195,6 +195,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture3" />
      <Folder Include="Assets\model\kenney_car-kit\Models\DAE format" />
      <Folder Include="Assets\Scripts\NameScene" />
+     <Folder Include="Assets\Scenes\Map\Resource\Result" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown" />
      <Folder Include="Assets\Prefabs\NameScene" />
      <Folder Include="Assets\model\NPC\Jody" />
@@ -260,6 +261,7 @@
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\Asphalt_materials\Textures\Asphalt_texture12" />
      <Folder Include="Assets\Prefabs\UI" />
      <Folder Include="Assets\Scenes\Map\Resource\garbage\Corrugated metal pack\Roof" />
+     <Folder Include="Assets\Scenes\Map\Resource\Result\Image\example" />
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\AllSkyFree\_AllSkyFreeDemoEnvironment" />
      <Folder Include="Assets\Prefabs\npc" />
      <Folder Include="Assets\model\Realistic\Dogs\Shepherd\Prefabs" />
@@ -528,6 +530,7 @@
      <Folder Include="Assets\Scenes\Map\ExtraMainMap\Meterial\SimpleLowPolyNature\Shaders" />
      <Folder Include="Assets\FoodImports\FREE Food Pack\Shaders" />
      <Folder Include="Assets\model\Realistic\Dogs\Shepherd\Scenes" />
+     <Folder Include="Assets\Scenes\Map\Resource\Result\Image\Rank" />
      <Folder Include="Assets\Scenes\Map\Resource\park\GrassFlowers" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Waldemarst\JapaneseGardenPackage\Prefabs" />
@@ -768,6 +771,7 @@
      <Folder Include="Assets\FoodImports\DigitalKonstrukt\Can\Resources\Textures" />
      <Folder Include="Assets\Scenes\Map\Resource\park\Grass And Flowers Pack 1\Example Scene\Skyboxes\Textures\Sunny1" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\POLYGON city pack\Meshes,textures\lamps fbx\Materials" />
+     <Folder Include="Assets\Scenes\Map\Resource\Result\Image" />
      <Folder Include="Assets\Scenes\EndingScene\EndingScene" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\milltype\MyTown\Textures\Road\GuardRail\Materials" />
      <Folder Include="Assets\Scenes\Map\Resource\Hometown\PavingStone" />
