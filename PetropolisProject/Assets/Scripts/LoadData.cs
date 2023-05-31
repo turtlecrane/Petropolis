@@ -20,6 +20,7 @@ public class LoadData : MonoBehaviour
     void Awake()
     {
         saveData = GameObject.Find("SaveData").GetComponent<SaveData>(); // SaveData 불러오기
+        npc = GameObject.FindGameObjectsWithTag("NPC");
         SetPlayer();
         if (saveData.GetSaveHungry() != 0.0f)
         {
@@ -46,7 +47,6 @@ public class LoadData : MonoBehaviour
         ///ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         if (saveData.GetNpcLength() != 0) // 저장된 Npc 데이터가 있다면
         {
-            npc = GameObject.FindGameObjectsWithTag("NPC");
             for (int i = 0; i < saveData.GetNpcLength(); i++) 
                 // 기존에 저장된 Npc의 Id와 새로 생긴 Npc의 Id가 다르다면 저장된 Npc의 Id로 변환
             {

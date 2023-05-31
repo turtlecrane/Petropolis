@@ -125,6 +125,7 @@ public class TalkManager : MonoBehaviour
             }
             else if (talkData.Split(':')[1] == "103") // 쓰레기장 퀘스트
             {
+                talkIndex = -1;
                 npcController.isChange = true;
                 SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
                 saveData.ClearQuest_3();

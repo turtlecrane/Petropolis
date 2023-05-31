@@ -30,10 +30,6 @@ public class Quest3 : MonoBehaviour
             else
             {
                 doctorExclamation.gameObject.SetActive(true);
-                if (target.GetComponent<ObjData>().id == 13011)
-                {
-                    target.gameObject.SetActive(false);
-                }
             }
         }
         else
@@ -53,5 +49,6 @@ public class Quest3 : MonoBehaviour
     public void Clear()
     {
         doctor.GetComponent<ObjData>().id++;
+        target.gameObject.SetActive(false);
     }
 }
