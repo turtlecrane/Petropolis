@@ -9,8 +9,6 @@ public class LoadData : MonoBehaviour
     private GameObject player;
     private GameObject[] food;
     private Transform playerPos;
-    public Transform cam;
-    public Transform vCamFreeLook;
     
     public MiniGameManager mgManager;
 
@@ -40,11 +38,6 @@ public class LoadData : MonoBehaviour
         playerPos = saveData.GetPlayerPos(); // PlayerPos 불러오기
         player.transform.position = playerPos.position; // player에 이전 transform 적용
         player.transform.rotation = playerPos.rotation;
-        if (saveData.GetCamOffset() != Vector3.zero)
-        {
-            cam.position = playerPos.position - saveData.GetCamOffset();
-            vCamFreeLook.position = playerPos.position - saveData.GetCamOffset();
-        }
     }
     void Start()
     {
@@ -119,12 +112,6 @@ public class LoadData : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     private void SetPlayer() // SaveData의 SetPlayer와 같음
     {
         if (GameObject.FindGameObjectWithTag("Cat") != null)
@@ -161,4 +148,5 @@ public class LoadData : MonoBehaviour
         qManager.Quest1SetEx();
         qManager.Quest2SetEx();
     }
+
 }

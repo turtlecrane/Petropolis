@@ -12,7 +12,6 @@ public class SaveData : MonoBehaviour
     public int[] eatList;
     private int foodEatIndex = 0;
     public Transform playerPos; // 플레이어 위치 저장
-    private Vector3 camOffset = Vector3.zero;
     
     private float disease = 0.0f; 
     private float hungry = 0.0f; 
@@ -68,7 +67,6 @@ public class SaveData : MonoBehaviour
         Camera cam = Camera.main;
         nowscene = 0;
         SetPlayer();
-        camOffset = player.transform.position - cam.transform.position;
 
         playerPos.position = player.transform.position; // 포지션값 초기화
         npc = GameObject.FindGameObjectsWithTag("NPC"); // 메인 씬의 NPC 태그를 가진 모든 오브젝트 리스트에 추가
@@ -165,11 +163,6 @@ public class SaveData : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Dog"); // 없으면 Dog를 등록
         }
-    }
-
-    public Vector3 GetCamOffset()
-    {
-        return camOffset;
     }
 
     public void SaveDisease(float disease)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class MiniGameManager : MonoBehaviour
     public GameObject quizNpc;
     public Transform cam;
     public Transform vCamFreeLook;
+    
 
     // Set ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     public void SetClearRoadGame_1(bool clear)
@@ -38,17 +40,17 @@ public class MiniGameManager : MonoBehaviour
     
     public void SetPassRoadGame_1(bool pass)
     {
-        clearRoadGame_1 = pass;
+        passRoadGame_1 = pass;
     }
     
     public void SetPassRoadGame_2(bool pass)
     {
-        clearRoadGame_2 = pass;
+        passRoadGame_2 = pass;
     }
     
     public void SetPassRoadGame_3(bool pass)
     {
-        clearRoadGame_3 = pass;
+        passRoadGame_3 = pass;
     }
     
     public void SetClearQuiz(bool clear)
@@ -138,10 +140,5 @@ public class MiniGameManager : MonoBehaviour
             saveData.SearchAndSaveChangedId(quizNpc);
         }
     }
-
-    public void Warp(Transform player, Vector3 offset)
-    {
-        cam.position = player.position - offset;
-        vCamFreeLook.position = player.position - offset;
-    }
+    
 }

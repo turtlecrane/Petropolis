@@ -13,12 +13,11 @@ public class RoadWarp : MonoBehaviour
     {
         if (other.gameObject.tag == "Cat" || other.gameObject.tag == "Dog") // 플레이어 구분
         {
-            Vector3 camOffset = other.gameObject.transform.position - Camera.main.transform.position;
             if (portalNum == 1)
             {
                 if (mgManager.GetPassRoadGame_1()) // 클리어 했을 경우
                 {
-                    Warp(other.transform, camOffset);
+                    other.gameObject.transform.position = nextPortal.transform.position; // 다음 위치(NextPortal)로 이동
                 }
                 else // 클리어 하지 않았을 경우
                 {
@@ -32,7 +31,7 @@ public class RoadWarp : MonoBehaviour
             {
                 if (mgManager.GetPassRoadGame_2())
                 {
-                    Warp(other.transform, camOffset);
+                    other.gameObject.transform.position = nextPortal.transform.position; // 다음 위치(NextPortal)로 이동
                 }
                 else
                 {
@@ -46,7 +45,7 @@ public class RoadWarp : MonoBehaviour
             {
                 if (mgManager.GetPassRoadGame_3())
                 {
-                    Warp(other.transform, camOffset);
+                    other.gameObject.transform.position = nextPortal.transform.position; // 다음 위치(NextPortal)로 이동
                 }
                 else
                 {
@@ -59,18 +58,12 @@ public class RoadWarp : MonoBehaviour
             else if (portalNum == 4)
             {
                 GetComponent<ResetDoctorId>().Reset();
-                Warp(other.transform, camOffset);
+                other.gameObject.transform.position = nextPortal.transform.position; // 다음 위치(NextPortal)로 이동
             }
             else
             {
-                Warp(other.transform, camOffset);
+                other.gameObject.transform.position = nextPortal.transform.position; // 다음 위치(NextPortal)로 이동
             }
         }
-    }
-
-    private void Warp(Transform other, Vector3 camOffset)
-    {
-        other.position = nextPortal.transform.position; // 다음 위치(NextPortal)로 이동
-        mgManager.Warp(other, camOffset);
     }
 }
