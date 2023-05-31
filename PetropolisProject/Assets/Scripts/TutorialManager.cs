@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
-    public GameObject gameObject;
+    public GameObject tutorialUI;
     public TextMeshProUGUI tutorialText;
 
     private string[] textOptions = { "<color=#00FF00>W,A,S,D</color>를 눌러 움직입니다", "<color=#00FF00>Space Bar</color>를 눌러 점프합니다", "특정 오브젝트 앞에서 <color=#00FF00>왼쪽 마우스 버튼</color>를 눌러 상호작용 합니다", "<color=#00FF00>Left Shift</color>를 눌러 달립니다", "<color=#00FF00>[ T ] </color> 버튼을 눌러서 게임 튜토리얼을 확인 할 수 있어요!" };
@@ -22,7 +22,7 @@ public class TutorialManager : MonoBehaviour
             optionUsed[i] = false;
         }
         tutorialText.text = textOptions[currentTextIndex];
-        gameObject.SetActive(true);
+        tutorialUI.SetActive(true);
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class TutorialManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
-            gameObject.SetActive(false);
+            tutorialUI.SetActive(false);
         }
 
     }
