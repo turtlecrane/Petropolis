@@ -2,25 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
+using UnityEngine.UI;
 
 public class ResultManager : MonoBehaviour
 {
     public GameObject cat;
+    
+    [Header("ClearPanel")]
     public GameObject clearPanel;
     public TextMeshProUGUI clearPanelTitle;
     public TextMeshProUGUI questClearCount;
     public TextMeshProUGUI minigameClearCount;
     public TextMeshProUGUI quizScore;
+    
+    [Header("FoodPanel")]
     public GameObject foodPanel;
     public TextMeshProUGUI foodPanelTitle;
+    public TextMeshProUGUI foodPlayerName;
     public TextMeshProUGUI goodFoodCount;
     public TextMeshProUGUI badFoodCount;
-    public TextMeshProUGUI dangerFoodCount;
-    public TextMeshProUGUI fatalFoodCount;
-    public GameObject endPanel;
+    public TextMeshProUGUI dnfFoodCount;
     
+    [Header("EndPanel")]
+    public GameObject endPanel;
     public TextMeshProUGUI endPanelTitle;
-    public TextMeshProUGUI resultRank;
+    [Header("Rank")]
+    public Image rankImage;
+    public Sprite sRank;
+    public Sprite aRank;
+    public Sprite bRank;
+    public Sprite cRank;
+    public Sprite fRank;
+    
+    
     
     private Animator ani;
     private SaveData saveData;
@@ -67,42 +82,49 @@ public class ResultManager : MonoBehaviour
             + foodCount[0] * 2 - foodCount[1] - foodCount[2] * 2 - foodCount[3] * 3;
         
         // ClearPanel
-        clearPanelTitle.text = playerName.Name + "의 클리어 기록";
-        questClearCount.text = "퀘스트 클리어(+1) : " + questCount + " / 3";
-        minigameClearCount.text = "미니게임 클리어(+1) : " + minigameCount + " / 4";
-        quizScore.text = "퀴즈 점수(+2) : " + saveData.GetQuizScore() + " / 10";
+        clearPanelTitle.text = "<color=blue>" + playerName.Name + "</color>의 클리어 기록";
+        questClearCount.text = "총 <color=green>" + saveData.ReturnQuestCount().Length + "개</color>의 퀘스트 중 <color=green>"
+                               + questCount + "개</color>를 클리어 했네요!";
+        minigameClearCount.text = "미니게임은 총 <color=green>" + saveData.ReturnMinigameCount().Length + "개</color> 중 <color=green>" +
+                                  minigameCount + "개</color>를 클리어 했어요!";
+        quizScore.text = "퀴즈는 총 <color=green>10문제</color> 중 <color=green>" + saveData.GetQuizScore() + "개</color>를 맞혔군요!";
         //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         
         // FoodPanel
-        foodPanelTitle.text = playerName.Name + "의 음식 섭취 기록";
-        goodFoodCount.text = "Good(+2) : " + foodCount[0] + " / 9";
-        badFoodCount.text = "Bad(-1) : " + foodCount[1] + " / 8";
-        dangerFoodCount.text = "Danger(-2) : " + foodCount[2] + " / 4";
-        fatalFoodCount.text = "Fatal(-3) : " + foodCount[3] + " / 7";
+        foodPanelTitle.text = "<color=blue>" + playerName.Name + "</color>의 음식 섭취 기록";
+        foodPlayerName.text = "<color=blue>" + playerName.Name + "</color>은(는) 오늘 하루";
+        goodFoodCount.text = "좋은 음식 <color=green>" + foodCount[0] + "개</color>";
+        badFoodCount.text = "건강에 나쁜 음식 <color=purple>" + foodCount[1] + "개</color>";
+        dnfFoodCount.text = "위험한 음식 <color=red>" + (foodCount[2]+foodCount[3]) + "개</color>를 먹었습니다!";
         //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         
         // EndPanel
-        endPanelTitle.text = playerName.Name + "의 랭크";
+        endPanelTitle.text = "<color=blue>" + playerName.Name + "</color>의 랭크";
 
         if (rankScore < 10)
         {
-            resultRank.text = "F";
+            //resultRank.text = "F";
+            rankImage.sprite = fRank;
         }
         else if (rankScore < 20 && rankScore >= 10)
         {
-            resultRank.text = "C";
+            //resultRank.text = "C";
+            rankImage.sprite = cRank;
         }
         else if (rankScore < 30 && rankScore >= 20)
         {
-            resultRank.text = "B";
+            //resultRank.text = "B";
+            rankImage.sprite = bRank;
         }
         else if (rankScore < 40 && rankScore >= 30)
         {
-            resultRank.text = "A";
+            //resultRank.text = "A";
+            rankImage.sprite = aRank;
         }
         else if (rankScore <= 45 && rankScore >= 40)
         {
-            resultRank.text = "S";
+            //resultRank.text = "S";
+            rankImage.sprite = sRank;
         }
         //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     }

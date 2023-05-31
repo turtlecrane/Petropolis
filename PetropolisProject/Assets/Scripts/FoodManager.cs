@@ -215,13 +215,15 @@ public class FoodManager : MonoBehaviour
         {
             hungry += satiety;
             saveData.SaveHungry(hungry);
-            Instantiate(goodEffect, player.transform.position, player.transform.rotation);
+            var ge = Instantiate(goodEffect, player.transform.position, player.transform.rotation);
+            ge.transform.parent = player.transform;
             goodSound.Play();
         }
         else // BadFood, DangerFood, FatalFood
         {
             SetActiveCondition(foodType);
-            Instantiate(badEffect, player.transform.position, player.transform.rotation);
+            var be = Instantiate(badEffect, player.transform.position, player.transform.rotation);
+            be.transform.parent = player.transform;
             badSound.Play();
         }
         ConditionTextActive();
