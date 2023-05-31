@@ -114,7 +114,7 @@ public class FoodManager : MonoBehaviour
                 IncreasingRed(diseaseImage, diseaseConditionColor);
             }
 
-            if (hungry >= 400.0f) // 배부름 상태
+            if (hungry >= 300.0f) // 배부름 상태
             {
                 if (hungry > maxHungry)
                 {
@@ -124,11 +124,11 @@ public class FoodManager : MonoBehaviour
 
                 SetActiveHungry(0);
             }
-            else if (hungry >= 250.0f && hungry < 400.0f) // 보통 상태
+            else if (hungry >= 200.0f && hungry < 300.0f) // 보통 상태
             {
                 SetActiveHungry(1);
             }
-            else if (hungry >= 100.0f && hungry < 250.0f) // 배고픔 상태
+            else if (hungry >= 100.0f && hungry < 200.0f) // 배고픔 상태
             {
                 SetActiveHungry(2);
             }
