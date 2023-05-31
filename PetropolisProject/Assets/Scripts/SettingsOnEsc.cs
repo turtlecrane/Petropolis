@@ -20,6 +20,7 @@ public class SettingsOnEsc : MonoBehaviour
         if (popups.Length > 0)
         {
             Time.timeScale = 0;
+            isOpen = true;
             // Debug.Log("Popup found!");
         }
         else

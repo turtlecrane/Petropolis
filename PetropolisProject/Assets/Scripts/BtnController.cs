@@ -12,7 +12,7 @@ public class BtnController : MonoBehaviour
     }
     public void GotoGameStage()
     {
-        SceneManager.LoadScene("Level_house");//
+        SceneManager.LoadScene("MainMap");
     }
 
     public void OnClickOptionBtn()
