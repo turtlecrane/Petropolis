@@ -6,7 +6,7 @@ using TMPro;
 
 public class TimeattackManager : MonoBehaviour
 {
-    public GameObject gameObject;
+    public GameObject timeAtkUI;
     public float gameTime = 60f; // 게임 시간 (초)
     public TextMeshProUGUI timeText; // UI에 표시될 시간 텍스트
 
@@ -33,7 +33,7 @@ public class TimeattackManager : MonoBehaviour
         if (isGameRunning)
         {
             // 타이머 감소
-            gameObject.SetActive(true);
+            timeAtkUI.SetActive(true);
             timer -= Time.deltaTime;
 
             UpdateUITime();
@@ -65,7 +65,7 @@ public class TimeattackManager : MonoBehaviour
     public void EndGame()
     {
         isGameRunning = false;
-        gameObject.SetActive(false);
+        timeAtkUI.SetActive(false);
     }
 
     public void InteractTarget()
