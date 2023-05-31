@@ -9,6 +9,8 @@ public class LoadData : MonoBehaviour
     private GameObject player;
     private GameObject[] food;
     private Transform playerPos;
+    public Transform cam;
+    public Transform vCamFreeLook;
     
     public MiniGameManager mgManager;
 
@@ -38,6 +40,11 @@ public class LoadData : MonoBehaviour
         playerPos = saveData.GetPlayerPos(); // PlayerPos 불러오기
         player.transform.position = playerPos.position; // player에 이전 transform 적용
         player.transform.rotation = playerPos.rotation;
+        if (saveData.GetCamOffset() != Vector3.zero)
+        {
+            cam.position = playerPos.position - saveData.GetCamOffset();
+            vCamFreeLook.position = playerPos.position - saveData.GetCamOffset();
+        }
     }
     void Start()
     {
@@ -50,6 +57,11 @@ public class LoadData : MonoBehaviour
             for (int i = 0; i < saveData.GetNpcLength(); i++) 
                 // 기존에 저장된 Npc의 Id와 새로 생긴 Npc의 Id가 다르다면 저장된 Npc의 Id로 변환
             {
+                if (npc == null)
+                {
+                    break;
+                }
+                
                 if (npc[i].GetComponent<ObjData>().name == saveData.GetNpcName(i) &&
                     npc[i].GetComponent<ObjData>().id != saveData.GetNpcId(i))
                 {
@@ -130,6 +142,9 @@ public class LoadData : MonoBehaviour
         mgManager.SetClearRoadGame_1(saveData.GetClearRoadGame_1());
         mgManager.SetClearRoadGame_2(saveData.GetClearRoadGame_2());
         mgManager.SetClearRoadGame_3(saveData.GetClearRoadGame_3());
+        mgManager.SetPassRoadGame_1(saveData.GetPassRoadGame_1());
+        mgManager.SetPassRoadGame_2(saveData.GetPassRoadGame_2());
+        mgManager.SetPassRoadGame_3(saveData.GetPassRoadGame_3());
         mgManager.SetClearQuiz(saveData.GetClearQuiz());
         if (mgManager.GetClearQuiz())
         {

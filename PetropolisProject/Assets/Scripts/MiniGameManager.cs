@@ -7,6 +7,9 @@ public class MiniGameManager : MonoBehaviour
     private bool clearRoadGame_1 = false;
     private bool clearRoadGame_2 = false;
     private bool clearRoadGame_3 = false;
+    private bool passRoadGame_1 = false;
+    private bool passRoadGame_2 = false;
+    private bool passRoadGame_3 = false;
     private bool clearQuiz = false;
     private bool clearFrisbee = false;
     private bool clearTimeAttack = false;
@@ -14,6 +17,8 @@ public class MiniGameManager : MonoBehaviour
     private int quizScore = 0;
 
     public GameObject quizNpc;
+    public Transform cam;
+    public Transform vCamFreeLook;
 
     // Set ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     public void SetClearRoadGame_1(bool clear)
@@ -29,6 +34,21 @@ public class MiniGameManager : MonoBehaviour
     public void SetClearRoadGame_3(bool clear)
     {
         clearRoadGame_3 = clear;
+    }
+    
+    public void SetPassRoadGame_1(bool pass)
+    {
+        clearRoadGame_1 = pass;
+    }
+    
+    public void SetPassRoadGame_2(bool pass)
+    {
+        clearRoadGame_2 = pass;
+    }
+    
+    public void SetPassRoadGame_3(bool pass)
+    {
+        clearRoadGame_3 = pass;
     }
     
     public void SetClearQuiz(bool clear)
@@ -67,6 +87,21 @@ public class MiniGameManager : MonoBehaviour
     {
         return clearRoadGame_3;
     }
+    
+    public bool GetPassRoadGame_1()
+    {
+        return passRoadGame_1;
+    }
+    
+    public bool GetPassRoadGame_2()
+    {
+        return passRoadGame_2;
+    }
+    
+    public bool GetPassRoadGame_3()
+    {
+        return passRoadGame_3;
+    }
 
     public bool GetClearQuiz()
     {
@@ -102,5 +137,11 @@ public class MiniGameManager : MonoBehaviour
             quizNpc.GetComponent<ObjData>().id = 14003;
             saveData.SearchAndSaveChangedId(quizNpc);
         }
+    }
+
+    public void Warp(Transform player, Vector3 offset)
+    {
+        cam.position = player.position - offset;
+        vCamFreeLook.position = player.position - offset;
     }
 }

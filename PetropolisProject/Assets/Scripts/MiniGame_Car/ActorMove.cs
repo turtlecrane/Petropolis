@@ -110,7 +110,7 @@ public class ActorMove : MonoBehaviour
         if(other.CompareTag("Clear")) // 목적지 도착시
         {
             finishUI.SetActive(true);
-            Invoke("LoadNextScene", 1f);
+            Invoke("LoadNextSceneClear", 1f);
         }
 
     }
@@ -124,20 +124,48 @@ public class ActorMove : MonoBehaviour
     {
         Debug.Log("다음 씬으로 넘어갑니다.");
         SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
-        if (!saveData.GetClearRoadGame_1())
+        if (!saveData.GetPassRoadGame_1())
         {
+            saveData.PassRoadGame_1();
+        }
+        else
+        {
+            if (!saveData.GetPassRoadGame_2())
+            {
+                saveData.PassRoadGame_2();
+            }
+            else
+            {
+                if (!saveData.GetPassRoadGame_3())
+                {
+                    saveData.PassRoadGame_3();
+                }
+            }
+        }
+
+        GetComponent<GotoScene>().SceneChange();
+    }
+
+    void LoadNextSceneClear()
+    {
+        SaveData saveData = GameObject.Find("SaveData").GetComponent<SaveData>();
+        if (!saveData.GetPassRoadGame_1())
+        {
+            saveData.PassRoadGame_1();
             saveData.ClearRoadGame_1();
         }
         else
         {
-            if (!saveData.GetClearRoadGame_2())
+            if (!saveData.GetPassRoadGame_2())
             {
+                saveData.PassRoadGame_2();
                 saveData.ClearRoadGame_2();
             }
             else
             {
-                if (!saveData.GetClearRoadGame_3())
+                if (!saveData.GetPassRoadGame_3())
                 {
+                    saveData.PassRoadGame_3();
                     saveData.ClearRoadGame_3();
                 }
             }

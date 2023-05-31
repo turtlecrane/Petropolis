@@ -12,6 +12,7 @@ public class SaveData : MonoBehaviour
     public int[] eatList;
     private int foodEatIndex = 0;
     public Transform playerPos; // 플레이어 위치 저장
+    private Vector3 camOffset = Vector3.zero;
     
     private float disease = 0.0f; 
     private float hungry = 0.0f; 
@@ -26,6 +27,9 @@ public class SaveData : MonoBehaviour
     private bool clearRoadGame_1 = false;
     private bool clearRoadGame_2 = false;
     private bool clearRoadGame_3 = false;
+    private bool passRoadGame_1 = false;
+    private bool passRoadGame_2 = false;
+    private bool passRoadGame_3 = false;
     private bool clearQuiz = false;
     private bool clearFrisbee = false;
     private bool clearTimeAttack = false;
@@ -61,8 +65,10 @@ public class SaveData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Camera cam = Camera.main;
         nowscene = 0;
         SetPlayer();
+        camOffset = player.transform.position - cam.transform.position;
 
         playerPos.position = player.transform.position; // 포지션값 초기화
         npc = GameObject.FindGameObjectsWithTag("NPC"); // 메인 씬의 NPC 태그를 가진 모든 오브젝트 리스트에 추가
@@ -161,6 +167,11 @@ public class SaveData : MonoBehaviour
         }
     }
 
+    public Vector3 GetCamOffset()
+    {
+        return camOffset;
+    }
+
     public void SaveDisease(float disease)
     {
         this.disease = disease;
@@ -233,6 +244,21 @@ public class SaveData : MonoBehaviour
         clearRoadGame_3 = true;
     }
     
+    public void PassRoadGame_1()
+    {
+        passRoadGame_1 = true;
+    }
+    
+    public void PassRoadGame_2()
+    {
+        passRoadGame_2 = true;
+    }
+    
+    public void PassRoadGame_3()
+    {
+        passRoadGame_3 = true;
+    }
+    
     public void ClearQuiz()
     {
         clearQuiz = true;
@@ -289,6 +315,21 @@ public class SaveData : MonoBehaviour
     public bool GetClearRoadGame_3()
     {
         return clearRoadGame_3;
+    }
+    
+    public bool GetPassRoadGame_1()
+    {
+        return passRoadGame_1;
+    }
+    
+    public bool GetPassRoadGame_2()
+    {
+        return passRoadGame_2;
+    }
+    
+    public bool GetPassRoadGame_3()
+    {
+        return passRoadGame_3;
     }
     
     public bool GetClearQuiz()
