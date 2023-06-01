@@ -113,6 +113,7 @@
      <Compile Include="Assets\Scripts\EndingScene\ResultManager.cs" />
      <Compile Include="Assets\Scripts\LoadData.cs" />
      <Compile Include="Assets\Scripts\DontDestroy.cs" />
+     <Compile Include="Assets\Scripts\QuizScripts\MouseCursor.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Scenes\Map\Resource\downtown\K_Building B_09\Textures" />
      <Folder Include="Assets\model\Furniture\Dining Chairs\Textures\2" />
