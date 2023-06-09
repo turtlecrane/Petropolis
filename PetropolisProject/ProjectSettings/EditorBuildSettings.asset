@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 0b8e29f9af0f15a4a9cd044d4660548d
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Test/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Map/MainMap.unity
     guid: 99e3b07a5a12af347bac19a3286809db
   - enabled: 0
-    path: Assets/Scenes/FoodTest.unity
+    path: Assets/Scenes/Test/FoodTest.unity
     guid: db56a7f620b494f4ca43a9f4029d4e14
   - enabled: 1
     path: Assets/Scenes/Quiz.unity
@@ -33,13 +33,13 @@ EditorBuildSettings:
     path: Assets/Scenes/PrologueScene/PrologueScene.unity
     guid: 157f9d2dd9854a14db065c1ba451214f
   - enabled: 1
-    path: Assets/Scenes/Hospital.unity
+    path: Assets/Scenes/Test/Hospital.unity
     guid: 20103d8b8c6bb704cafe27483177e5fc
   - enabled: 1
     path: Assets/Scenes/EndingScene/EndingScene.unity
     guid: ef715338404a8544c8498b64fb0e4fd9
   - enabled: 0
-    path: Assets/Scenes/MainMap123.unity
+    path: Assets/Scenes/Test/MainMap123.unity
     guid: ca69e4a5cf91e3a43b288217060a4fbe
   - enabled: 1
     path: Assets/Scenes/Map/Result.unity
